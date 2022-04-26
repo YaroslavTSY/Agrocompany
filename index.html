@@ -1,68 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TBB TRADING DMCC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap&_v=20220426132533" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css?_v=20220426132533" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20220426132533">
-</head>
+@@include('html/head.html',{ "title":"TBB TRADING DMCC" })
 
 <body>
-    <header class="header">
-    <div class="header__container">
-        <nav class="header__bar d-flex">
-            <div class="header-logo d-flex">
-                <a href="#" class="header-logo__logo">
-                    <picture><source srcset="img/tbb-logotype1-1-1.webp" type="image/webp"><img src="img/tbb-logotype1-1-1.png" alt="logo"></picture>
-                </a>
-                <p class="header-logo__desc">
-                    Trading in agriculture and wood commodities
-                </p>
-            </div>
-            <div class="header-nav d-flex">
-                <div class="header-nav__social d-flex">
-                    <a href="#" class="social-logo">
-                        <picture><source srcset="img/facebook-5.webp" type="image/webp"><img src="img/facebook-5.png" alt="Facebook"></picture>
-                    </a>
-                    <a href="#" class="social-logo">
-                        <picture><source srcset="img/instagram-5-1.webp" type="image/webp"><img src="img/instagram-5-1.png" alt="Instagram"></picture>
-                    </a>
-                </div>
-                <div class="header-nav__email d-flex">
-                    <div class="email-logo">
-                        <picture><source srcset="img/ic_baseline-email.webp" type="image/webp"><img src="img/ic_baseline-email.png" alt="e"></picture>
-                    </div>
-                    <a href="#" class="email">
-                        tbb.dmcc@gmail.com
-                    </a>
-                </div>
-                <div class="header-nav__phone d-flex">
-                    <div class="phone-logo">
-                        <picture><source srcset="img/logos_whatsapp.webp" type="image/webp"><img src="img/logos_whatsapp.png" alt="WA"></picture>
-                    </div>
-                    <a href="#" class="phone">
-                        +971 50 601 8233
-                    </a>
-                </div>
-                <a href="#" class="call__cta">
-                    Request a call
-                </a>
-            </div>
-            <div class="header__menu">
-                <div class="menu__icon">
-                    <span></span>
-                </div>
-            </div>
-
-    </div>
-    </nav>
-    </div>
-</header>
+    @@include('html/header.html',{})
     <main class="main">
         <section class="first-screen" id="first-screen">
             <div class="container p-0">
@@ -135,13 +76,13 @@
                 <div class="about-images">
                     <div class="about-images__wrapper">
                         <a href="##" class="about__image">
-                            <picture><source srcset="img/photo-1.webp" type="image/webp"><img src="img/photo-1.jpg" alt="product#1"></picture>
+                            <img src="img/photo-1.jpg" alt="product#1">
                         </a>
                         <a href="##" class="about__image">
-                            <picture><source srcset="img/photo-2.webp" type="image/webp"><img src="img/photo-2.png" alt="product#2"></picture>
+                            <img src="img/photo-2.png" alt="product#2">
                         </a>
                         <a href="##" class="about__image">
-                            <picture><source srcset="img/photo-3.webp" type="image/webp"><img src="img/photo-3.png" alt="product#3"></picture>
+                            <img src="img/photo-3.png" alt="product#3">
                         </a>
                     </div>
                 </div>
@@ -194,8 +135,8 @@
                     </div>
                 </div>
             </div>
-            <div class="kliptarz__about__1"><picture><source srcset="img/klipartz-1.webp" type="image/webp"><img src="img/klipartz-1.png" alt=""></picture></div>
-            <div class="kliptarz__about__2"><picture><source srcset="img/klipartz-2.webp" type="image/webp"><img src="img/klipartz-2.png" alt=""></picture></div>
+            <div class="kliptarz__about__1"><img src="img/klipartz-1.png" alt=""></div>
+            <div class="kliptarz__about__2"><img src="img/klipartz-2.png" alt=""></div>
         </section>
         <section class="biz to-scrolling">
             <h2 class="section-title__biz">
@@ -208,7 +149,7 @@
                             <div class="biz-card__1 height-fit">
                                 <div class="biz-title height-fit">
                                     <div class="height-fit">
-                                        <picture><source srcset="img/block-1-icon.webp" type="image/webp"><img src="img/block-1-icon.png" alt=""></picture>
+                                        <img src="img/block-1-icon.png" alt="">
                                     </div>
                                     <div class="height-fit">
                                         <h3>Agricultural commodity department:</h3>
@@ -233,7 +174,7 @@
                             <div class="biz-card__2">
                                 <div class="biz-title">
                                     <div>
-                                        <picture><source srcset="img/block-2-icon.webp" type="image/webp"><img src="img/block-2-icon.png" alt=""></picture>
+                                        <img src="img/block-2-icon.png" alt="">
                                     </div>
                                     <h3>
                                         Wood commodity department:
@@ -261,11 +202,11 @@
                 <div class="images">
                     <div class="biz__image">
                         <div class="blur"></div>
-                        <picture><source srcset="img/structure-1.webp" type="image/webp"><img class="be-left" src="img/structure-1.jpg" alt=""></picture>
+                        <img class="be-left" src="img/structure-1.jpg" alt="">
                     </div>
                     <div class="biz__image">
                         <div class="blur"></div>
-                        <picture><source srcset="img/structure-2.webp" type="image/webp"><img class="be-right" src="img/structure-2.jpg" alt=""></picture>
+                        <img class="be-right" src="img/structure-2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -277,7 +218,7 @@
             <div class="services-cards__container">
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/agreement-1.webp" type="image/webp"><img src="img/agreement-1.png" alt="Agree"></picture>
+                        <img src="img/agreement-1.png" alt="Agree">
                     </div>
                     <h4 class="services-title">
                         Official argreement
@@ -291,7 +232,7 @@
                 </div>
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/plant-1.webp" type="image/webp"><img src="img/plant-1.png" alt="Plant"></picture>
+                        <img src="img/plant-1.png" alt="Plant">
                     </div>
                     <h4 class="services-title">
                         Purchase
@@ -304,7 +245,7 @@
                 </div>
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/warehouse-1.webp" type="image/webp"><img src="img/warehouse-1.png" alt="Warehousing"></picture>
+                        <img src="img/warehouse-1.png" alt="Warehousing">
                     </div>
                     <h4 class="services-title">
                         Warehouse delivery
@@ -318,7 +259,7 @@
                 </div>
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/customer-1.webp" type="image/webp"><img src="img/customer-1.png" alt="Customer"></picture>
+                        <img src="img/customer-1.png" alt="Customer">
                     </div>
                     <h4 class="services-title">
                         Special service
@@ -330,7 +271,7 @@
                 </div>
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/information-1.webp" type="image/webp"><img src="img/information-1.png" alt="Call-info"></picture>
+                        <img src="img/information-1.png" alt="Call-info">
                     </div>
                     <h4 class="services-title">
                         Informational support
@@ -343,7 +284,7 @@
                 </div>
                 <div class="services__card">
                     <div class="services-icon">
-                        <picture><source srcset="img/seeds-1.webp" type="image/webp"><img src="img/seeds-1.png" alt="Seeds"></picture>
+                        <img src="img/seeds-1.png" alt="Seeds">
                     </div>
                     <h4 class="services-title">
                         Cleaning and packing
@@ -357,7 +298,7 @@
                 </div>
             </div>
             <div class="kliptarz__services">
-                <picture><source srcset="img/services-klipatz.webp" type="image/webp"><img src="img/services-klipatz.png" alt=""></picture>
+                <img src="img/services-klipatz.png" alt="">
             </div>
         </section>
         <section class="docs to-scrolling" id="docs">
@@ -378,7 +319,7 @@
                     <div class="swiper-slide docs-item">
                         <div class="document">
                             <div class="document-image">
-                                <picture><source srcset="img/1-document.webp" type="image/webp"><img class="img-fluid" src="img/1-document.jpg" alt="Doc"></picture>
+                                <img class="img-fluid" src="img/1-document.jpg" alt="Doc">
                             </div>
                             <div class="certificate">
                                 Photo certificate
@@ -388,7 +329,7 @@
                     <div class="swiper-slide docs-item">
                         <div class="document">
                             <div class="documnet-image">
-                                <picture><source srcset="img/Phyto-2-2.webp" type="image/webp"><img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc"></picture>
+                                <img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc">
                             </div>
                             <div class="certificate">
                                 Photo certificate
@@ -398,7 +339,7 @@
                     <div class="swiper-slide docs-item">
                         <div class="document">
                             <div class="document-image">
-                                <picture><source srcset="img/CO-2.webp" type="image/webp"><img class="img-fluid" src="img/CO-2.jpg" alt="Doc"></picture>
+                                <img class="img-fluid" src="img/CO-2.jpg" alt="Doc">
                             </div>
                             <div class="certificate">
                                 Photo certificate
@@ -408,7 +349,7 @@
                     <div class="swiper-slide docs-item">
                         <div class="document">
                             <div class="document-image">
-                                <picture><source srcset="img/CO-2.webp" type="image/webp"><img class="img-fluid" src="img/CO-2.jpg" alt="Doc"></picture>
+                                <img class="img-fluid" src="img/CO-2.jpg" alt="Doc">
                             </div>
                             <div class="certificate">
                                 Photo certificate
@@ -418,7 +359,7 @@
                     <div class="swiper-slide docs-item">
                         <div class="document">
                             <div class="document-image">
-                                <picture><source srcset="img/Phyto-2-2.webp" type="image/webp"><img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc"></picture>
+                                <img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc">
                             </div>
                             <div class="certificate">
                                 Photo certificate
@@ -435,7 +376,7 @@
                     <div class="swiper-srollbar docs-srollbar"></div>
                 </div>
             </div>
-            <div class="kliptarz__docs"><picture><source srcset="img/klipartz-5.webp" type="image/webp"><img src="img/klipartz-5.png" alt=""></picture></div>
+            <div class="kliptarz__docs"><img src="img/klipartz-5.png" alt=""></div>
         </section>
         <section class="control to-scrolling" id="control">
             <h2 class="section-title__control">
@@ -456,15 +397,15 @@
                         </a>
                     </div>
                     <div class="control__icon">
-                        <picture><source srcset="img/Control-icons.webp" type="image/webp"><img class="img-fluid" src="img/Control-icons.png" alt=""></picture>
+                        <img class="img-fluid" src="img/Control-icons.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="kliptarz__control__1">
-                <picture><source srcset="img/klipartz-11.webp" type="image/webp"><img src="img/klipartz-11.png" alt=""></picture>
+                <img src="img/klipartz-11.png" alt="">
             </div>
             <div class="kliptarz__control__2">
-                <picture><source srcset="img/klipartz-11.webp" type="image/webp"><img src="img/klipartz-11.png" alt=""></picture>
+                <img src="img/klipartz-11.png" alt="">
             </div>
         </section>
         <section class="products to-scrolling">
@@ -473,690 +414,7 @@
                     Our Products
                 </h2>
                 <div class="products__content">
-                        <div class="products__tabs">
-        <div class="products__tab active">
-            <div class="products__tab-icon">
-                <picture><source srcset="img/flour-3.webp" type="image/webp"><img src="img/flour-3.png" alt="/|\"></picture>
-            </div>
-            <div class="tab-text__wrapper">
-                <h3 class="products__tab-text">
-                    Food commodities
-                </h3>
-            </div>
-        </div>
-        <div class="products__tab">
-            <div class="products__tab-icon">
-                <picture><source srcset="img/flour-3.webp" type="image/webp"><img src="img/flour-3.png" alt="/|\"></picture>
-            </div>
-            <div class="tab-text__wrapper">
-                <h3 class="products__tab-text">
-                    Cattle Feed commodities
-                </h3>
-            </div>
-        </div>
-        <div class="products__tab">
-            <div class="products__tab-icon">
-                <picture><source srcset="img/flour-3.webp" type="image/webp"><img src="img/flour-3.png" alt="/|\"></picture>
-            </div>
-            <div class="tab-text__wrapper">
-                <h3 class="products__tab-text">
-                    Wood Timber commodities
-                </h3>
-            </div>
-        </div>
-    </div>
-    <div class="products__tabs-content">
-        <div class="tab-items__wrapper active">
-            <div class="products__tab-items">
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__wheat">
-                            <div class="__content-wrapper">
-                                <p>MILLING WHEAT</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__barley">
-                            <div class="__content-wrapper">
-                                <p>Barley</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__oats">
-                            <div class="__content-wrapper">
-                                <p>Oats</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__faba">
-                            <div class="__content-wrapper">
-                                <p>Faba Beans</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__red-sorghum">
-                            <div class="__content-wrapper">
-                                <p>RED SORGHUM</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__white-sorghum">
-                            <div class="__content-wrapper">
-                                <p>White Sorghum</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__yellow-peas">
-                            <div class="__content-wrapper">
-                                <p>Yellow Peas</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__yellow-millet">
-                            <div class="__content-wrapper">
-                                <p>Yellow Millet</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__yellow-corn">
-                            <div class="__content-wrapper">
-                                <p>Yellow Corn</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__chickpeas">
-                            <div class="__content-wrapper">
-                                <p>Chickpeas</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__rapeseeds">
-                            <div class="__content-wrapper">
-                                <p>Rapeseeds</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__flax-seeds">
-                            <div class="__content-wrapper">
-                                <p>Flax Seeds</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__coriander">
-                            <div class="__content-wrapper">
-                                <p>Coriander</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__soybean">
-                            <div class="__content-wrapper">
-                                <p>Soybean</p>
-                                <p class="on-hover">
-                                    Moisture: max. 14.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Foreign matter: max. 2.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Protein: min. 11.50 %
-                                </p>
-                                <p class="on-hover">
-                                    Test weight: min 740 kg/hl
-                                </p>
-                                <p class="on-hover">
-                                    Wet gluten: min 24.00
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-
-                        <div class="tab-cta">
-                            <div class="tab-cta__wrapper">
-                                <h4 class="tab-cta__title">
-                                    TBB Trading company
-                                </h4>
-                                <p class="tab-cta__subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                </p>
-                                <a href="##" class="tab-cta__cta">
-                                    Request a call
-                                </a>
-                            </div>
-                            <div class="tab-cta__bg-img">
-                                <picture><source srcset="img/Vector.webp" type="image/webp"><img src="img/Vector.png" alt=""></picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-items__wrapper">
-            <div class="products__tab-items">
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__sunflower-meal">
-                            <div class="__content-wrapper">
-                                <p>SUNFLOWER MEAL</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__sunflower-pellets">
-                            <div class="__content-wrapper">
-                                <p>SUNFLOWER MEAL PELLETS</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__seeds-cake">
-                            <div class="__content-wrapper">
-                                <p>SUNFLOWER Seeds Cake</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__feed-wheat">
-                            <div class="__content-wrapper">
-                                <p>FEED WHEAT</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__wheat-bran-pellets">
-                            <div class="__content-wrapper">
-                                <p>WHEAT BRAN PELLETS</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__soybean-meal">
-                            <div class="__content-wrapper">
-                                <p>soybean meal</p>
-                                <p class="on-hover">
-                                    Protein content: min. 35.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fiber: max. 20.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Moisture: max. 12.00 %
-                                </p>
-                                <p class="on-hover">
-                                    Fat content: max. 2.00 %
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-items__wrapper">
-            <div class="products__tab-items">
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__timber-air-dry">
-                            <div class="__content-wrapper">
-                                <p class="tab-title">FRESH CUT PINE TIMBER AIR DRY</p>
-                                <p class="on-hover">
-                                    Moisture up to 18 %
-                                </p>
-                                <p class="on-hover">
-                                    Size: length up to 6000 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -width up to 150 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -thickness up to 150 mm.
-                                </p>
-                                <p class="on-hover">
-                                    Grade: mix grade AB/ABC/BC
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__timber-klin-dry">
-                            <div class="__content-wrapper">
-                                <p class="tab-title">FRESH CUT PINE TIMBER KLIN DRY</p>
-                                <p class="on-hover">
-                                    Moisture up to 18 %
-                                </p>
-                                <p class="on-hover">
-                                    Size: length up to 6000 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -width up to 150 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -thickness up to 150 mm.
-                                </p>
-                                <p class="on-hover">
-                                    Grade: mix grade AB/ABC/BC
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item">
-                    <div class="products__tab-img">
-                        <div class="tab-name__dead-wood">
-                            <div class="__content-wrapper">
-                                <p class="tab-title">Dead Wood</p>
-                                <p class="on-hover">
-                                    Moisture up to 18 %
-                                </p>
-                                <p class="on-hover">
-                                    Size: length up to 6000 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -width up to 150 mm.
-                                </p>
-                                <p class="on-hover to-right">
-                                    -thickness up to 150 mm.
-                                </p>
-                                <p class="on-hover">
-                                    Grade: mix grade AB/ABC/BC
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/woods-1.webp" type="image/webp"><img class="img-fluid" src="img/woods-1.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-2.webp" type="image/webp"><img class="img-fluid" src="img/wood-2.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-3.webp" type="image/webp"><img class="img-fluid" src="img/wood-3.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-4.webp" type="image/webp"><img class="img-fluid" src="img/wood-4.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-5.webp" type="image/webp"><img class="img-fluid" src="img/wood-5.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-6.webp" type="image/webp"><img class="img-fluid" src="img/wood-6.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-7.webp" type="image/webp"><img class="img-fluid" src="img/wood-7.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-8.webp" type="image/webp"><img class="img-fluid" src="img/wood-8.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__tab-item __stock-image">
-                    <div class="products__tab-img">
-                        <div>
-                            <picture><source srcset="img/wood-9.webp" type="image/webp"><img class="img-fluid" src="img/wood-9.jpg" alt=""></picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+                    @@include('html/tabs.html')
                 </div>
             </div>
         </section>
@@ -1170,7 +428,7 @@
                         <div class="gallery-item swiper-slide">
                             <div class="gallery-item__content">
                                 <div class="gallery-item__image">
-                                    <picture><source srcset="img/chickpeas-2-2.webp" type="image/webp"><img class="img-fluid" src="img/chickpeas-2-2.jpg" alt="photo-1"></picture>
+                                    <img class="img-fluid" src="img/chickpeas-2-2.jpg" alt="photo-1">
                                 </div>
                                 <div class="gallery-item__desc">
                                     <p>
@@ -1182,7 +440,7 @@
                         <div class="gallery-item swiper-slide">
                             <div class="gallery-item__content">
                                 <div class="gallery-item__image">
-                                    <picture><source srcset="img/SPLIT-YELLOW-PEAS-2.webp" type="image/webp"><img class="img-fluid" src="img/SPLIT-YELLOW-PEAS-2.jpg" alt="photo-2"></picture>
+                                    <img class="img-fluid" src="img/SPLIT-YELLOW-PEAS-2.jpg" alt="photo-2">
                                 </div>
                                 <div class="gallery-item__desc">
                                     <p>
@@ -1194,7 +452,7 @@
                         <div class="gallery-item swiper-slide">
                             <div class="gallery-item__content">
                                 <div class="gallery-item__image">
-                                    <picture><source srcset="img/pine-timber-loading-4-2.webp" type="image/webp"><img class="img-fluid" src="img/pine-timber-loading-4-2.jpg" alt="photo-3"></picture>
+                                    <img class="img-fluid" src="img/pine-timber-loading-4-2.jpg" alt="photo-3">
                                 </div>
                                 <div class="gallery-item__desc">
                                     <p>
@@ -1211,7 +469,7 @@
                     </div>
                 </div>
                 <div class="kliptarz__gallery">
-                    <picture><source srcset="img/klipartz-14.webp" type="image/webp"><img src="img/klipartz-14.jpg" alt=""></picture>
+                    <img src="img/klipartz-14.jpg" alt="">
                 </div>
         </section>
         <section class="business-activity to-scrolling" id="business-activity">
@@ -1223,7 +481,7 @@
                     <div class="activity-cards">
                         <div class="activity-card __wood">
                             <div class="activity-card__icon">
-                                <picture><source srcset="img/wood-1.webp" type="image/webp"><img class="img-fluid" src="img/wood-1.png" alt=""></picture>
+                                <img class="img-fluid" src="@img/wood-1.png" alt="">
                             </div>
                             <h3 class="activity-card__title">
                                 up to <span>10000</span> cbm
@@ -1234,7 +492,7 @@
                         </div>
                         <div class="activity-card __turnover">
                             <div class="activity-card__icon">
-                                <picture><source srcset="img/boxes-1.webp" type="image/webp"><img class="img-fluid" src="img/boxes-1.png" alt=""></picture>
+                                <img class="img-fluid" src="@img/boxes-1.png" alt="">
                             </div>
                             <h3 class="activity-card__title">
                                 up to <span>700</span> fcl +
@@ -1245,7 +503,7 @@
                         </div>
                         <div class="activity-card __buyers">
                             <div class="activity-card__icon">
-                                <picture><source srcset="img/participant-1.webp" type="image/webp"><img class="img-fluid" src="img/participant-1.png" alt=""></picture>
+                                <img class="img-fluid" src="@img/participant-1.png" alt="">
                             </div>
                             <h3 class="activity-card__title">
                                 <span>80</span> compamies
@@ -1256,7 +514,7 @@
                         </div>
                         <div class="activity-card __export">
                             <div class="activity-card__icon">
-                                <picture><source srcset="img/agriculture-1.webp" type="image/webp"><img class="img-fluid" src="img/agriculture-1.png" alt=""></picture>
+                                <img class="img-fluid" src="@img/agriculture-1.png" alt="">
                             </div>
                             <h3 class="activity-card__title">
                                 up to <span>9000</span> metric tones
@@ -1267,7 +525,7 @@
                         </div>
                         <div class="activity-card __countries">
                             <div class="activity-card__icon">
-                                <img class="img-fluid" src="img/countries.svg" alt="">
+                                <img class="img-fluid" src="@img/countries.svg" alt="">
                             </div>
                             <h3 class="activity-card__title">
                                 <span>40</span> countries
@@ -1348,32 +606,32 @@
                     <div class="partners-slider__wrapper swiper-wrapper">
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS-1.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-1.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS-1.png" alt="">
                             </div>
                         </div>
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS.png" alt="">
                             </div>
                         </div>
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS-3.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-3.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS-3.png" alt="">
                             </div>
                         </div>
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS-4.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-4.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS-4.png" alt="">
                             </div>
                         </div>
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS-5.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-5.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS-5.png" alt="">
                             </div>
                         </div>
                         <div class="partners-slider__slide swiper-slide">
                             <div class="partners-slider__image">
-                                <picture><source srcset="img/OUR-BUSINESS-PARTNERS-2.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-2.png" alt=""></picture>
+                                <img src="@img/OUR-BUSINESS-PARTNERS-2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -1409,18 +667,10 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-    <div class="footer__container">
-        <div class="footer__content">
-            <p class="copyright">
-                Copyright © 2022
-            </p>
-        </div>
-    </div>
-</footer>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ff8936a5-432c-4783-b92d-fb665bf83d8f&lang=uk_UK&_v=20220426132533"></script>
-    <script src="https://unpkg.com/swiper@6/swiper-bundle.min.js?_v=20220426132533"></script>
-    <script src="js/app.min.js?_v=20220426132533"></script>
+    @@include('html/footer.html',{})
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ff8936a5-432c-4783-b92d-fb665bf83d8f&lang=uk_UK"></script>
+    <script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>
