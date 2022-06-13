@@ -1,0 +1,71 @@
+&[class*="wheat"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/1-klip.jpg) center 50% / cover no-repeat;
+}
+&[class*="barley"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/barley.jpg) center 50% / cover no-repeat;
+}
+&[class*="oats"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/oats.jpg) center 50% / cover no-repeat;
+}
+&[class*="faba"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/faba-beans.jpg) center 50% / cover no-repeat;
+}
+&[class*="red-sorghum"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/red-sorghum.jpg) center 50% / cover no-repeat;
+}
+&[class*="white-sorghum"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/white-sorghum.jpg) center 50% / cover no-repeat;
+}
+&[class*="yellow-peas"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/yellow-peas.jpg) center 50% / cover no-repeat;
+}
+&[class*="yellow-millet"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/yellow-millet.jpg) center 50% / cover no-repeat;
+}
+&[class*="yellow-corn"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/yellow-corn.jpg) center 50% / cover no-repeat;
+}
+&[class*="chickpeas"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/chickpeas.jpg) center 50% / cover no-repeat;
+}
+&[class*="rapeseeds"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/rapeseeds.jpg) center 50% / cover no-repeat;
+}
+&[class*="flax-seeds"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/flax-seeds.jpg) center 50% / cover no-repeat;
+}
+&[class*="coriander"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/coriander.jpg) center 50% / cover no-repeat;
+}
+&[class*="soybean"] {
+	background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+		url(../img/soybean.jpg) center 50% / cover no-repeat;
+}
+@mixin tabs-bg__hover($name, $img) {
+	&[class*="#{$name}"] {
+		background: linear-gradient(0, rgba(216, 125, 26, 0.95) 50%, rgba(216, 125, 26, 0.95) 50%),
+			url(../img/#{$img}.jpg) center 50% / cover no-repeat;
+	}
+}
+@include tabs-bg__hover("sunflower-meal", sunflower-meal);
+@include tabs-bg__hover("sunflower-pellets", sunflower-pellets);
+@include tabs-bg__hover("seeds-cake", seeds-cake);
+@include tabs-bg__hover("feed-wheat", feed-wheat);
+@include tabs-bg__hover("wheat-bran-pellets", wheat-bran-pellets);
+@include tabs-bg__hover("soybean-meal", soybean-meal);
+@include tabs-bg__hover("timber-air-dry", timber-air-dry);
+@include tabs-bg__hover("timber-klin-dry", timber-klin-dry);
+@include tabs-bg__hover("dead-wood", dead-wood);
