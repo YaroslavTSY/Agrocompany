@@ -568,7 +568,8 @@ h4 {
 
 [class*=__container],
 .container {
-  max-width: 1344px;
+  max-width: 1392;
+  max-width: 1392px;
   margin: 0 auto;
   padding-left: calc(16px + 8 * ((100vw - 320px) / 1120));
   padding-right: calc(16px + 8 * ((100vw - 320px) / 1120));
@@ -1952,11 +1953,6 @@ h2.section-title__control {
   overflow: hidden;
 }
 
-.products__tab-item.__stock-image .products__tab-img div .img-fluid {
-  width: auto;
-  height: auto;
-}
-
 .to-right {
   margin-left: 12%;
 }
@@ -2730,6 +2726,11 @@ input[name=email] {
 }
 
 @media (min-width: 1344px) {
+  [class*=__container],
+  .container {
+    max-width: calc(800px + 592 * ((100vw - 320px) / 1120));
+  }
+
   .tab-cta__cta {
     font-size: calc(1px + 13 * ((100vw - 320px) / 1120));
   }
@@ -2794,6 +2795,13 @@ input[name=email] {
 
   .desc__text {
     font-size: calc(15px + 10 * ((100vw - 320px) / 1024));
+  }
+}
+
+@media (max-width: 84em) {
+  .products__tab-item.__stock-image .products__tab-img div .img-fluid {
+    width: auto;
+    height: auto;
   }
 }
 
@@ -2978,6 +2986,16 @@ input[name=email] {
 
   .menu__body._active {
     left: 0;
+  }
+
+  .offer-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .offer-cta {
+    margin: 0 auto;
   }
 
   .about-wrapper__container {
@@ -3302,19 +3320,9 @@ input[name=email] {
 }
 
 @media (max-width: 35.9375em) {
-  .offer-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .offer {
     margin: 250px 0 100px 0;
     text-align: center;
-  }
-
-  .offer-cta {
-    margin: 0 auto;
   }
 }
 
