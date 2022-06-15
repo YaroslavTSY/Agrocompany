@@ -1255,8 +1255,10 @@ h2.section-title__control {
 .products__tab-item.__stock-image {
 	overflow: hidden;
 	.products__tab-img div .img-fluid {
-		width: auto;
-		height: auto;
+		@media (max-width: em(1344px)) {
+			width: auto;
+			height: auto;
+		}
 	}
 }
 
