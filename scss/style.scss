@@ -100,7 +100,8 @@ h4 {
 }
 [class*="__container"],
 .container {
-	max-width: 1344px;
+	max-width: calc($maxWidthContainer + 48);
+	@include adaptiv-value("max-width", 1392, 800, 2);
 	margin: 0 auto;
 	@include adaptiv-value("padding-left", 24, 16, 0);
 	@include adaptiv-value("padding-right", 24, 16, 0);
