@@ -1463,10 +1463,14 @@ h3 {
   grid-template-rows: 1fr;
   grid-auto-flow: row;
       grid-template-areas: ". control__icon";
-  justify-items: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.control__content > * {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .control__icon {
@@ -3075,8 +3079,12 @@ input[name=email] {
     -ms-grid-rows: 1fr 80px 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 80px;
-    justify-items: center;
         grid-template-areas: "." "control__icon";
+  }
+
+  .control__content > * {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 
   h2.section-title__control {
