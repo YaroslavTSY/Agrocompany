@@ -7,7 +7,6 @@ import * as tabToSection from "./modules/tabToSection.js";
 import * as showAboutText from "./modules/showAboutText.js";
 import * as productsTabs from "./modules/tabsProducts.js"
 import * as sliders from "./modules/sliders.js";
-import * as map from "./modules/map.js";
 
 
 functions.isWebp();
@@ -46,9 +45,6 @@ window.onload = function () {
 	sliders.docsSlider;
 	sliders.gallerySlider;
 	sliders.partnersSlider;
-
-	//Yandex map's imported from map.js
-	map
 }
 
 

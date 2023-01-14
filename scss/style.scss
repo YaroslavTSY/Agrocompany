@@ -1023,13 +1023,17 @@ h3 {
 	grid-template-rows: 1fr;
 	grid-auto-flow: row;
 	grid-template-areas: ". control__icon";
-	justify-items: end;
-	align-items: center;
+	> * {
+		align-self: center;
+		justify-self: end;
+	}
 	@media (max-width: em(768px)) {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 		gap: 80px;
-		justify-items: center;
+		> * {
+			justify-self: center;
+		}
 		grid-template-areas:
 			"."
 			"control__icon";
