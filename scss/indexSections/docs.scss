@@ -1,0 +1,72 @@
+//* Docs
+.docs {
+	&__container {
+	}
+
+	&__desc {
+	}
+}
+.section-title__docs {
+	@extend .section-title__biz;
+	@include adaptiv-value("width", 827, 300, 0);
+	@include adaptiv-value("height", 96, 70, 0);
+	color: var(--base-color);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--accent-color);
+	align-self: flex-start;
+	padding: 0 4vw 0 0;
+	border-radius: 0px 0px 35px 0px;
+	margin: -4.375rem 0 0 0;
+}
+.desc {
+	&__icon {
+	}
+
+	&__text {
+	}
+}
+.swiper-container {
+}
+.docs-slider {
+	&__wrapper {
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.docs-item {
+}
+.document {
+}
+.document-image {
+}
+.img-fluid {
+}
+.certificate {
+}
+.documnet-image {
+}
+.swiper-button-next {
+}
+.docs-button-next {
+}
+.swiper-button-prev {
+}
+.docs-button-prev {
+}
+.swiper-pagination {
+}
+.docs-pagination {
+}
+.swiper-srollbar {
+}
+.docs-srollbar {
+}
+.kliptarz {
+	&__docs {
+	}
+}
+// Docs

@@ -1,0 +1,20 @@
+$base-font-size: 16px;
+
+//Adaptiv value
+$maxWidth: 1440;
+$maxWidthContainer: 1200;
+
+// Colors
+@import "varsColors";
+
+// Style's
+
+// Header sizes
+$startHeightHeader: 105;
+$smallHeightHeader: 60;
+
+// Real vars:
+html {
+	--hovercursor: url(../img/cursor/hover.png);
+	--defautBorderRadius: 6px;
+}

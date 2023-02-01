@@ -1,0 +1,187 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Mulish", sans-serif;
+	height: 100%;
+	background-color: var(--base-color);
+	color: var(--main-color);
+	&._lock {
+		overflow: hidden;
+	}
+	svg,
+	svg path {
+		transition: fill 0.3s ease 0s;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	user-select: text;
+	&::selection {
+		background-color: var(--base-color);
+		color: var(--orange-color);
+	}
+}
+
+a {
+	cursor: var(--hovercursor), pointer;
+}
+
+[class*="__container"],
+.container {
+	@include adaptiv-value("max-width", $maxWidthContainer + 48, 800, 2);
+	margin: 0 auto;
+	@include adaptiv-value("padding-left", 24, 16, 0);
+	@include adaptiv-value("padding-right", 24, 16, 0);
+}
+// h1 {
+// 	@include adaptiv-value("font-size", 48, 35, 0);
+// }
+h2 {
+	@include adaptiv-value("font-size", 35, 28, 0);
+}
+h3 {
+	@include adaptiv-value("font-size", 28, 24, 0);
+}
+h4 {
+	@include adaptiv-value("font-size", 24, 20, 0);
+}
+// h5 {
+// 	@include adaptiv-value("font-size", 20, 18, 0);
+// }
+// h6 {
+// 	@include adaptiv-value("font-size", 18, $rootfz, 0);
+// }
+p {
+	@include adaptiv-value("font-size", $rootfz, 12, 2);
+	line-height: 1.5em;
+}
+
+.page {
+	> section:nth-child(1) {
+		@include adaptiv-value("padding-top", $startHeightHeader, $smallHeightHeader, 2);
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+.page {
+}
+
+section {
+	position: relative;
+	margin: 5rem 0;
+}
+
+[class*="section-title"] {
+	line-height: 114%;
+	text-transform: uppercase;
+	font-weight: 800;
+	@include adaptiv-value("font-size", 35, 28, 0);
+	background: #fff;
+	z-index: 1;
+}
+
+.max-full-screen {
+	max-height: 90vh;
+}
+
+.btn {
+}
+
+.subtitle {
+}
+
+.title {
+}
+
+.text {
+}
+
+.type-block {
+	.subtitle {
+	}
+	.title {
+	}
+	.text {
+	}
+}
+
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.jc-center {
+	justify-content: center;
+}
+
+.p-0 {
+	padding: 0;
+}
+
+.height-fit {
+	height: fit-content;
+}
+
+//! If need
+/*
+
+
+%visible {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+%invisible {
+	transform: translate(0, -50%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.underline {
+	position: relative;
+	&::after {
+		transition: transform 0.3s ease 0s;
+		left: 0;
+		transform: scaleX(0);
+		transform-origin: center;
+		content: " ";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background-color: var(--main-color);
+	}
+	&:hover {
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+*/

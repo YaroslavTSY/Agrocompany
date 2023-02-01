@@ -1,0 +1,36 @@
+//* Fisrt screen
+.first-screen {
+	background: linear-gradient(65deg, rgba(23, 27, 0, 0.6) 10%, rgba(196, 196, 196, 0) 80%),
+		url(../img/combainu.jpg) center 50% / cover no-repeat;
+	color: #fff;
+	position: relative;
+	margin-top: 0;
+	height: calc(100vh - #{$startHeightHeader + px});
+}
+.offer {
+	margin: 9.3125rem 0 12.1875rem 0;
+	@include adaptiv-value("gap", 31, 30, 0);
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	align-items: flex-start;
+	z-index: 2;
+	&-wrapper {
+		display: flex;
+	}
+	&-title {
+		@include adaptiv-value("font-size", 45, 25, 0);
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	&-subtitle {
+		@include adaptiv-value("font-size", 18, 12, 0);
+	}
+	&-cta {
+		@extend .call__cta;
+		padding: 21px 38px;
+		@include adaptiv-value("font-size", 18, 20, 0);
+	}
+}
+// First screen

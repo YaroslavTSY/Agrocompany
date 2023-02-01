@@ -1,0 +1,59 @@
+//Adaptiv value
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	@if $type == 1 {
+		//* REM
+		//If smaller then Container
+		#{$property}: rem($startSize);
+		@media (max-width: em($maxWidthContainer)) {
+			#{$property}: calc(#{rem($minSize)} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 2 {
+		//* REM
+		//If bigger then Screen
+		#{$property}: rem($startSize);
+		@media (min-width: em($maxWidth)) {
+			#{$property}: calc(#{rem($minSize)} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else if $type == 3 {
+		//? Percent
+		//Always
+		#{$property}: calc(#{$minSize * 1%} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	} @else if $type == 4 {
+		//? Percent
+		//If smaller then Container
+		#{$property}: #{$startSize * 1%};
+		@media (max-width: em($maxWidthContainer)) {
+			#{$property}: calc(#{$minSize * 1%} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 5 {
+		//? Percent
+		//If bigger then Container
+		#{$property}: $startSize * 1%;
+		@media (min-width: em($maxWidth)) {
+			#{$property}: calc(#{$minSize * 1%} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else if $type == 6 {
+		//! PX
+		//Always
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	} @else if $type == 7 {
+		//! PX
+		//If smaller then Container
+		#{$property}: #{$startSize + px};
+		@media (max-width: em($maxWidthContainer)) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 8 {
+		//! PX
+		//If bigger then Screen
+		#{$property}: #{$startSize + px};
+		@media (min-width: em($maxWidth)) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//* REM
+		//Always
+		#{$property}: calc(#{rem($minSize)} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
