@@ -1,41 +1,78 @@
 //* Business Activity
 .business-activity {
 }
-.section-title {
-	&__activity {
-	}
+.section-title__activity {
+	@extend .section-title__biz;
+	@include adaptiv-value("width", 1050, 300, 0);
+	@include adaptiv-value("height", 96, 70, 0);
+	float: right;
+	margin-top: -2.5%;
+	display: flex;
+	align-items: center;
+	padding: 2.16vw 0 2.15vw 11.75vw !important;
 }
 .activity {
 	&__content {
+		background: linear-gradient(0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),
+			url(../img/business-activity-bg.jpg) 60% 50% / cover no-repeat;
+		padding: 6.25rem 0 4.625rem 0;
 	}
 
 	&__container {
 	}
 }
 .activity-cards {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 4.375rem 1.875rem;
+	grid-template-areas:
+		"__wood __wood __turnover __turnover __buyers __buyers"
+		". __export __export __countries __countries .";
 }
 .activity-card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	align-items: center;
+	// flex: 33% 1 1;
+	padding: em(20px);
 	&__icon {
+		margin-bottom: 0.625em;
 	}
 
 	&__title {
+		font-weight: 600;
+		color: var(--accent-color);
+		span {
+			font-weight: 700;
+		}
+		margin-bottom: 0.625em;
 	}
 
 	&__subtitle {
+		font-weight: 700;
+		color: var(--second-color);
 	}
 	&.__wood {
+		grid-area: __wood;
 	}
 
 	&.__turnover {
+		grid-area: __turnover;
 	}
 
 	&.__buyers {
+		grid-area: __buyers;
 	}
 
 	&.__export {
+		grid-area: __export;
 	}
 
 	&.__countries {
+		grid-area: __countries;
 	}
 }
 // Business Activity

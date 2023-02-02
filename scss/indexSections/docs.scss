@@ -1,9 +1,17 @@
 //* Docs
 .docs {
+	background: #fffaf2;
+	padding-bottom: 2.5vh;
 	&__container {
 	}
 
 	&__desc {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 3.625rem 0 2.6875rem 0;
+		padding: 0 3vw;
+		column-gap: 0.625rem;
 	}
 }
 .section-title__docs {
@@ -25,12 +33,20 @@
 	}
 
 	&__text {
+		@include adaptiv-value("font-size", 25, 15, 1);
 	}
 }
 .swiper-container {
 }
 .docs-slider {
+	z-index: 2;
 	&__wrapper {
+		.swiper-slide-active {
+			.certificate {
+				display: flex;
+				justify-content: start;
+			}
+		}
 	}
 }
 .swiper-wrapper {
@@ -40,12 +56,31 @@
 .docs-item {
 }
 .document {
+	position: relative;
+	picture img,
+	img {
+		@include adaptiv-value("width", 400, 258, 0);
+		@include adaptiv-value("height", 580, 356, 0);
+		object-fit: cover;
+		object-position: center;
+	}
 }
 .document-image {
 }
 .img-fluid {
 }
 .certificate {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 0.7vw 0 0.7vw 3vw;
+	background: #85bf2d;
+	border-radius: 0px 35px 0px 0px;
+	font-size: 1.125rem;
+	line-height: 2.22em;
+	color: #fff;
 }
 .documnet-image {
 }

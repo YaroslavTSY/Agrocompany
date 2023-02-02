@@ -61,12 +61,12 @@
 		padding: $padding; // 31% 1%
 	}
 }
-@include tabs-bg__normal("sunflower-meal", sunflower-meal, 0 10px);
-@include tabs-bg__normal("sunflower-pellets", sunflower-pellets, 0 10px);
-@include tabs-bg__normal("seeds-cake", seeds-cake, 0 10px);
-@include tabs-bg__normal("feed-wheat", feed-wheat, 0 10px);
-@include tabs-bg__normal("wheat-bran-pellets", wheat-bran-pellets, 0 10px);
-@include tabs-bg__normal("soybean-meal", soybean-meal, 0 10px);
-@include tabs-bg__normal("timber-air-dry", timber-air-dry, 0 10px);
-@include tabs-bg__normal("timber-klin-dry", timber-klin-dry, 0 10px);
-@include tabs-bg__normal("dead-wood", dead-wood, 0 10px);
+@include tabs-bg__normal("sunflower-meal", sunflower-meal, 0 0.625rem);
+@include tabs-bg__normal("sunflower-pellets", sunflower-pellets, 0 0.625rem);
+@include tabs-bg__normal("seeds-cake", seeds-cake, 0 0.625rem);
+@include tabs-bg__normal("feed-wheat", feed-wheat, 0 0.625rem);
+@include tabs-bg__normal("wheat-bran-pellets", wheat-bran-pellets, 0 0.625rem);
+@include tabs-bg__normal("soybean-meal", soybean-meal, 0 0.625rem);
+@include tabs-bg__normal("timber-air-dry", timber-air-dry, 0 0.625rem);
+@include tabs-bg__normal("timber-klin-dry", timber-klin-dry, 0 0.625rem);
+@include tabs-bg__normal("dead-wood", dead-wood, 0 0.625rem);

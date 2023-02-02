@@ -21,18 +21,28 @@
 	&__wrapper {
 	}
 }
-.swiper-container {
-}
-.swiper-wrapper {
-}
 .gallery-item {
 	&__content {
+		position: relative;
+		// width: 89.7%;
+		max-height: 100%;
 	}
 
 	&__image {
+		@extend .document;
 	}
 
 	&__desc {
+		@extend .certificate;
+		padding: 1vw 0 1vw 0;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: em(40px);
+		letter-spacing: em(0.1px);
+		position: absolute;
+		bottom: 2%;
+		display: flex;
+		justify-content: center;
 	}
 }
 .swiper-slide {

@@ -5,7 +5,13 @@
 	color: #fff;
 	position: relative;
 	margin-top: 0;
-	height: calc(100vh - #{$startHeightHeader + px});
+	height: calc(
+		100vh -
+			calc(
+				#{rem($smallHeightHeader)} + #{$startHeightHeader - $smallHeightHeader} *
+					((100vw - 320px) / #{$maxWidth - 320})
+			)
+	);
 }
 .offer {
 	margin: 9.3125rem 0 12.1875rem 0;
