@@ -3,7 +3,18 @@
 	}
 
 	&__content {
+		height: 3.9375rem;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
 	}
 }
 .copyright {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	line-height: 3.33em;
+	color: var(--main-color);
 }

@@ -1,3 +1,101 @@
+#hideAll {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--base-color);
+	z-index: 99;
+	> div {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		> div {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&.__active {
+		animation: hideAll 0.5s linear 0s 1 normal forwards;
+		> div {
+			display: none;
+		}
+	}
+}
+
+@keyframes hideAll {
+	0% {
+		opacity: 1;
+		z-index: 99;
+	}
+	99% {
+		opacity: 0;
+		pointer-events: none;
+	}
+	100% {
+		z-index: -99;
+		display: none;
+	}
+}
+
+.lds-ellipsis {
+	display: inline-block;
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+}
+.lds-ellipsis div {
+	position: absolute;
+	top: 4.125rem;
+	width: 1.625rem;
+	height: 1.625rem;
+	border-radius: 50%;
+	background: var(--accent-color);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+	left: 1rem;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+	left: 1rem;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+	left: 4rem;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+	left: 7rem;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(3rem, 0);
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -7,6 +105,7 @@ body {
 	height: 100%;
 	background-color: var(--base-color);
 	color: var(--main-color);
+	position: relative;
 	&._lock {
 		overflow: hidden;
 	}
@@ -14,6 +113,24 @@ body {
 	svg path {
 		transition: fill 0.3s ease 0s;
 	}
+}
+
+::-webkit-scrollbar {
+	width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px #7ba1c3;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--accent-color);
+	-webkit-box-shadow: inset 0 0 6px #4d9ad866;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #416e1c;
 }
 
 h1,
@@ -27,7 +144,7 @@ span {
 	user-select: text;
 	&::selection {
 		background-color: var(--base-color);
-		color: var(--orange-color);
+		color: var(--second-accent-color);
 	}
 }
 

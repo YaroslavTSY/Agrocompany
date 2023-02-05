@@ -8,9 +8,25 @@ import * as showAboutText from "./modules/showAboutText.js";
 import * as productsTabs from "./modules/tabsProducts.js"
 import * as sliders from "./modules/sliders.js";
 
-
 functions.isWebp();
 
+let oldIE = false;
+
+if (oldIE) {
+	functions.ie7();
+}
+
+const headerNav = document.querySelector('.header-nav');
+const offerCta = document.querySelector('.offer-cta');
+const headerNavAddClass = () => headerNav.classList.add("__active");
+const headerNavRemoveClass = () => headerNav.classList.remove("__active");
+window.addEventListener('scroll', function () {
+	let scrollpos = window.scrollY;
+
+	if (scrollpos >= 1) { headerNavRemoveClass(); offerCta.classList.add("__active"); }
+	else { headerNavAddClass(); offerCta.classList.remove("__active"); }
+
+})
 
 // Navigation //
 
@@ -37,6 +53,8 @@ productsTabs
 
 
 window.onload = function () {
+	document.getElementById('hideAll').classList.add('__active');
+	headerNavAddClass();
 	// ! import from navScroll.js
 	// Change class "_active" for Nav on Scroll to Section
 	navScroll

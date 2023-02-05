@@ -1,5 +1,6 @@
 //* Business Activity
 .business-activity {
+	margin-bottom: 0;
 }
 .section-title__activity {
 	@extend .section-title__biz;
@@ -53,7 +54,7 @@
 
 	&__subtitle {
 		font-weight: 700;
-		color: var(--second-color);
+		color: var(--base-color);
 	}
 	&.__wood {
 		grid-area: __wood;

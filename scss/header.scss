@@ -5,14 +5,16 @@
 	background-color: var(--base-color);
 	color: var(--main-color);
 	&__bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		@include adaptiv-value("font-size", 18, 14, 0);
 		@include adaptiv-value("min-height", $startHeightHeader, $smallHeightHeader, 0);
 		line-height: 1.25em;
 		letter-spacing: 0.01em;
-		align-items: center;
-		justify-content: space-between;
 	}
 	&-logo {
+		display: flex;
 		align-items: center;
 		@include adaptiv-value("max-width", 29, 40, 3);
 		&__logo img {
@@ -26,18 +28,11 @@
 		}
 	}
 	&-nav {
+		display: flex;
 		align-items: center;
 		@include adaptiv-value("gap", 51, -15, 1);
-		&__social {
-			@include adaptiv-value("gap", 20, 0, 0);
-		}
-		&__email {
-			@include adaptiv-value("gap", 8, -5, 0);
-			align-items: center;
-		}
-		&__phone {
-			@include adaptiv-value("gap", 8, -5, 0);
-			align-items: center;
+		> * i {
+			color: var(--accent-color);
 		}
 	}
 	&__menu {
@@ -45,22 +40,48 @@
 	}
 }
 
+.social {
+	display: flex;
+	@include adaptiv-value("gap", 20, 0, 0);
+	&__logo {
+		font-size: 1.875rem;
+	}
+}
+.email {
+	display: flex;
+	align-items: center;
+	@include adaptiv-value("gap", 8, -5, 0);
+	&__logo {
+		font-size: 1.25rem;
+	}
+	&__link {
+	}
+}
+
 .phone {
-	font-weight: 800;
+	display: flex;
+	@include adaptiv-value("gap", 8, -5, 0);
+	align-items: center;
+	&__logo {
+		font-size: 1.375rem;
+	}
+	&__number {
+		font-weight: 800;
+	}
 }
 
 .call__cta {
 	text-align: center;
-	@include adaptiv-value("font-size", 14, 16, 0);
+	@include adaptiv-value("font-size", 14, 17, 0);
 	font-weight: 700;
 	color: var(--base-color);
 	background: var(--accent-color);
 	border-radius: 30px;
 	letter-spacing: 0.06em;
-	@include adaptiv-value("padding-top", 13, 7, 0);
-	@include adaptiv-value("padding-bottom", 13, 7, 0);
-	@include adaptiv-value("padding-left", 40, 20, 0);
-	@include adaptiv-value("padding-right", 40, 20, 0);
+	@include adaptiv-value("padding-top", 13, 7, 2);
+	@include adaptiv-value("padding-bottom", 13, 7, 2);
+	@include adaptiv-value("padding-left", 40, 20, 2);
+	@include adaptiv-value("padding-right", 40, 20, 2);
 	transition: all 0.3s ease 0s;
 	&:hover {
 		box-shadow: inset 0px -1px 100px -50px rgb(0 128 0 / 70%), 1px 7px 45px -20px #29dd4f,
@@ -70,7 +91,6 @@
 
 .menu {
 	&__icon {
-		display: none;
 		&._active {
 			span {
 				transition: all 0.3s ease 0s;
@@ -90,7 +110,7 @@
 	&__body {
 		overflow: auto;
 		background: rgba(133, 191, 45, 0.6);
-		transition: left 0.3s ease 0s;
+		transition: left 0.4s ease 0.1s;
 	}
 
 	&__list {

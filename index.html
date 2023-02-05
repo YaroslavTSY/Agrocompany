@@ -3,6 +3,18 @@
 @@include('html/head.html',{ "title":"TBB TRADING DMCC" })
 
 <body>
+	<div id="hideAll">
+		<div>
+			<div>
+				<div class="lds-ellipsis">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
 	@@include('html/header.html',{})
 	<main class="main">
 		<section class="first-screen" id="first-screen">
@@ -544,7 +556,7 @@
 			</h2>
 			<div class="contact__container">
 				<div class="contact-info">
-					<div class="contact-card">
+					<div class="contact-card contact-card__uae">
 						<h3 class="contact-title">
 							Office in UAE
 						</h3>
@@ -565,7 +577,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="contact-card">
+					<div class="contact-card contact-card__ukraine">
 
 						<h3 class="contact-title">
 							Office in Ukraine
@@ -587,7 +599,7 @@
 						</p>
 
 					</div>
-					<div class="contact-card">
+					<div class="contact-card contact-card__warehouse">
 						<h3 class="contact-title">
 							WAREHOUSE
 						</h3>
@@ -668,6 +680,9 @@
 		</section>
 	</main>
 	@@include('html/footer.html',{})
+	<!--[if lt IE 8]>
+		<script type="text/javascript">oldIE = true;</script>
+	<![endif]-->
 	<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>

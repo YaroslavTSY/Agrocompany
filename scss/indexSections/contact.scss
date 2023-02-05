@@ -1,23 +1,70 @@
 //* Contact
 .contact {
+	margin-top: 0;
 	&__container {
 	}
 }
-.section-title {
-	&__contact {
-	}
+.section-title__contact {
+	@extend .section-title__docs;
+	margin: 0 0 em(23px) 0;
+	box-shadow: 0 0 0 0;
 }
 .contact-info {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	gap: 3.75rem;
+	grid-template-areas: "uae ukraine warehouse";
 }
 .contact-card {
+	display: flex;
+	justify-content: start;
+	font-size: 1rem;
+	line-height: 1.56em;
+	letter-spacing: em(0.2px);
+	display: flex;
+	flex-direction: column;
+	gap: 1.4375rem 0;
+	color: #6b6b6b;
+	span {
+		font-weight: 800;
+	}
 	&__tbb-content {
+		@extend .contact-card__content !optional;
+		p.contact-addres {
+			max-width: 80%;
+		}
+		position: relative;
+	}
+	&__ukraine {
+		grid-area: ukraine;
+	}
+	&__uae {
+		grid-area: uae;
+	}
+	&__warehouse {
+		grid-area: warehouse;
 	}
 }
 .contact-title {
+	text-transform: uppercase;
+	font-weight: 800;
+	line-height: 1.5em;
+	color: #373f41;
+	@include adaptiv-value("margin-bottom", 20, 10, 0);
 	&__partners {
+		margin-top: 5rem;
+		margin-bottom: 1.5625em;
 	}
 }
 .contact-tbb {
+	font-weight: 800;
+	@include adaptiv-value("font-size", 20, 18, 0);
+	line-height: 1.56em;
+	letter-spacing: 0.0125em;
+	color: var(--accent-color);
+	position: absolute;
+	top: -23%;
 }
 .contact-addres {
 }
@@ -35,12 +82,19 @@
 }
 .partners-slider {
 	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__slide {
 	}
 
 	&__image {
+		text-align: center;
+		img {
+			max-width: 100%;
+		}
 	}
 }
 .swiper-container {
@@ -50,6 +104,18 @@
 .swiper-slide {
 }
 .partners-scrollbar {
+	@extend .swiper-scrollbar;
+	max-width: 30%;
+	margin: 0 auto;
+	&.swiper-scrollbar {
+		max-width: 40%;
+		height: 0.1875rem;
+		margin: 0.625rem auto 0 auto;
+		position: relative;
+		.swiper-scrollbar-drag {
+			border-width: 0.125rem;
+		}
+	}
 }
 .swiper-scrollbar {
 }

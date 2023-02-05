@@ -27,6 +27,17 @@
 	.activity-card__title {
 		line-height: 156%;
 	}
+	.contact-card {
+		&__ukraine {
+			margin-right: auto;
+		}
+		&__uae {
+			margin: 0 auto;
+		}
+		&__warehouse {
+			margin-left: auto;
+		}
+	}
 }
 @media (min-width: em(768px)) {
 	.menu {
@@ -91,6 +102,11 @@
 			justify-self: end;
 		}
 	}
+	.reg {
+		&__submit {
+			max-width: 100%;
+		}
+	}
 }
 //* Desktop-first
 @media (max-width: em(1399px)) {
@@ -109,17 +125,27 @@
 	.container {
 		max-width: 71.25rem;
 	}
-	.header-nav__email {
-		display: none;
-	}
 }
 @media (max-width: em(991px)) {
 	[class*="__container"],
 	.container {
 		max-width: 60rem;
 	}
-	.header-logo__desc {
-		display: none;
+	.header {
+		&-logo__desc {
+			display: none;
+		}
+		&-nav {
+			&,
+			&__social {
+				@include adaptiv-value("gap", 35.5, 75, 1);
+			}
+			&__phone {
+				.phone__number {
+					display: none;
+				}
+			}
+		}
 	}
 	.offer {
 		&-subtitle {
@@ -152,6 +178,13 @@
 			margin-bottom: 0.625rem;
 		}
 	}
+	.contact-info {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas:
+			"uae ukraine"
+			"warehouse ukraine";
+	}
 }
 @media (max-width: em(767px)) {
 	[class*="__container"],
@@ -167,18 +200,53 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		&-nav {
-			display: none;
-			&__phone {
-				display: none;
+		&__menu {
+			display: block;
+		}
+	}
+	.header-nav {
+		transition: right 0.4s ease 0.1s;
+		position: fixed;
+		height: calc(
+			100vh -
+				calc(
+					#{rem($smallHeightHeader)} + #{$startHeightHeader - $smallHeightHeader} *
+						((100vw - 320px) / #{$maxWidth - 320})
+				)
+		);
+		padding: 5%;
+		right: -100%;
+		bottom: 0;
+		> * i {
+			color: var(--base-color);
+		}
+		&,
+		&__social {
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-end;
+			> a:not(.call__cta) {
+				width: 2rem;
+				display: flex;
+				justify-content: center;
 			}
 		}
-		&-block {
-			display: block;
+		.call__cta {
+			margin-top: 2rem;
+			background-color: var(--base-color);
+			color: var(--accent-color);
+		}
+		.email__link {
+			display: none;
+		}
+		&.__active {
+			right: 0;
 		}
 	}
 	.menu {
 		&__body {
+			width: 100%;
+			height: 100%;
 			background: rgba(108, 155, 37, 0.9);
 			position: fixed;
 			z-index: 5;
@@ -187,15 +255,13 @@
 			&._active {
 				left: 0;
 			}
-			width: 100%;
-			height: 100%;
 		}
 		&__icon {
 			display: block;
 			z-index: 6;
 			position: relative;
-			width: 30px;
-			height: 18px;
+			width: 1.875rem;
+			height: 1.125rem;
 			cursor: pointer;
 			transition: all 0.3s ease 0s;
 			&::before,
@@ -206,7 +272,7 @@
 				height: 10%;
 				width: 100%;
 				transition: all 0.3s ease 0s;
-				background: #000;
+				background: var(--main-color);
 			}
 			&::before,
 			&::after {
@@ -251,7 +317,14 @@
 			@include adaptiv-value("font-size", 45, 42, 0);
 		}
 		&-cta {
+			transition: all 0.4s ease 0.1s;
 			margin: 0 auto;
+			opacity: 0;
+			pointer-events: none;
+			&.__active {
+				opacity: 1;
+				pointer-events: all;
+			}
 		}
 	}
 	.section-title {
@@ -363,11 +436,35 @@
 	.activity-card.__countries {
 		width: 100%;
 	}
+	.contact-info {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas:
+			"uae"
+			"ukraine"
+			"warehouse";
+	}
+	.contact-card {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&__tbb-content {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.feedback {
+		&__content {
+			flex-direction: column;
+		}
+		&__reg {
+			border-radius: 0 0 35px 0;
+		}
+	}
 }
 @media (max-width: em(575px)) {
-	.header-nav__social {
-		display: none;
-	}
 	.offer {
 		margin: 15.625rem 0 6.25rem 0;
 		text-align: center;
