@@ -2,7 +2,6 @@
 .control {
 	margin: 6.25rem 0;
 	&_btn {
-		@extend .call__cta;
 		padding: 1.375rem 2.5rem;
 		background: #416e1c;
 		border-radius: 30px;

@@ -16,15 +16,15 @@ if (oldIE) {
 	functions.ie7();
 }
 
-const headerNav = document.querySelector('.header-nav');
+const headerContacts = document.querySelector('.header__contacts');
 const offerCta = document.querySelector('.offer-cta');
-const headerNavAddClass = () => headerNav.classList.add("__active");
-const headerNavRemoveClass = () => headerNav.classList.remove("__active");
+const headerContactsAddClass = () => headerContacts.classList.add("__active");
+const headerContactsRemoveClass = () => headerContacts.classList.remove("__active");
 window.addEventListener('scroll', function () {
 	let scrollpos = window.scrollY;
 
-	if (scrollpos >= 1) { headerNavRemoveClass(); offerCta.classList.add("__active"); }
-	else { headerNavAddClass(); offerCta.classList.remove("__active"); }
+	if (scrollpos >= 1) { headerContactsRemoveClass(); offerCta.classList.add("__active"); }
+	else { headerContactsAddClass(); offerCta.classList.remove("__active"); }
 
 })
 
@@ -54,7 +54,7 @@ productsTabs
 
 window.onload = function () {
 	document.getElementById('hideAll').classList.add('__active');
-	headerNavAddClass();
+	headerContactsAddClass();
 	// ! import from navScroll.js
 	// Change class "_active" for Nav on Scroll to Section
 	navScroll

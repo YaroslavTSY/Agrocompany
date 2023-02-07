@@ -1,18 +1,18 @@
 
-    const mainHeader = document.querySelector('.header');
-    let menuBody = document.querySelector('.menu__body');
+const mainHeader = document.querySelector('.header');
+const menuBody = document.querySelector('.menu__body');
 
-    let scrollpos = window.scrollY
+let scrollpos = window.scrollY;
 
-    const scrollChange = mainHeader.clientHeight
+const scrollChange = mainHeader.clientHeight;
 
-    const add_class_on_scroll = () => menuBody.classList.add("scroll")
-    const remove_class_on_scroll = () => menuBody.classList.remove("scroll")
+const add_class_on_scroll = () => menuBody.classList.add("scroll")
+const remove_class_on_scroll = () => menuBody.classList.remove("scroll")
 
-    window.addEventListener('scroll', function () {
-        scrollpos = window.scrollY;
+window.addEventListener('scroll', function () {
+	scrollpos = window.scrollY;
 
-        if (scrollpos >= scrollChange) { add_class_on_scroll() }
-        else { remove_class_on_scroll() }
+	if (scrollpos >= scrollChange) { add_class_on_scroll() }
+	else { remove_class_on_scroll() }
 
-    })
+})

@@ -34,10 +34,51 @@
 		@include adaptiv-value("font-size", 18, 12, 0);
 	}
 	&-cta {
-		@extend .call__cta;
 		padding: 21px 38px;
 		@include adaptiv-value("font-size", 18, 20, 0);
 		transition: all 0.5s ease 0.2s;
+	}
+}
+.menu {
+	&__body {
+		overflow: auto;
+		background: rgba(133, 191, 45, 0.6);
+		transition: left 0.4s ease 0.1s;
+	}
+
+	&__list {
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 1.3125rem;
+		@include adaptiv-value("font-size", 16, 6, 1);
+		li {
+			&._active {
+				a {
+					font-weight: 700;
+					transform: skew(1.1);
+					border-bottom: 4px solid var(--base-color);
+				}
+			}
+			a {
+				@include adaptiv-value("padding-top", 33, 18, 0);
+				@include adaptiv-value("padding-bottom", 29, 15, 0);
+				color: var(--base-color);
+				height: 100%;
+				display: inline-flex;
+				transition: all 0.4s;
+				border-bottom: 4px solid transparent;
+				&:hover {
+					border-bottom: 4px solid var(--base-color);
+				}
+			}
+		}
+		> :not(:last-child) {
+		}
+	}
+
+	&__link {
 	}
 }
 // First screen

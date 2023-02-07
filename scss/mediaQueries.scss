@@ -1,5 +1,5 @@
 //* Mobile-first
-@media (min-width: em($maxWidth)) {
+@media (min-width: em($maxWidth + 1)) {
 	.swiper-button-prev,
 	.swiper-button-next {
 		@include adaptiv-value("padding", 30, 5, 2);
@@ -21,9 +21,6 @@
 		background: linear-gradient(65deg, rgba(23, 27, 0, 0.6) 10%, rgba(196, 196, 196, 0) 60%),
 			url(../img/combainu.jpg) center 50% / cover no-repeat;
 	}
-	.header-logo__desc {
-		@include adaptiv-value("max-width", 153, 50, 2);
-	}
 	.activity-card__title {
 		line-height: 156%;
 	}
@@ -40,6 +37,12 @@
 	}
 }
 @media (min-width: em(768px)) {
+	.email,
+	.phone {
+		> :not(:last-child) {
+			@include adaptiv-value("margin-right", 8, 0, 0);
+		}
+	}
 	.menu {
 		&__body {
 			border-radius: 0px 0px 0px 35px;
@@ -115,7 +118,7 @@
 	}
 }
 @media (max-width: em($maxWidthContainer)) {
-	.products__tab-item.__stock-image .products__tab-img div .img-fluid {
+	logo .products__tab-item.__stock-image .products__tab-img div .img-fluid {
 		width: auto;
 		height: auto;
 	}
@@ -125,26 +128,36 @@
 	.container {
 		max-width: 71.25rem;
 	}
+	.logo {
+		&__desc {
+			display: none;
+		}
+	}
 }
 @media (max-width: em(991px)) {
 	[class*="__container"],
 	.container {
 		max-width: 60rem;
 	}
-	.header {
-		&-logo__desc {
+	.logo {
+		.logo__desc {
 			display: none;
 		}
-		&-nav {
-			&,
-			&__social {
-				@include adaptiv-value("gap", 35.5, 75, 1);
-			}
-			&__phone {
-				.phone__number {
-					display: none;
-				}
-			}
+	}
+	.contacts {
+		> :not(:last-child, .contacts__phone) {
+			@include adaptiv-value("margin-right", 40, 20, 1);
+		}
+	}
+	.social {
+		> :not(:last-child) {
+			@include adaptiv-value("margin-right", 20, 10, 1);
+		}
+	}
+	.phone {
+		@include adaptiv-value("margin-right", 15, 5, 1);
+		&__number {
+			display: none;
 		}
 	}
 	.offer {
@@ -160,7 +173,7 @@
 				". ."
 				". ."
 				". .";
-			gap: 74px 54px;
+			gap: 4.625rem 3.375rem;
 		}
 	}
 	.docs__desc {
@@ -204,7 +217,7 @@
 			display: block;
 		}
 	}
-	.header-nav {
+	.contacts {
 		transition: right 0.4s ease 0.1s;
 		position: fixed;
 		height: calc(
@@ -220,29 +233,34 @@
 		> * i {
 			color: var(--base-color);
 		}
-		&,
-		&__social {
-			flex-direction: column;
-			align-items: flex-end;
-			justify-content: flex-end;
-			> a:not(.call__cta) {
-				width: 2rem;
-				display: flex;
-				justify-content: center;
-			}
-		}
-		.call__cta {
-			margin-top: 2rem;
+		&__btn {
+			margin-top: 3vh;
 			background-color: var(--base-color);
 			color: var(--accent-color);
 		}
-		.email__link {
+		.email__name {
 			display: none;
 		}
 		&.__active {
 			right: 0;
 		}
+		&,
+		.social {
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-end;
+			> :not(:last-child) {
+				width: 2rem;
+				display: flex;
+				justify-content: center;
+				margin-right: 0;
+			}
+			> :not(:first-child) {
+				margin-top: 7vh;
+			}
+		}
 	}
+
 	.menu {
 		&__body {
 			width: 100%;
@@ -294,8 +312,10 @@
 			width: fit-content;
 			@include adaptiv-value("font-size", 16, 14, 1);
 			li {
+				$menuListLiPadding: 0.625rem;
+				padding: $menuListLiPadding;
 				margin-left: 0;
-				margin: 0px 0px 2.1875rem 0px;
+				margin: 0px 0px calc(2.1875rem - $menuListLiPadding) 0px;
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -306,7 +326,7 @@
 			@include adaptiv-value("margin-top", 125, 80, 0);
 		}
 	}
-	.first-screen {
+	.first {
 		@include adaptiv-value("margin-top", $startHeightHeader, $smallHeightHeader, 0);
 	}
 	.offer {
@@ -366,7 +386,10 @@
 		}
 		&__body {
 			flex-wrap: wrap;
-			@include adaptiv-value("gap", 430, 38, 1);
+			margin-right: 0;
+			> :not(:last-child) {
+				@include adaptiv-value("margin-bottom", 430, 38, 1);
+			}
 		}
 	}
 	.images {
@@ -391,7 +414,7 @@
 	.control__content {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
-		gap: 80px;
+		gap: 5rem;
 		> * {
 			justify-self: center;
 		}
@@ -412,7 +435,7 @@
 		&__tab-items {
 			grid-auto-columns: 1fr;
 			grid-template-columns: repeat(2, 1fr);
-			gap: 7px 8px;
+			gap: 0.4375rem 0.5rem;
 			grid-template-areas:
 				". ."
 				". ."
@@ -462,6 +485,17 @@
 		&__reg {
 			border-radius: 0 0 35px 0;
 		}
+	}
+}
+@media (max-height: em(400px)) {
+	.contacts {
+		flex-wrap: wrap-reverse;
+		> :not(:last-child) {
+			display: none;
+		}
+	}
+	.social {
+		margin-left: auto;
 	}
 }
 @media (max-width: em(575px)) {

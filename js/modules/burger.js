@@ -1,5 +1,5 @@
 const iconMenu = document.querySelector('.menu__icon');
-const headerNav = document.querySelector('.header-nav');
+const headerContacts = document.querySelector('.header__contacts');
 let menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
 	iconMenu.addEventListener('click', function (e) {
@@ -7,7 +7,7 @@ if (iconMenu) {
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
 		if (window.scrollY >= 1) {
-			headerNav.classList.toggle('__active');
+			headerContacts.classList.toggle('__active');
 		}
 	})
 }
