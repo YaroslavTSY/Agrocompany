@@ -16,29 +16,14 @@ if (oldIE) {
 	functions.ie7();
 }
 
-const headerContacts = document.querySelector('.header__contacts');
-const offerCta = document.querySelector('.offer-cta');
-const headerContactsAddClass = () => headerContacts.classList.add("__active");
-const headerContactsRemoveClass = () => headerContacts.classList.remove("__active");
-window.addEventListener('scroll', function () {
-	let scrollpos = window.scrollY;
-
-	if (scrollpos >= 1) { headerContactsRemoveClass(); offerCta.classList.add("__active"); }
-	else { headerContactsAddClass(); offerCta.classList.remove("__active"); }
-
-})
-
 // Navigation //
-
-// Tabs/active/on click
 navTabs
 
 // Change positon Nav Menu on Scroll
 navPosition
 
-////
+//
 
-// Burger-menu //
 burger
 
 // Scroll to section on click Tab //
@@ -54,8 +39,10 @@ productsTabs
 
 window.onload = function () {
 	document.getElementById('hideAll').classList.add('__active');
-	headerContactsAddClass();
-	// ! import from navScroll.js
+	let mediaQuery576 = window.matchMedia("(min-width: 36em)");
+	if (mediaQuery576.matches) {
+		navPosition.headerContactsAddClass();
+	}
 	// Change class "_active" for Nav on Scroll to Section
 	navScroll
 
@@ -64,8 +51,6 @@ window.onload = function () {
 	sliders.gallerySlider;
 	sliders.partnersSlider;
 }
-
-
 
 
 

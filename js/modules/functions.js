@@ -39,6 +39,7 @@ export function ie7() {
 		'i-companies': '&#xe912;',
 		'i-plant': '&#xe913;',
 		'i-countries': '&#xe914;',
+		'i-arrow-more': '&#xe915;',
 		'0': 0
 	},
 		els = document.getElementsByTagName('*'),

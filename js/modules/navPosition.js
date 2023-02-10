@@ -1,18 +1,28 @@
 
 const mainHeader = document.querySelector('.header');
 const menuBody = document.querySelector('.menu__body');
+const menuBodyAddClass = () => menuBody.classList.add("scroll");
+const menuBodyRemoveClass = () => menuBody.classList.remove("scroll");
 
-let scrollpos = window.scrollY;
+const headerContacts = document.querySelector('.header__contacts');
+const offerBtn = document.querySelector('.offer__btn');
+export const headerContactsAddClass = () => headerContacts.classList.add("__active");
+const headerContactsRemoveClass = () => headerContacts.classList.remove("__active");
 
-const scrollChange = mainHeader.clientHeight;
-
-const add_class_on_scroll = () => menuBody.classList.add("scroll")
-const remove_class_on_scroll = () => menuBody.classList.remove("scroll")
+const headerScrollChange = mainHeader.clientHeight;
 
 window.addEventListener('scroll', function () {
-	scrollpos = window.scrollY;
+	let scrollpos = window.scrollY;
+	let mediaQuery576 = window.matchMedia("(min-width: 36em)")
 
-	if (scrollpos >= scrollChange) { add_class_on_scroll() }
-	else { remove_class_on_scroll() }
+	if (scrollpos >= headerScrollChange) { menuBodyAddClass() }
+	else { menuBodyRemoveClass() };
 
+	if (scrollpos >= 1) {
+		headerContactsRemoveClass();
+		offerBtn.classList.add("__active");
+	} else if (mediaQuery576.matches) {
+		headerContactsAddClass();
+		offerBtn.classList.remove("__active");
+	}
 })

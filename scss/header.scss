@@ -54,41 +54,27 @@
 .contacts {
 	display: flex;
 	align-items: center;
-	> :not(:last-child) {
+	&__item {
 		@include adaptiv-value("margin-right", 51, -20, 1);
 	}
 	> * i {
 		color: var(--accent-color);
 	}
-	&__social {
-	}
-
-	&__email {
-	}
-
-	&__phone {
-	}
-
-	&__btn {
-	}
 }
-.social {
-	display: flex;
-	> :not(:last-child) {
-		@include adaptiv-value("margin-right", 20, 0, 0);
-	}
-	&__link {
-		font-size: 1.875rem;
-		width: 1.875rem;
-		> * {
-			margin: 0 auto;
-			max-width: fit-content;
-			display: block;
-			float: none;
-		}
-	}
-
+.facebook {
+	@include adaptiv-value("margin-right", 20, 0, 0);
+}
+.instagram {
+}
+.facebook,
+.instagram {
+	font-size: 1.875rem;
+	width: 1.875rem;
 	&__icon {
+		margin: 0 auto;
+		max-width: fit-content;
+		display: block;
+		float: none;
 	}
 }
 .email {
@@ -98,17 +84,18 @@
 		font-size: 1.25rem;
 	}
 
-	&__name {
+	&__content {
 		min-width: max-content;
 	}
 }
 .phone {
 	display: flex;
 	align-items: center;
+	@include adaptiv-value("margin-right", 51, -20, 1);
 	&__icon {
 		font-size: 1.4375rem;
 	}
-	&__number {
+	&__content {
 		font-weight: 800;
 		min-width: max-content;
 	}

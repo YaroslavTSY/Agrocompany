@@ -1,23 +1,23 @@
 @use "sass:math";
 $rootfz: 16;
 $rootfzinpx: $rootfz * 1px;
-@function em($px, $metric: "em", $base-font-size: 16px) {
+@function em($px, $metric: "em", $baseFontSize: 16px) {
 	@if unitless($px) {
 		// @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-		@return em($px * 1px, $metric, $base-font-size);
+		@return em($px * 1px, $metric, $baseFontSize);
 	} @else if unit($px) == em {
 		@return $px;
 	}
-	$test: #{math.div($px, $base-font-size) + $metric};
+	$test: #{math.div($px, $baseFontSize) + $metric};
 	@return $test;
 }
-@function rem($px, $metric: "rem", $base-font-size: 16px) {
+@function rem($px, $metric: "rem", $baseFontSize: 16px) {
 	@if unitless($px) {
 		// @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-		@return rem($px * 1px, $metric, $base-font-size);
+		@return rem($px * 1px, $metric, $baseFontSize);
 	} @else if unit($px) == rem {
 		@return $px;
 	}
-	$test: #{math.div($px, $base-font-size) + $metric};
+	$test: #{math.div($px, $baseFontSize) + $metric};
 	@return $test;
 }

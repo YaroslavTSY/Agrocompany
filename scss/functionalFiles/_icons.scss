@@ -12,7 +12,8 @@
 	font-display: block;
 }
 
-i {
+i::before,
+i.i-arrow-more::after {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "#{$icomoon-font-family}" !important;
 	speak: never;
@@ -130,5 +131,10 @@ i {
 .i-countries {
 	&:before {
 		content: $i-countries;
+	}
+}
+.i-arrow-more {
+	&::after {
+		content: $i-arrow-more;
 	}
 }

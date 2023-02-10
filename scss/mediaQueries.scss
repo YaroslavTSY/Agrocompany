@@ -46,6 +46,9 @@
 	.menu {
 		&__body {
 			border-radius: 0px 0px 0px 35px;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 			&.scroll {
 				position: fixed;
 				z-index: 5;
@@ -145,23 +148,21 @@
 		}
 	}
 	.contacts {
-		> :not(:last-child, .contacts__phone) {
+		&__item {
 			@include adaptiv-value("margin-right", 40, 20, 1);
 		}
 	}
-	.social {
-		> :not(:last-child) {
-			@include adaptiv-value("margin-right", 20, 10, 1);
-		}
+	.facebook {
+		@include adaptiv-value("margin-right", 20, 10, 1);
 	}
 	.phone {
 		@include adaptiv-value("margin-right", 15, 5, 1);
-		&__number {
+		&__content {
 			display: none;
 		}
 	}
 	.offer {
-		&-subtitle {
+		&__subtitle {
 			@include adaptiv-value("font-size", 18, 20, 0);
 		}
 	}
@@ -218,8 +219,13 @@
 		}
 	}
 	.contacts {
-		transition: right 0.4s ease 0.1s;
 		position: fixed;
+		right: -100%;
+		bottom: 0;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin-right: 1rem;
 		height: calc(
 			100vh -
 				calc(
@@ -227,9 +233,17 @@
 						((100vw - 320px) / #{$maxWidth - 320})
 				)
 		);
-		padding: 5%;
-		right: -100%;
-		bottom: 0;
+		padding: 1.5rem 2rem 2rem 1.5rem;
+		transition: right 0.4s ease 0.1s;
+		&__item {
+			width: 2rem;
+			display: flex;
+			justify-content: center;
+			margin-right: 0;
+		}
+		> :not(:first-child) {
+			margin-top: 7vh;
+		}
 		> * i {
 			color: var(--base-color);
 		}
@@ -238,26 +252,11 @@
 			background-color: var(--base-color);
 			color: var(--accent-color);
 		}
-		.email__name {
+		.email__content {
 			display: none;
 		}
 		&.__active {
 			right: 0;
-		}
-		&,
-		.social {
-			flex-direction: column;
-			align-items: flex-end;
-			justify-content: flex-end;
-			> :not(:last-child) {
-				width: 2rem;
-				display: flex;
-				justify-content: center;
-				margin-right: 0;
-			}
-			> :not(:first-child) {
-				margin-top: 7vh;
-			}
 		}
 	}
 
@@ -316,10 +315,7 @@
 				padding: $menuListLiPadding;
 				margin-left: 0;
 				margin: 0px 0px calc(2.1875rem - $menuListLiPadding) 0px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				a {
+				> a {
 					padding: 0.3125rem 0;
 				}
 			}
@@ -330,15 +326,12 @@
 		@include adaptiv-value("margin-top", $startHeightHeader, $smallHeightHeader, 0);
 	}
 	.offer {
-		&-wrapper {
-			justify-content: center;
-		}
-		&-title {
+		max-width: calc(100% - 3.875rem);
+		&__title {
 			@include adaptiv-value("font-size", 45, 42, 0);
 		}
-		&-cta {
+		&__btn {
 			transition: all 0.4s ease 0.1s;
-			margin: 0 auto;
 			opacity: 0;
 			pointer-events: none;
 			&.__active {
@@ -348,11 +341,6 @@
 		}
 	}
 	.section-title {
-		&__about {
-			width: 100%;
-			padding: 2vh 10vw;
-			box-shadow: 5px 0 15px #efefef;
-		}
 		&__biz {
 			width: 100%;
 			padding: 4vw 10vw;
@@ -363,20 +351,20 @@
 			padding: 5% 1.4vw 5% 4vw;
 		}
 	}
-	.about-wrapper {
-		&__container {
-			flex-wrap: wrap;
-			flex-direction: column;
+	.about__wrapper {
+		flex-direction: column;
+		> :not(:last-child) {
+			margin-right: 0;
+			@include adaptiv-value("margin-bottom", 40, 20, 0);
 		}
 	}
-	.about-images__wrapper {
-		max-height: 90vh; // or .max-full-screen (but it's media query)
-	}
-	.about__image {
-		max-height: 90vh;
-		img {
+	.about-images {
+		&__image {
 			max-height: 90vh;
-			max-width: 100%;
+			img {
+				max-height: 90vh;
+				max-width: 100%;
+			}
 		}
 	}
 	.biz {
@@ -487,22 +475,15 @@
 		}
 	}
 }
-@media (max-height: em(400px)) {
+@media (max-width: em(575px)) and (max-height: em(400px)) {
 	.contacts {
 		flex-wrap: wrap-reverse;
-		> :not(:last-child) {
-			display: none;
+		&__item {
+			margin-left: 2rem;
 		}
-	}
-	.social {
-		margin-left: auto;
 	}
 }
 @media (max-width: em(575px)) {
-	.offer {
-		margin: 15.625rem 0 6.25rem 0;
-		text-align: center;
-	}
 	.products__tab-items {
 		grid-auto-columns: 1fr;
 		grid-template-columns: 1fr;
@@ -539,5 +520,15 @@
 			"__turnover"
 			"__export"
 			"__countries";
+	}
+}
+@media (max-width: em(375px)) {
+	.contacts {
+		> .contacts__btn {
+			display: none;
+		}
+	}
+	.menu__request {
+		display: block;
 	}
 }

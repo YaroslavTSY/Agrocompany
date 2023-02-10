@@ -15,7 +15,7 @@ body {
 	}
 	svg,
 	svg path {
-		transition: fill 0.3s ease 0s;
+		transition: all 0.4s ease 0.1s;
 	}
 }
 
@@ -52,7 +52,8 @@ span {
 	}
 }
 
-a {
+a,
+i {
 	cursor: var(--hovercursor), pointer;
 }
 
@@ -100,6 +101,7 @@ p {
 }
 
 main {
+	position: relative;
 	flex: 1 1 auto;
 }
 
@@ -109,42 +111,48 @@ main {
 section {
 	position: relative;
 	margin: 5rem 0;
+	&::before,
+	&::after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		height: 300px;
+		width: 300px;
+		display: block;
+		background: center center no-repeat;
+		background-size: contain;
+	}
 }
 
 .btn {
 	min-width: max-content;
 	text-align: center;
-	@include adaptiv-value("font-size", 18, 15, 0);
+	@include adaptiv-value("font-size", 18, 16, 0);
 	font-weight: 700;
 	color: var(--base-color);
 	background: var(--accent-color);
 	border-radius: 30px;
-	letter-spacing: 0.06em;
-	line-height: 1.28; /* 18px/14 */
-	@include adaptiv-value("padding-top", 23, 15, 2);
-	@include adaptiv-value("padding-bottom", 23, 15, 2);
+	line-height: 1.4375em;
+	@include adaptiv-value("padding-top", 18, 15, 2);
+	@include adaptiv-value("padding-bottom", 18, 15, 2);
 	@include adaptiv-value("padding-left", 38, 25, 2);
 	@include adaptiv-value("padding-right", 38, 25, 2);
-	transition: all 0.3s ease 0s;
+	transition: all 0.4s ease 0.1s;
 	&:hover {
-		box-shadow: inset 0px -1px 100px -50px rgb(0 128 0 / 70%), 1px 7px 45px -20px #29dd4f,
-			42px 65px 5px 5px rgb(0 0 0 / 0%);
+		background: rgb(70, 104, 19);
 	}
 }
 .btn-small {
 	font-size: 0.875rem;
-	@include adaptiv-value("padding-top", 18, 12, 0);
-	@include adaptiv-value("padding-bottom", 18, 12, 0);
-	@include adaptiv-value("padding-left", 40, 26, 0);
-	@include adaptiv-value("padding-right", 40, 26, 0);
+	line-height: 0.875em;
 }
 
 [class*="section-title"] {
-	line-height: 114%;
+	color: #1b1b1b;
+	letter-spacing: 0.0063em;
 	text-transform: uppercase;
-	font-weight: 800;
+	font-weight: 700;
 	@include adaptiv-value("font-size", 35, 28, 0);
-	background: #fff;
 	z-index: 1;
 }
 
