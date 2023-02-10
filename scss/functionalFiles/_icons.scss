@@ -12,8 +12,8 @@
 	font-display: block;
 }
 
-i::before,
-i.i-arrow-more::after {
+[class*="i-"]::before,
+[class*="i-"].i-arrow-more::after {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "#{$icomoon-font-family}" !important;
 	speak: never;

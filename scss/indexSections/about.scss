@@ -24,7 +24,6 @@ $aboutMoreBottom: 3rem;
 }
 
 .about {
-	margin-bottom: 0;
 	&::before {
 		top: -5rem;
 		right: 0;
@@ -64,13 +63,8 @@ $aboutMoreBottom: 3rem;
 	&__text {
 		flex: 1;
 		position: relative;
-		margin-bottom: 10rem;
-		:nth-last-child(2) {
-			margin-bottom: 2 * ($aboutMoreBottom);
-		}
 		&._not-active {
 			animation: aboutText 1s linear 0s 1 alternate-reverse both;
-			margin-bottom: 5rem;
 			.show {
 				margin-top: -18%;
 				opacity: 0;
@@ -115,20 +109,26 @@ $aboutMoreBottom: 3rem;
 		line-height: 1.5; /* 30px/20 */
 		letter-spacing: 0.005em; /* 0.1px/20 */
 		color: var(--accent-color);
+		transition: all 0.4s ease 0.1s;
 		svg {
 			margin-left: 0.625rem;
 			fill: var(--accent-color);
 			transform: rotate(180deg);
 		}
 		&:hover {
+			svg {
+				fill: #689b1b;
+				transform: translateY(10%);
+			}
 			background-color: #689b1b;
-			transform: scale(0.99);
+			transform: scale(0.95);
 		}
 	}
 }
 .about-images {
 	flex: 1 1 46.58%;
 	overflow: hidden;
+	border-radius: 35px 0 35px 0;
 	max-height: calc(
 		100vh -
 			calc(
@@ -139,7 +139,6 @@ $aboutMoreBottom: 3rem;
 	&__wrapper {
 		max-width: 100%;
 		overflow: hidden;
-		border-radius: 35px 0 35px 0;
 		display: flex;
 		justify-content: center;
 		flex-direction: row;
