@@ -1,3 +1,24 @@
+.i-agreement {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe916;");
+}
+.i-delivery {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe917;");
+}
+.i-pack {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe918;");
+}
+.i-purchase {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe919;");
+}
+.i-service {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe920;");
+}
+.i-support {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe91f;");
+}
+.i-arrow-more {
+	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe915;");
+}
 .i-facebook {
 	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe900;");
 }
@@ -13,26 +34,8 @@
 .i-culture {
 	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe904;");
 }
-.i-firewood-1 {
+.i-firewood {
 	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe905;");
-}
-.i-agreement {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe906;");
-}
-.i-purchase {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe907;");
-}
-.i-delivery {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe908;");
-}
-.i-service {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe909;");
-}
-.i-support {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe90a;");
-}
-.i-pack {
-	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe90b;");
 }
 .i-document {
 	*zoom: expression(this.runtimeStyle[ "zoom"] = "1", this.innerHTML = "&#xe90c;");

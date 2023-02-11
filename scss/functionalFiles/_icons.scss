@@ -2,18 +2,19 @@
 
 @font-face {
 	font-family: "#{$icomoon-font-family}";
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9hvmzo");
-	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9hvmzo#iefix") format("embedded-opentype"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9hvmzo") format("truetype"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9hvmzo") format("woff"),
-		url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9hvmzo##{$icomoon-font-family}") format("svg");
+	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot");
+	src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot") format("embedded-opentype"),
+		url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf") format("truetype"),
+		url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff") format("woff"),
+		url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg##{$icomoon-font-family}") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
 }
 
+[class^="i-"]::before,
 [class*="i-"]::before,
-[class*="i-"].i-arrow-more::after {
+[class*="i-arrow-more"]::after {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: "#{$icomoon-font-family}" !important;
 	speak: never;
@@ -28,6 +29,41 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.i-agreement {
+	&:before {
+		content: $i-agreement;
+	}
+}
+.i-delivery {
+	&:before {
+		content: $i-delivery;
+	}
+}
+.i-pack {
+	&:before {
+		content: $i-pack;
+	}
+}
+.i-purchase {
+	&:before {
+		content: $i-purchase;
+	}
+}
+.i-service {
+	&:before {
+		content: $i-service;
+	}
+}
+.i-support {
+	&:before {
+		content: $i-support;
+	}
+}
+.i-arrow-more {
+	&:after {
+		content: $i-arrow-more;
+	}
+}
 .i-facebook {
 	&:before {
 		content: $i-facebook;
@@ -53,39 +89,9 @@
 		content: $i-culture;
 	}
 }
-.i-firewood-1 {
+.i-firewood {
 	&:before {
-		content: $i-firewood-1;
-	}
-}
-.i-agreement {
-	&:before {
-		content: $i-agreement;
-	}
-}
-.i-purchase {
-	&:before {
-		content: $i-purchase;
-	}
-}
-.i-delivery {
-	&:before {
-		content: $i-delivery;
-	}
-}
-.i-service {
-	&:before {
-		content: $i-service;
-	}
-}
-.i-support {
-	&:before {
-		content: $i-support;
-	}
-}
-.i-pack {
-	&:before {
-		content: $i-pack;
+		content: $i-firewood;
 	}
 }
 .i-document {
@@ -131,10 +137,5 @@
 .i-countries {
 	&:before {
 		content: $i-countries;
-	}
-}
-.i-arrow-more {
-	&::after {
-		content: $i-arrow-more;
 	}
 }

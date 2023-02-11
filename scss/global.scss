@@ -36,7 +36,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #416e1c;
 }
-
+.section-title__biz {
+}
 h1,
 h2,
 h3,
@@ -44,11 +45,14 @@ h4,
 h5,
 h6,
 p,
+li,
 span {
 	user-select: text;
 	&::selection {
-		background-color: var(--base-color);
-		color: var(--second-accent-color);
+		-webkit-background-clip: inherit;
+		-webkit-text-fill-color: var(--base-color);
+		background-color: var(--second-accent-color);
+		color: var(--base-color);
 	}
 }
 
@@ -83,6 +87,7 @@ h4 {
 // 	@include adaptiv-value("font-size", 18, $rootfz, 0);
 // }
 p {
+	color: var(--gray-opacity-color);
 	@include adaptiv-value("font-size", $rootfz, 12, 2);
 	line-height: 1.5em;
 }
@@ -110,7 +115,7 @@ main {
 
 section {
 	position: relative;
-	margin: 5rem 0;
+	margin: 5.3125rem 0;
 	&::before,
 	&::after {
 		z-index: -1;
@@ -147,9 +152,8 @@ section {
 	line-height: 0.875em;
 }
 
-[class*="section-title"] {
-	color: #1b1b1b;
-	letter-spacing: 0.0063em;
+.section-title {
+	color: var(--main-color);
 	text-transform: uppercase;
 	font-weight: 700;
 	@include adaptiv-value("font-size", 35, 28, 0);

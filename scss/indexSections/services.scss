@@ -1,43 +1,114 @@
 //* Services
-.services {
-	padding: 5.1875rem 0px;
-	&__card {
-		position: relative;
-		background: #ffffff;
-		box-shadow: 0px 0px 35px #eaeaea;
-		border-radius: 0px 0px 0px 35px;
-		padding: em(63px) em(25px);
-		@extend .max-full-screen;
-	}
-}
-.section-title__services {
-	text-align: center;
-	margin-bottom: 3.125rem;
-}
-.services-cards {
-	&__container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		gap: 5.5rem 2.75rem;
-		grid-template-areas:
-			". . ."
-			". . .";
-	}
-}
-.services-icon {
-	margin-top: -3.4375rem;
-	padding-bottom: 1.875rem;
-}
-.services-title {
-	padding-bottom: 1.375rem;
-	font-weight: 800;
-	text-align: left;
-}
-.services-text {
-	@include adaptiv-value("font-size", 18, 16, 0);
-	line-height: 1.67em;
-	letter-spacing: 0.01em;
-	overflow: hidden;
-}
+// .services {
+// 	&::before {
+// 		top: -8rem;
+// 		right: 0;
+// 		background-image: url(../img/services-image-1.png);
+// 	}
+// 	&::after {
+// 		content: none;
+// 	}
+// 	&__card {
+// 		position: relative;
+// 		background: #ffffff;
+// 		box-shadow: 0px 0px 35px #eaeaea;
+// 		border-radius: 0px 0px 0px 35px;
+// 		padding: em(63px) em(25px);
+// 		@extend .max-full-screen;
+// 	}
+// }
+// .section-title__services {
+// 	text-align: center;
+// 	margin-bottom: 3.125rem;
+// }
+// .services-cards {
+// 	&__container {
+// 		display: grid;
+// 		grid-template-columns: 1fr 1fr 1fr;
+// 		grid-template-rows: 1fr 1fr;
+// 		gap: 5.5rem 2.75rem;
+// 		grid-template-areas:
+// 			". . ."
+// 			". . .";
+// 	}
+// }
+// .services-icon {
+// 	margin-top: -3.4375rem;
+// 	padding-bottom: 1.875rem;
+// }
+// .services-title {
+// 	padding-bottom: 1.375rem;
+// 	font-weight: 800;
+// 	text-align: left;
+// }
+// .services-text {
+// 	@include adaptiv-value("font-size", 18, 16, 0);
+// 	line-height: 1.67em;
+// 	letter-spacing: 0.01em;
+// 	overflow: hidden;
+// }
 // Services
+$servicesIconsFz: 3.75rem;
+.services {
+	&::before {
+		top: -8rem;
+		right: 0;
+		background-image: url(../img/services-image-1.png);
+	}
+	&::after {
+		content: none;
+	}
+	&__title {
+		line-height: 1.14; /* 40px/35 */ /* or 114% */
+		text-align: center;
+		letter-spacing: 0.028em; /* 0.1px/35 */
+		margin-bottom: 3.5rem;
+	}
+
+	&__container {
+	}
+
+	&__wrapper {
+		padding-top: calc($servicesIconsFz / 2);
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		row-gap: 3.125rem;
+		column-gap: 2.8125rem;
+	}
+
+	&__card {
+	}
+}
+.services-card {
+	padding: 4.375rem 1.5625rem 3.4375rem 1.5625rem;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background: var(--base-color);
+	box-shadow: 0px 0px 35px var(--base-color-shadow);
+	border-radius: 0px 0px 0px 35px;
+	> :not(:last-child) {
+		margin-bottom: 1.375rem;
+	}
+	&__icon {
+		position: absolute;
+		top: -1.5625rem;
+		left: 1.875rem;
+		font-size: $servicesIconsFz;
+		color: var(--accent-color);
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 1.5rem;
+		line-height: 1;
+		letter-spacing: 0.041em; /* 0.1px/24 */
+		text-transform: capitalize;
+	}
+
+	&__text {
+		font-size: 1.125rem;
+		line-height: 1.66; /* 30px/18 */ /* or 167% */
+		letter-spacing: 0.011em; /* 0.2px/18 */
+	}
+}

@@ -36,6 +36,10 @@
 	@include adaptiv-value("max-width", 29, 55, 3);
 	&__link {
 		min-width: 7rem;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 
 	&__img {
