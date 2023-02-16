@@ -5,7 +5,7 @@ import * as navScroll from "./modules/navScroll.js";
 import * as burger from "./modules/burger.js";
 import * as tabToSection from "./modules/tabToSection.js";
 import * as showAboutText from "./modules/showAboutText.js";
-import * as productsTabs from "./modules/tabsProducts.js"
+import * as productsTabs from "./modules/tabsProducts.js";
 import * as sliders from "./modules/sliders.js";
 
 functions.isWebp();

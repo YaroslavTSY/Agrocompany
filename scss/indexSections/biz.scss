@@ -120,6 +120,7 @@
 // Biz
 
 .biz {
+	padding-top: 0;
 	&::before {
 		content: "";
 		display: inline-block;
@@ -132,40 +133,13 @@
 		width: 0.125rem;
 		height: 100%;
 	}
-	&::after {
-		content: none;
-	}
 	&__wrapper {
 		position: relative;
 	}
-	$titleHeight: 6rem;
 	&__title {
-		position: absolute;
-		top: -3.125rem;
-		right: 0;
-		left: 0;
-		z-index: 4;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: $titleHeight;
-		span {
-			padding: 0 5%;
-			display: block;
-			position: relative;
-			z-index: 2;
-		}
 		&::before {
-			content: " ";
-			display: block;
-			position: absolute;
-			@include adaptiv-value("width", 70, 90, 4);
-			height: $titleHeight;
-			top: 0;
 			right: 0;
 			background-color: var(--base-color);
-			box-shadow: 0px -20px 35px var(--base-color-shadow);
 			border-radius: 0px 0px 0px 35px;
 		}
 	}
@@ -179,7 +153,7 @@
 		z-index: 2;
 		background-color: rgba(0, 0, 0, 0.7);
 		height: 100%;
-		padding: 5.9375rem 0;
+		padding: calc(3rem + $titleHeight / 2) 0;
 	}
 
 	&__container {

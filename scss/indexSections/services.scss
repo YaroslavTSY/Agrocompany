@@ -48,15 +48,13 @@
 // 	overflow: hidden;
 // }
 // Services
-$servicesIconsFz: 3.75rem;
 .services {
 	&::before {
-		top: -8rem;
+		content: "";
+		top: 0;
 		right: 0;
+		transform: translateY(-50%);
 		background-image: url(../img/services-image-1.png);
-	}
-	&::after {
-		content: none;
 	}
 	&__title {
 		line-height: 1.14; /* 40px/35 */ /* or 114% */

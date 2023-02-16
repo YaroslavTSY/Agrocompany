@@ -1,5 +1,4 @@
 //* About
-$aboutMoreBottom: 3rem;
 @keyframes aboutText {
 	0% {
 		max-height: calc(
@@ -24,14 +23,20 @@ $aboutMoreBottom: 3rem;
 }
 
 .about {
+	&::before,
+	&::after {
+		content: "";
+	}
 	&::before {
-		top: -5rem;
+		top: 0;
 		right: 0;
+		transform: translateY(-40%);
 		background-image: url(../img/about-image-1.png);
 	}
 	&::after {
 		bottom: 0;
 		right: 0;
+		transform: translateY(40%);
 		background-image: url(../img/about-image-2.png);
 	}
 	&__container {

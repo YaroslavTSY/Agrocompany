@@ -1,16 +1,5 @@
 //* Mobile-first
 @media (min-width: em($maxWidth + 1)) {
-	.swiper-button-prev,
-	.swiper-button-next {
-		@include adaptiv-value("padding", 30, 5, 2);
-		&::after {
-			@include adaptiv-value("font-size", 35, 15, 2);
-		}
-	}
-	.gallery-slider,
-	.docs-slider {
-		@include adaptiv-value("padding-bottom", 4, 5, 3);
-	}
 }
 @media (min-width: em(1400px)) {
 }
@@ -45,7 +34,10 @@
 	}
 	.about {
 		&__text {
-			margin-bottom: 2 * ($aboutMoreBottom);
+			margin-bottom: 2 * ($aboutMoreMarginBottom);
+			&._not-active {
+				margin-bottom: 0;
+			}
 		}
 	}
 	.menu {
@@ -78,8 +70,7 @@
 	.more {
 		justify-content: center;
 	}
-	.gallery-slider,
-	.docs-slider {
+	.gallery-slider {
 		@include adaptiv-value("padding-bottom", 6, 10, 3);
 	}
 	.activity-card {
@@ -101,12 +92,25 @@
 			max-width: 100%;
 		}
 	}
+	.docs-slider__shadow {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		left: 0;
+		background: linear-gradient(
+			90deg,
+			var(--neutral-color) 0%,
+			rgba(255, 255, 255, 0) 10%,
+			rgba(255, 255, 255, 0) 90%,
+			var(--neutral-color) 100%
+		);
+	}
 }
 //* Desktop-first
 @media (max-width: em(1399px)) {
-	.docs-slider__wrapper .swiper-slide-active .document {
-		width: fit-content;
-	}
 }
 @media (max-width: em($maxWidthContainer)) {
 	logo .products__tab-item.__stock-image .products__tab-img div .img-fluid {
@@ -156,15 +160,6 @@
 	}
 	.services__wrapper {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-	.docs__desc {
-		.desc__text {
-			text-align: center;
-			line-height: 130%;
-		}
-		.desc__icon {
-			transform: scale(1.5);
-		}
 	}
 	.tab-cta {
 		&__title {
@@ -287,7 +282,6 @@
 			width: fit-content;
 			@include adaptiv-value("font-size", 16, 14, 1);
 			li {
-				$menuListLiPadding: 0.625rem;
 				padding: $menuListLiPadding;
 				margin-left: 0;
 				margin: 0px 0px calc(2.1875rem - $menuListLiPadding) 0px;
@@ -447,6 +441,11 @@
 			border-radius: 0 0 35px 0;
 		}
 	}
+	.docs::after {
+		opacity: 0.6;
+		filter: blur(1.5px);
+		transform: translateY(50%) translateX(10%) scale(0.9);
+	}
 }
 @media (max-width: em(575px)) and (max-height: em(400px)) {
 	.contacts {
@@ -457,7 +456,7 @@
 	}
 }
 @media (max-width: em(575px)) {
-	.section-title-media-absolute {
+	.section-title-absolute {
 		&,
 		&::before {
 			max-width: none;
@@ -511,6 +510,13 @@
 			"__turnover"
 			"__export"
 			"__countries";
+	}
+	.docs-slider__item-wrapper {
+		height: 100% !important;
+		width: 100% !important;
+	}
+	.docs::after {
+		z-index: 0;
 	}
 }
 @media (max-width: em(375px)) {
