@@ -19,40 +19,65 @@
 		background: rgba(133, 191, 45, 0.6);
 		transition: left 0.4s ease 0.1s;
 	}
-
+	&__underline {
+		position: absolute;
+		width: 0;
+		height: 0.25rem;
+		left: auto;
+		bottom: 0;
+		background-color: var(--base-color);
+		transition: all 1s ease 0s;
+	}
 	&__list {
+		position: relative;
 		font-weight: 600;
 		letter-spacing: 0.07em;
 		justify-content: space-around;
 		align-items: center;
 		padding: 0 1.3125rem;
 		@include adaptiv-value("font-size", 16, 10, 1);
-		> :not(:last-child) {
+		> li:not(:last-child) {
 			@include adaptiv-value("margin-right", 16, 10, 0);
 		}
 		li {
-			&._active {
-				a {
-					font-weight: 700;
-					transform: skew(1.1);
-					border-bottom: 4px solid var(--base-color);
-				}
+			// &._active {
+			// 	a {
+			// 		font-weight: 700;
+			// 		transform: skew(1.1);
+			// 		border-bottom: 4px solid var(--base-color);
+			// 	}
+			// }
+			position: relative;
+			height: 100%;
+			&::after {
+				content: " ";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 0.25rem;
+				background-color: var(--base-color);
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.7s ease 0s;
 			}
-			> a {
-				@include adaptiv-value("padding-top", 33, 18, 0);
-				@include adaptiv-value("padding-bottom", 29, 15, 0);
-				color: var(--base-color);
-				height: 100%;
-				display: inline-flex;
-				transition: all 0.4s;
-				border-bottom: 4px solid transparent;
-				&:hover {
-					border-bottom: 4px solid var(--base-color);
+			&:hover,
+			&._active {
+				&::after {
+					transform-origin: left;
+					transform: scaleX(1);
 				}
 			}
 		}
 	}
 	&__link {
+		display: inline-flex;
+		align-items: center;
+		color: var(--base-color);
+		height: 100%;
+		@include adaptiv-value("padding-top", 33, 18, 0);
+		@include adaptiv-value("padding-bottom", 29, 15, 0);
+		transition: all 0.4s;
 	}
 	&__request {
 		display: none;

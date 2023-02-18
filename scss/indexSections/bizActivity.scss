@@ -3,7 +3,6 @@
 	margin-bottom: 0;
 }
 .section-title__activity {
-	@extend .section-title__biz;
 	@include adaptiv-value("width", 1050, 300, 0);
 	@include adaptiv-value("height", 96, 70, 0);
 	float: right;

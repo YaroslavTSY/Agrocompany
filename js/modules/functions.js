@@ -12,6 +12,9 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+export const addClass = (el, className) => el.classList.add(className);
+export const removeClass = (el, className) => el.classList.remove(className);
+export const toggleClass = (el, className) => el.classList.toggle(className);
 export function ie7() {
 	function addIcon(el, entity) {
 		var html = el.innerHTML;

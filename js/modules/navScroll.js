@@ -1,5 +1,6 @@
 // Change class "_active" for Nav on Scroll to Section //
 // function callback
+import * as navTabs from './navTabs.js';
 const links = document.querySelectorAll('.menu__link');
 const callback = (entries) => {
 	links.forEach((link) => link.parentElement.classList.remove('_active'));
