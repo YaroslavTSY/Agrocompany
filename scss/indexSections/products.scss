@@ -84,7 +84,8 @@
 		}
 	}
 
-	&__tab-img {
+	&__tab-img,
+	picture {
 		height: 100%;
 		[class*="tab-name"] {
 			display: flex;
@@ -257,7 +258,8 @@
 		padding: 1.5rem 3rem;
 	}
 
-	&__bg-img {
+	&__bg-img,
+	picture {
 		position: absolute;
 		right: 3%;
 		bottom: 0%;

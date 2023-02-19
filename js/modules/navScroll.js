@@ -7,7 +7,11 @@ const callback = (entries) => {
 	const elem = entries.find((entry) => entry.isIntersecting);
 	if (elem) {
 		const index = sections.findIndex((section) => section === elem.target);
-		links[index].parentElement.classList.add('_active');
+		let linkSelected = links[index].parentElement;
+		let linkOffsetLeft = (100 / navTabs.menuList.offsetWidth * linkSelected.offsetLeft);
+		let linkOffsetWidth = (100 / navTabs.menuList.offsetWidth * linkSelected.offsetWidth);
+		linkSelected.classList.add('_active');
+		navTabs.moveUnderline(linkOffsetLeft, linkOffsetWidth, navTabs.navUnderline);
 	}
 }
 

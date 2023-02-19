@@ -326,7 +326,8 @@
 	.about-images {
 		&__image {
 			max-height: 90vh;
-			img {
+			img,
+			picture {
 				max-height: 90vh;
 				max-width: 100%;
 			}
@@ -500,7 +501,7 @@
 		}
 	}
 	.activity-cards {
-		grid-auto-columns: 1fr;
+		// grid-auto-columns: 1fr;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(5, 1fr);
 		gap: 1.875rem 0;

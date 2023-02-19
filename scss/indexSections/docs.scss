@@ -56,7 +56,7 @@
 // .document {
 // 	position: relative;
 // 	picture img,
-// 	img {
+// 	img, picture {
 // 		@include adaptiv-value("width", 400, 258, 0);
 // 		@include adaptiv-value("height", 580, 356, 0);
 // 		object-fit: cover;
@@ -243,7 +243,8 @@
 	&__image {
 		width: inherit;
 		height: inherit;
-		img {
+		img,
+		picture {
 			width: inherit;
 			height: inherit;
 			object-fit: cover;
