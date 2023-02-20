@@ -1,5 +1,4 @@
-import { addClass, removeClass } from "./functions.js";
-import * as navTabs from "./navTabs.js";
+import { moveUnderline, navUnderline } from "./navTabs.js";
 
 const mainHeader = document.querySelector('.header');
 const menuBody = document.querySelector('.menu__body');
@@ -13,19 +12,19 @@ window.addEventListener('scroll', function () {
 	let scrollpos = window.scrollY;
 	let mediaQuery576 = window.matchMedia("(min-width: 36em)");
 	if (scrollpos >= headerScrollChange) {
-		addClass(menuBody, 'scroll');
+		menuBody.classList.add('scroll');
 	}
 	else {
-		removeClass(menuBody, 'scroll');
-		navTabs.moveUnderline(0, 0, navTabs.navUnderline);
+		menuBody.classList.remove('scroll');
+		navUnderline.style.width = '0';
 	};
 
 	if (scrollpos >= 1) {
-		removeClass(headerContacts, '__active');
-		addClass(offerBtn, '__active');
+		headerContacts.classList.remove('__active');
+		offerBtn.classList.add('__active');
 	} else if (mediaQuery576.matches) {
-		addClass(headerContacts, '__active');
-		removeClass(offerBtn, '__active');
+		headerContacts.classList.add('__active');
+		offerBtn.classList.remove('__active');
 	}
 })
 

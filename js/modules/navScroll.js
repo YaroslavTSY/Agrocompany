@@ -1,6 +1,7 @@
 // Change class "_active" for Nav on Scroll to Section //
+import { moveUnderline } from "./navTabs.js";
+
 // function callback
-import * as navTabs from './navTabs.js';
 const links = document.querySelectorAll('.menu__link');
 const callback = (entries) => {
 	links.forEach((link) => link.parentElement.classList.remove('_active'));
@@ -8,10 +9,8 @@ const callback = (entries) => {
 	if (elem) {
 		const index = sections.findIndex((section) => section === elem.target);
 		let linkSelected = links[index].parentElement;
-		let linkOffsetLeft = (100 / navTabs.menuList.offsetWidth * linkSelected.offsetLeft);
-		let linkOffsetWidth = (100 / navTabs.menuList.offsetWidth * linkSelected.offsetWidth);
 		linkSelected.classList.add('_active');
-		navTabs.moveUnderline(linkOffsetLeft, linkOffsetWidth, navTabs.navUnderline);
+		moveUnderline();
 	}
 }
 

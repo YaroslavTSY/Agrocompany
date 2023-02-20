@@ -50,8 +50,7 @@ window.onload = function () {
 	document.getElementById('hideAll').classList.add('__active');
 	let mediaQuery576 = window.matchMedia("(min-width: 36em)");
 	if (mediaQuery576.matches) {
-
-		functions.addClass(navPosition.headerContacts, '__active');
+		navPosition.headerContacts.classList.add('__active');
 	}
 	// Change class "_active" for Nav on Scroll to Section
 	navScroll
