@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TBB TRADING DMCC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap&_v=20230114170938" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css?_v=20230114170938" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20230114170938">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TBB TRADING DMCC</title>
+	<link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap&_v=20230222000013" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css?_v=20230222000013" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230222000013">
 </head>
 
 <body>
-	<header class="header">
-    <div class="header__container">
-        <nav class="header__bar d-flex">
-            <div class="header-logo d-flex">
-                <a href="#" class="header-logo__logo">
-                    <picture><source srcset="img/tbb-logotype1-1-1.webp" type="image/webp"><img src="img/tbb-logotype1-1-1.png" alt="logo"></picture>
-                </a>
-                <p class="header-logo__desc">
-                    Trading in agriculture and wood commodities
-                </p>
-            </div>
-            <div class="header-nav d-flex">
-                <div class="header-nav__social d-flex">
-                    <a href="#" class="social-logo">
-                        <picture><source srcset="img/facebook-5.webp" type="image/webp"><img src="img/facebook-5.png" alt="Facebook"></picture>
-                    </a>
-                    <a href="#" class="social-logo">
-                        <picture><source srcset="img/instagram-5-1.webp" type="image/webp"><img src="img/instagram-5-1.png" alt="Instagram"></picture>
-                    </a>
-                </div>
-                <div class="header-nav__email d-flex">
-                    <div class="email-logo">
-                        <picture><source srcset="img/ic_baseline-email.webp" type="image/webp"><img src="img/ic_baseline-email.png" alt="e"></picture>
-                    </div>
-                    <a href="#" class="email">
-                        tbb.dmcc@gmail.com
-                    </a>
-                </div>
-                <div class="header-nav__phone d-flex">
-                    <div class="phone-logo">
-                        <picture><source srcset="img/logos_whatsapp.webp" type="image/webp"><img src="img/logos_whatsapp.png" alt="WA"></picture>
-                    </div>
-                    <a href="#" class="phone">
-                        +971 50 601 8233
-                    </a>
-                </div>
-                <a href="#" class="call__cta">
-                    Request a call
-                </a>
-            </div>
-            <div class="header__menu">
-                <div class="menu__icon">
-                    <span></span>
-                </div>
-            </div>
-
-    </div>
-    </nav>
-    </div>
+	<!-- <div id="hideAll">
+		<div>
+			<div>
+				<div class="lds-ellipsis">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container">
+		<div class="header__wrapper">
+			<div class="header__logo logo">
+				<a href="#" class="logo__link">
+					<picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__img" src="img/logo.png" alt="logo"></picture>
+				</a>
+				<p class="logo__desc">
+					Trading in agriculture and wood commodities
+				</p>
+			</div>
+			<div class="header__contacts contacts">
+				<a href="#" class="contacts__item facebook">
+					<i class="facebook__icon i-facebook"> </i>
+				</a>
+				<a href="#" class="contacts__item instagram">
+					<i class="instagram__icon i-instagram"> </i>
+				</a>
+				<a href="mailto: example@gmail.com?subject = Support&body = Message" class="contacts__item email">
+					<i class="email__icon i-mail">
+					</i>
+					<div class="email__content">
+						support.tbb@tbb.com
+					</div>
+				</a>
+				<a href="tel:+987654321234" class="contacts__item phone">
+					<i class="phone__icon i-phone">
+					</i>
+					<div class="phone__content">
+						+987 65 432 1234
+					</div>
+				</a>
+				<a href="#" class="contacts__btn btn btn-small">
+					Request a call
+				</a>
+			</div>
+			<div class="header__menu menu">
+				<button class="menu__icon">
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
 </header>
-	<main class="main">
-		<section class="first-screen" id="first-screen">
-			<div class="container p-0">
-				<nav class="menu__body">
-					<ul id="menu__list" class="menu__list">
+		<main class="main">
+			<div class="menu__nav">
+				<nav class="menu__container menu__body">
+					<ul id="menuList" class="menu__list">
 						<li>
 							<a data-goto=".about" href="#" class="menu__link">
 								About us
@@ -108,366 +115,385 @@
 								Contact Us
 							</a>
 						</li>
+						<li class="menu__request">
+							<div>
+								<a href="#" class="contacts__btn btn btn-small">
+									Request a call
+								</a>
+							</div>
+						</li>
+						<div class="menu__underline">
+						</div>
 					</ul>
 				</nav>
 			</div>
-			<div class="container">
-				<div class="offer-wrapper">
-					<div class="offer d-flex ">
-						<h1 class="offer-title">
-							TBB Trading DMCC
-						</h1>
-						<p class="offer-subtitle">
-							Аgricultural and wood commodities from Ukraine
-						</p>
-						<a href="##" class="offer-cta">
-							Request a call
-						</a>
+			<section class="first" id="firstScreen">
+				<div class="first__container">
+					<div class="first__wrapper">
+						<div class="first__offer offer">
+							<h1 class="offer__title">
+								TBB Trading DMCC
+							</h1>
+							<p class="offer__subtitle">
+								Аgricultural and wood commodities from Ukraine
+							</p>
+							<a href="##" class="offer__btn btn">
+								Request a call
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about to-scrolling">
+				<div class="about__container">
+					<div class="about__wrapper _not-active">
+						<div class="about__images about-images">
+							<div class="about-images__wrapper">
+								<div class="about-images__image">
+									<picture><source srcset="img/photo-1.webp" type="image/webp"><img src="img/photo-1.jpg" alt="product#1"></picture>
+								</div>
+								<div class="about-images__image">
+									<picture><source srcset="img/photo-2.webp" type="image/webp"><img src="img/photo-2.png" alt="product#2"></picture>
+								</div>
+								<div class="about-images__image">
+									<picture><source srcset="img/photo-3.webp" type="image/webp"><img src="img/photo-3.png" alt="product#3"></picture>
+								</div>
+							</div>
+						</div>
+						<div class="about__info" id="aboutInfo">
+							<h2 class="about__title section-title section-title-media-absolute">
+								<span>ABOUT US</span>
+							</h2>
+							<div class="about__text _not-active">
+								<p><span>TBB Trading</span> company was established in Dubai city, UAE as <span>agricultural and
+										wood commodity wholesale trader</span> with high level of customers service from around
+									the globe, by year later our company launched representative <span>office in Ukraine,
+										Odessa</span>. Since foundation our company became one of the leading exporter of sawn
+									timber from Ukraine with a market share of over 25% and we are increasing this figure of
+									market share from year by year.</p>
+
+								<p>Today our company owns more than 8000 hectares of land and own storage facilities over 10,000
+									square meters with 5 hectares of the adjacent territory located in Odessa at a distance of
+									up to 3 km. to the largest seaport in Ukraine and 8 highly equipped sawmills.</p>
+
+								<p>Besides our own production, our company purchase different agricultural products directly
+									from Ukrainian farmers all year round, which allows us to fully control the quality and
+									ensure uninterrupted supply of goods in large volumes for our customers.</pc>
+
+								<p>Today the activities of our company has spread to more than 40 countries and 80 companies
+									around the world with a monthly turnover more than 700 containers of timber and agricultural
+									products, and we are increasing this figure from year to year.</p>
+
+								<p class="show">Today our company owns more than 8000 hectares of land
+									and
+									own
+									storage
+									facilities over 10,000 square meters with 5 hectares of the adjacent territory located in
+									Odessa at a distance of up to 3 km. to the largest seaport in Ukraine and 8 highly equipped
+									sawmills.</p>
+
+								<p class="show">Besides our own production, our company purchase different
+									agricultural
+									products directly from Ukrainian farmers all year round, which allows us to fully control
+									the quality and ensure uninterrupted supply of goods in large volumes for our customers.</p>
+
+								<p class="show">Today our company owns more than 8000 hectares of land and own storage
+									facilities over 10,000 square meters with 5 hectares of the adjacent territory located in
+									Odessa at a distance of up to 3 km. to the largest seaport in Ukraine and 8 highly equipped
+									sawmills.</p>
+
+								<p class="show">Besides our own production, our company purchase different
+									agricultural
+									products directly from Ukrainian farmers all year round, which allows us to fully control
+									the quality and ensure uninterrupted supply of goods in large volumes for our customers.</p>
+
+								<a href="" class="about__more">
+									Read completele
+									<svg width="1rem" height=".625rem" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M7.99996 9.12094C7.7132 9.12094 7.42649 9.01145 7.20787 8.79293L0.328226 1.91322C-0.109409 1.47559 -0.109409 0.766039 0.328226 0.328582C0.765684 -0.108876 1.47509 -0.108876 1.91276 0.328582L7.99996 6.41613L14.0872 0.328794C14.5248 -0.108664 15.2342 -0.108664 15.6716 0.328794C16.1094 0.766252 16.1094 1.4758 15.6716 1.91344L8.79205 8.79314C8.57332 9.0117 8.2866 9.12094 7.99996 9.12094Z" />
+									</svg>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 
-			</div>
-
-		</section>
-
-		<section class="about to-scrolling">
-			<div class="about-wrapper__container">
-				<div class="about-images">
-					<div class="about-images__wrapper">
-						<a href="##" class="about__image">
-							<picture><source srcset="img/photo-1.webp" type="image/webp"><img src="img/photo-1.jpg" alt="product#1"></picture>
-						</a>
-						<a href="##" class="about__image">
-							<picture><source srcset="img/photo-2.webp" type="image/webp"><img src="img/photo-2.png" alt="product#2"></picture>
-						</a>
-						<a href="##" class="about__image">
-							<picture><source srcset="img/photo-3.webp" type="image/webp"><img src="img/photo-3.png" alt="product#3"></picture>
-						</a>
+			</section>
+			<section class="biz title-absolute to-scrolling">
+				<h2 class="biz__title section-title section-title-absolute">
+					<span>OUR BUSINESS STRUCTURE</span>
+				</h2>
+				<div class="biz__background biz-background">
+					<div class="biz-background__image">
+						<picture><source srcset="img/structure-1.webp" type="image/webp"><img src="img/structure-1.jpg" alt=""></picture>
+					</div>
+					<div class="biz-background__image">
+						<picture><source srcset="img/structure-2.webp" type="image/webp"><img src="img/structure-2.jpg" alt=""></picture>
 					</div>
 				</div>
-				<div class="about-info">
-					<h2 class="section-title__about">
-						ABOUT US
-					</h2>
-					<div class="about-text not-active">
-						<p><span>TBB Trading</span> company was established in Dubai city, UAE as <span>agricultural and
-								wood commodity wholesale trader</span> with high level of customers service from around
-							the globe, by year later our company launched representative <span>office in Ukraine,
-								Odessa</span>. Since foundation our company became one of the leading exporter of sawn
-							timber from Ukraine with a market share of over 25% and we are increasing this figure of
-							market share from year by year.</p>
-
-						<p>Today our company owns more than 8000 hectares of land and own storage facilities over 10,000
-							square meters with 5 hectares of the adjacent territory located in Odessa at a distance of
-							up to 3 km. to the largest seaport in Ukraine and 8 highly equipped sawmills.</p>
-
-						<p>Besides our own production, our company purchase different agricultural products directly
-							from Ukrainian farmers all year round, which allows us to fully control the quality and
-							ensure uninterrupted supply of goods in large volumes for our customers.</pc>
-
-						<p>Today the activities of our company has spread to more than 40 countries and 80 companies
-							around the world with a monthly turnover more than 700 containers of timber and agricultural
-							products, and we are increasing this figure from year to year.</p>
-
-						<p class="show disabled">Today our company owns more than 8000 hectares of land and own storage
-							facilities over 10,000 square meters with 5 hectares of the adjacent territory located in
-							Odessa at a distance of up to 3 km. to the largest seaport in Ukraine and 8 highly equipped
-							sawmills.</p>
-
-						<p class="show disabled">Besides our own production, our company purchase different agricultural
-							products directly from Ukrainian farmers all year round, which allows us to fully control
-							the quality and ensure uninterrupted supply of goods in large volumes for our customers.</p>
-
-						<p class="show disabled">Today our company owns more than 8000 hectares of land and own storage
-							facilities over 10,000 square meters with 5 hectares of the adjacent territory located in
-							Odessa at a distance of up to 3 km. to the largest seaport in Ukraine and 8 highly equipped
-							sawmills.</p>
-
-						<p class="show disabled">Besides our own production, our company purchase different agricultural
-							products directly from Ukrainian farmers all year round, which allows us to fully control
-							the quality and ensure uninterrupted supply of goods in large volumes for our customers.</p>
-
-						<a href="##" class="more">
-							<p>Read completele</p>
-							<div class="picture__fix"><img src="img/Line-down.svg" alt=">"></div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="kliptarz__about__1"><picture><source srcset="img/klipartz-1.webp" type="image/webp"><img src="img/klipartz-1.png" alt=""></picture></div>
-			<div class="kliptarz__about__2"><picture><source srcset="img/klipartz-2.webp" type="image/webp"><img src="img/klipartz-2.png" alt=""></picture></div>
-		</section>
-		<section class="biz to-scrolling">
-			<h2 class="section-title__biz">
-				OUR BUSINESS STRUCTURE
-			</h2>
-			<div class="biz__cards">
 				<div class="biz__content">
 					<div class="biz__container">
-						<div class="biz__body">
-							<div class="biz-card__1 height-fit">
-								<div class="biz-title height-fit">
-									<div class="height-fit">
-										<picture><source srcset="img/block-1-icon.webp" type="image/webp"><img src="img/block-1-icon.png" alt=""></picture>
-									</div>
-									<div class="height-fit">
-										<h3>Agricultural commodity department:</h3>
-									</div>
-								</div>
-								<div class="biz-text__1">
-									<p><span>1.</span> Farming department - with land bank more than 8000 hectares;</p>
-									<p><span>2.</span> Warehousing department – our private area is more then 5 Ha with
+						<div class="biz__body biz-item">
+							<div class="biz__item biz-item biz-item-orange">
+								<h3 class="biz-item__title biz-item__title-orange i-culture">
+									Agricultural commodity department:
+								</h3>
+								<ol class="biz-item__list biz-item__list-orange">
+									<li>
+										Farming department - with land bank more than 8000 hectares;
+									</li>
+									<li>
+										Warehousing department – our private area is more then 5 Ha with
 										11 000 square meters warehouse including full equipment needed to fulfill any
-										type of loading;</p>
-									<p><span>3.</span> Purchase department – high degree management directly
+										type of loading;
+									</li>
+									<li>
+										Purchase department – high degree management directly
 										communicated with Ukraine farmers with monthly turnover more then 9000 metric
-										tones of different commodities;</p>
-									<p><span>4.</span> Logistic department – own fleet of trucks and railway wagons with
-										24 hours services;</p>
-									<p><span>5.</span> Trading department – high qualified traders which are connected
+										tones of different commodities;
+									</li>
+									<li>
+										Logistic department – own fleet of trucks and railway wagons with
+										24 hours services;
+									</li>
+									<li>
+										Trading department – high qualified traders which are connected
 										with most of TOP food traders and brokers globally. In current year our turnover
 										reached to 400 containers per month and our team improving this result from year
-										to year.</p>
-								</div>
+										to year.
+									</li>
+								</ol>
 							</div>
-							<div class="biz-card__2">
-								<div class="biz-title">
-									<div>
-										<picture><source srcset="img/block-2-icon.webp" type="image/webp"><img src="img/block-2-icon.png" alt=""></picture>
-									</div>
-									<h3>
-										Wood commodity department:
-									</h3>
-								</div>
-								<div class="biz-text__2">
-									<p><span>1.</span> Sawmills department – we are end owners of 8 modern sawmills in
-										the central and western part of Ukraine;</p>
-									<p><span>2.</span> Purchase department – our team personally participating in most
+							<div class="biz__item biz-item biz-item-green">
+								<h3 class="biz-item__title biz-item__title-green i-firewood">
+									Wood commodity department:
+								</h3>
+								<ol class="biz-item__list biz-item__list-green">
+									<li>
+										Sawmills department – we are end owners of 8 modern sawmills in
+										the central and western part of Ukraine;
+									</li>
+									<li>
+										Purchase department – our team personally participating in most
 										of government forestry buying directly from auctions. Monthly we purchase approx
-										12 000 cbm of pine logs;</p>
-									<p><span>3.</span> Trading department – in 2019 our main market was China but for
+										12 000 cbm of pine logs;
+									</li>
+									<li>
+										Trading department – in 2019 our main market was China but for
 										today our activity reached to more than 10 others countries like: UAE, India,
-										Israel, Korea, Vietnam etc.</p>
-									<p><span>4.</span> Development department – our development department is
+										Israel, Korea, Vietnam etc.
+									</li>
+									<li>
+										Development department – our development department is
 										responsible for both structure, spreading our business globally yearly. Our team
-										participating in more than 10 exhibitions each year and pay high </p>
-									<p><span>5.</span> Our wood commodities yearly turnover is near 4000 containers to
-										more than 10 countries globally;</p>
+										participating in more than 10 exhibitions each year and pay high
+									</li>
+									<li>
+										Our wood commodities yearly turnover is near 4000 containers to
+										more than 10 countries globally;
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services to-scrolling" id="services">
+				<h2 class="services__title section-title">
+					WHAT WE DO
+				</h2>
+				<div class="services__container">
+					<div class="services__wrapper">
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-agreement"></i>
+							</div>
+							<h4 class="services-card__title">
+								Official argreement
+							</h4>
+							<p class="services-card__text">
+								Before starting any business, be it with a buyer or a broker, our company necessarily signs a
+								contract, which allows to feel more confident and reliable both as a buyer and as a seller. All
+								our business activity happens according GAFTA rules and under control of independent survey
+								company GAFTA member.
+							</p>
+						</div>
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-plant"></i>
+							</div>
+							<h4 class="services-card__title">
+								Purchase
+							</h4>
+							<p class="services-card__text">
+								Due to our well-deserved reputation as a reliable and responsible buyer, we have constant and
+								reliable relationships with Ukrainian manufacturers that ensure uninterrupted supplies of
+								products all year round.
+							</p>
+						</div>
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-delivery"></i>
+							</div>
+							<h4 class="services-card__title">
+								Warehouse delivery
+							</h4>
+							<p class="services-card__text">
+								One of the important pricing components are logistics costs and costs associated with warehouse
+								work, due to the fact that our company owns warehouse premises of more than 10,000 square
+								meters, we are more reliable and competitively advantageous than many other companies that often
+								do not have their own warehouse capacities
+							</p>
+						</div>
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-service"></i>
+							</div>
+							<h4 class="services-card__title">
+								Special service
+							</h4>
+							<p class="services-card__text">
+								All our regular customers are privileged and has special conditions like payment terms, prices,
+								loading conditions and many others services available with us.
+							</p>
+						</div>
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-support"></i>
+							</div>
+							<h4 class="services-card__title">
+								Informational support
+							</h4>
+							<p class="services-card__text">
+								To provide high level service and be online with all our buyers, our team is available on the
+								calls and e-mail during 24/7. All our buyers will be served and got informational support in max
+								2 hours from request to response.
+							</p>
+						</div>
+						<div class="services__card services-card">
+							<div class="services-card__icon">
+								<i class="i-pack"></i>
+							</div>
+							<h4 class="services-card__title">
+								Cleaning and packing
+							</h4>
+							<p class="services-card__text">
+								To ensure high quality goods for our customers, our team carries out cleaning of goods from any
+								kind of impurities at a high technological level, with possible further packaging of goods in
+								any type of container. Today we carry out packaging of goods in bags 10 kg., 20 kg., 25 kg. and
+								50 kg., as well as big bags weighing from 500 to 1000 kg. and liner bags.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="docs title-absolute to-scrolling" id="docs">
+				<h2 class="docs__title section-title section-title-absolute">
+					<span>DOCUMENTATION</span>
+				</h2>
+				<div class="docs__container">
+					<div class="docs__wrapper">
+						<h3 class="docs__desc i-document">Each dispatch of the goods is accompanied by the following
+							documents mentioned in our contract:</h3>
+						<div class="swiper-container docs__slider docs-slider slider-typical">
+							<div class="swiper-wrapper docs-slider__wrapper slider-typical__wrapper">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/phyto-1.webp" type="image/webp"><img class="img-fluid" src="img/phyto-1.jpg" alt="Doc"></picture>
+										</div>
+										<div class="docs-slider-item__desc slider-typical-item__desc">
+											<span>Phyto certificate</span>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="images">
-					<div class="biz__image">
-						<div class="blur"></div>
-						<picture><source srcset="img/structure-1.webp" type="image/webp"><img class="be-left" src="img/structure-1.jpg" alt=""></picture>
-					</div>
-					<div class="biz__image">
-						<div class="blur"></div>
-						<picture><source srcset="img/structure-2.webp" type="image/webp"><img class="be-right" src="img/structure-2.jpg" alt=""></picture>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="services to-scrolling" id="services">
-			<h2 class="section-title__services">
-				WHAT WE DO
-			</h2>
-			<div class="services-cards__container">
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/agreement-1.webp" type="image/webp"><img src="img/agreement-1.png" alt="Agree"></picture>
-					</div>
-					<h4 class="services-title">
-						Official argreement
-					</h4>
-					<p class="services-text">
-						Before starting any business, be it with a buyer or a broker, our company necessarily signs a
-						contract, which allows to feel more confident and reliable both as a buyer and as a seller. All
-						our business activity happens according GAFTA rules and under control of independent survey
-						company GAFTA member.
-					</p>
-				</div>
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/plant-1.webp" type="image/webp"><img src="img/plant-1.png" alt="Plant"></picture>
-					</div>
-					<h4 class="services-title">
-						Purchase
-					</h4>
-					<p class="services-text">
-						Due to our well-deserved reputation as a reliable and responsible buyer, we have constant and
-						reliable relationships with Ukrainian manufacturers that ensure uninterrupted supplies of
-						products all year round.
-					</p>
-				</div>
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/warehouse-1.webp" type="image/webp"><img src="img/warehouse-1.png" alt="Warehousing"></picture>
-					</div>
-					<h4 class="services-title">
-						Warehouse delivery
-					</h4>
-					<p class="services-text">
-						One of the important pricing components are logistics costs and costs associated with warehouse
-						work, due to the fact that our company owns warehouse premises of more than 10,000 square
-						meters, we are more reliable and competitively advantageous than many other companies that often
-						do not have their own warehouse capacities
-					</p>
-				</div>
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/customer-1.webp" type="image/webp"><img src="img/customer-1.png" alt="Customer"></picture>
-					</div>
-					<h4 class="services-title">
-						Special service
-					</h4>
-					<p class="services-text">
-						All our regular customers are privileged and has special conditions like payment terms, prices,
-						loading conditions and many others services available with us.
-					</p>
-				</div>
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/information-1.webp" type="image/webp"><img src="img/information-1.png" alt="Call-info"></picture>
-					</div>
-					<h4 class="services-title">
-						Informational support
-					</h4>
-					<p class="services-text">
-						To provide high level service and be online with all our buyers, our team is available on the
-						calls and e-mail during 24/7. All our buyers will be served and got informational support in max
-						2 hours from request to response.
-					</p>
-				</div>
-				<div class="services__card">
-					<div class="services-icon">
-						<picture><source srcset="img/seeds-1.webp" type="image/webp"><img src="img/seeds-1.png" alt="Seeds"></picture>
-					</div>
-					<h4 class="services-title">
-						Cleaning and packing
-					</h4>
-					<p class="services-text">
-						To ensure high quality goods for our customers, our team carries out cleaning of goods from any
-						kind of impurities at a high technological level, with possible further packaging of goods in
-						any type of container. Today we carry out packaging of goods in bags 10 kg., 20 kg., 25 kg. and
-						50 kg., as well as big bags weighing from 500 to 1000 kg. and liner bags.
-					</p>
-				</div>
-			</div>
-			<div class="kliptarz__services">
-				<picture><source srcset="img/services-klipatz.webp" type="image/webp"><img src="img/services-klipatz.png" alt=""></picture>
-			</div>
-		</section>
-		<section class="docs to-scrolling" id="docs">
-			<h2 class="section-title__docs">
-				DOCUMENTATION
-			</h2>
-			<div class="docs__container">
-				<div class="docs__desc">
-					<div class="desc__icon">
-						<img src="img/file.svg" alt="">
-					</div>
-					<h3 class="desc__text">Each dispatch of the goods is accompanied by the following documents
-						mentioned in our contract:</h3>
-				</div>
-			</div>
-			<div class="swiper-container docs-slider">
-				<div class="swiper-wrapper docs-slider__wrapper">
-					<div class="swiper-slide docs-item">
-						<div class="document">
-							<div class="document-image">
-								<picture><source srcset="img/1-document.webp" type="image/webp"><img class="img-fluid" src="img/1-document.jpg" alt="Doc"></picture>
-							</div>
-							<div class="certificate">
-								Photo certificate
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide docs-item">
-						<div class="document">
-							<div class="documnet-image">
-								<picture><source srcset="img/Phyto-2-2.webp" type="image/webp"><img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc"></picture>
-							</div>
-							<div class="certificate">
-								Photo certificate
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide docs-item">
-						<div class="document">
-							<div class="document-image">
-								<picture><source srcset="img/CO-2.webp" type="image/webp"><img class="img-fluid" src="img/CO-2.jpg" alt="Doc"></picture>
-							</div>
-							<div class="certificate">
-								Photo certificate
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide docs-item">
-						<div class="document">
-							<div class="document-image">
-								<picture><source srcset="img/CO-2.webp" type="image/webp"><img class="img-fluid" src="img/CO-2.jpg" alt="Doc"></picture>
-							</div>
-							<div class="certificate">
-								Photo certificate
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide docs-item">
-						<div class="document">
-							<div class="document-image">
-								<picture><source srcset="img/Phyto-2-2.webp" type="image/webp"><img class="img-fluid" src="img/Phyto-2-2.jpg" alt="Doc"></picture>
-							</div>
-							<div class="certificate">
-								Photo certificate
-							</div>
-						</div>
-					</div>
 
-				</div>
-				<div class="swiper-button-next docs-button-next">
-				</div>
-				<div class="swiper-button-prev docs-button-prev">
-				</div>
-				<div class="swiper-pagination docs-pagination">
-					<div class="swiper-srollbar docs-srollbar"></div>
-				</div>
-			</div>
-			<div class="kliptarz__docs"><picture><source srcset="img/klipartz-5.webp" type="image/webp"><img src="img/klipartz-5.png" alt=""></picture></div>
-		</section>
-		<section class="control to-scrolling" id="control">
-			<h2 class="section-title__control">
-				SURVEY CONTROL
-			</h2>
-			<div class="control__container">
-				<div class="control__content">
-					<div class="control__offer">
-						<p class="control__text">
-							The main responsibility for our company company is quality of our products, so we pays much
-							attention to quality control of the goods when it is taken to the warehouse and during
-							loading to the final buyer. During the purchase and acceptance of goods, our specialists
-							carry out a thorough check and selection of cargo samples, due to this we can obtain
-							exhaustive information on the quality of the cargo even before it reaches our customers.
-						</p>
-						<a href="##" class="control_btn">
-							Request a call
-						</a>
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/phyto-2.webp" type="image/webp"><img class="img-fluid" src="img/phyto-2.jpg" alt="Doc"></picture>
+										</div>
+										<div class="docs-slider-item__desc slider-typical-item__desc">
+											<span>Phyto certificate</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/phyto-3.webp" type="image/webp"><img class="img-fluid" src="img/phyto-3.jpg" alt="Doc"></picture>
+										</div>
+										<div class="docs-slider-item__desc slider-typical-item__desc">
+											<span>Phyto certificate</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/phyto-4.webp" type="image/webp"><img class="img-fluid" src="img/phyto-4.jpg" alt="Doc"></picture>
+										</div>
+										<div class="docs-slider-item__desc slider-typical-item__desc">
+											<span>Phyto certificate</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/phyto-5.webp" type="image/webp"><img class="img-fluid" src="img/phyto-5.jpg" alt="Doc"></picture>
+										</div>
+										<div class="docs-slider-item__desc slider-typical-item__desc">
+											<span>Phyto certificate</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="swiper-pagination docs-slider__pagination slider-typical__pagination">
+								<div class="swiper-srollbar docs-slider__srollbar slider-typical__scrollbar"></div>
+							</div>
+							<div class="swiper-button-next docs-slider__button-next i-arrow-more slider-typical__button-next">
+							</div>
+							<div class="swiper-button-prev docs-slider__button-prev i-arrow-more slider-typical__button-prev">
+							</div>
+							<div class="docs-slider__shadow slider-typical__shadow"></div>
+						</div>
 					</div>
-					<div class="control__icon">
-						<picture><source srcset="img/Control-icons.webp" type="image/webp"><img class="img-fluid" src="img/Control-icons.png" alt=""></picture>
+				</div>
+			</section>
+			<section class="control to-scrolling" id="control">
+				<h2 class="control__title control-title section-title section-title-absolute">
+					<div class="control-title__container">
+						<span>SURVEY CONTROL</span>
+					</div>
+				</h2>
+				<div class="control__container">
+					<div class="control__wrapper">
+						<div class="control__content control-content">
+							<p class="control-content__text">
+								The main responsibility for our company company is quality of our products, so we pays much
+								attention to quality control of the goods when it is taken to the warehouse and during
+								loading to the final buyer. During the purchase and acceptance of goods, our specialists
+								carry out a thorough check and selection of cargo samples, due to this we can obtain
+								exhaustive information on the quality of the cargo even before it reaches our customers.
+							</p>
+							<a href="##" class="control-content__btn btn">
+								Request a call
+							</a>
+						</div>
+						<div class="control__images control-images">
+							<div class="control-images__img control-images__img-1"><picture><source srcset="img/survey-1.webp" type="image/webp"><img src="img/survey-1.png" alt=""></picture></div>
+							<div class="control-images__img"><picture><source srcset="img/survey-2.webp" type="image/webp"><img src="img/survey-2.png" alt=""></picture></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="kliptarz__control__1">
-				<picture><source srcset="img/klipartz-11.webp" type="image/webp"><img src="img/klipartz-11.png" alt=""></picture>
-			</div>
-			<div class="kliptarz__control__2">
-				<picture><source srcset="img/klipartz-11.webp" type="image/webp"><img src="img/klipartz-11.png" alt=""></picture>
-			</div>
-		</section>
-		<section class="products to-scrolling">
+			</section>
+			<!-- <section class="products to-scrolling">
 			<div class="products__container">
 				<h2 class="section-title__products">
 					Our Products
@@ -1269,7 +1295,7 @@
 			</h2>
 			<div class="contact__container">
 				<div class="contact-info">
-					<div class="contact-card">
+					<div class="contact-card contact-card__uae">
 						<h3 class="contact-title">
 							Office in UAE
 						</h3>
@@ -1290,7 +1316,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="contact-card">
+					<div class="contact-card contact-card__ukraine">
 
 						<h3 class="contact-title">
 							Office in Ukraine
@@ -1312,7 +1338,7 @@
 						</p>
 
 					</div>
-					<div class="contact-card">
+					<div class="contact-card contact-card__warehouse">
 						<h3 class="contact-title">
 							WAREHOUSE
 						</h3>
@@ -1390,9 +1416,9 @@
 					</form>
 				</div>
 			</div>
-		</section>
-	</main>
-	<footer class="footer">
+		</section> -->
+		</main>
+		<footer class="footer">
     <div class="footer__container">
         <div class="footer__content">
             <p class="copyright">
@@ -1401,8 +1427,147 @@
         </div>
     </div>
 </footer>
-	<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js?_v=20230114170938"></script>
-	<script src="js/app.min.js?_v=20230114170938"></script>
+	</div>
+	<!-- Стилі для body -->
+<style>
+	.lock body {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+
+	.loading body {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.loaded body {
+		transition: opacity 0.5s ease 0s;
+		opacity: 1;
+		visibility: visible;
+	}
+</style>
+<div id="preloader">
+	<!-- Стилі для прелоадера -->
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/* Головний блок */
+		.preloader {
+			pointer-events: none;
+			z-index: -1;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Блок з елементами */
+		.preloader__body {
+			padding: 0.93rem;
+			max-width: 31.25rem;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Блок з лічильником */
+		.preloader__counter {
+			font-size: 10rem;
+		}
+
+		/* Прогресбар */
+		.preloader__line {}
+
+		/* Лінія прогресбару */
+		.preloader__line span {
+			display: inline-block;
+			transition: width 0.2s ease;
+			height: 0.8rem;
+			background-color: #85BF2D;
+		}
+	</style>
+	<!-- Скріпт прелоадера -->
+	<script>
+		function preloader() {
+			const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+			const preloaderContainer = document.querySelector('#preloader');
+			if (preloaderImages.length) {
+				const preloaderTemplate = `
+					<div class="preloader">
+						<div class="preloader__body">
+							<div class="preloader__counter">0%</div>
+							<div class="preloader__line"><span></span></div>
+						</div>
+					</div>`;
+				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+
+				const
+					preloader = document.querySelector('.preloader'),
+					showPecentLoad = document.querySelector('.preloader__counter'),
+					showLineLoad = document.querySelector('.preloader__line span'),
+					htmlDocument = document.documentElement;
+
+				let imagesLoadedCount = counter = progress = 0;
+
+				htmlDocument.classList.add('loading');
+				htmlDocument.classList.add('lock');
+
+				preloaderImages.forEach(preloaderImage => {
+					const imgClone = document.createElement('img');
+					if (imgClone) {
+						imgClone.onload = imageLoaded;
+						imgClone.onerror = imageLoaded;
+						preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+					}
+				});
+				function setValueProgress(progress) {
+					showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+					showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+				}
+				showPecentLoad ? setValueProgress(progress) : null;
+
+				function imageLoaded() {
+					imagesLoadedCount++;
+					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+					const intervalId = setInterval(() => {
+						counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+						counter >= 100 ? addLoadedClass() : null;
+					}, 10);
+				}
+				function addLoadedClass() {
+					htmlDocument.classList.add('loaded');
+					htmlDocument.classList.remove('lock');
+					htmlDocument.classList.remove('loading');
+					setInterval(() => {
+						preloader.remove();
+						preloaderContainer.remove();
+					}, 500);
+				}
+			} else {
+				preloaderContainer.remove();
+			}
+		}
+		preloader();
+	</script>
+</div>
+	<!--[if lt IE 8]>
+		<script type="text/javascript">oldIE = true;</script>
+	<![endif]-->
+	<script src="js/app.min.js?_v=20230222000013"></script>
 </body>
 
 </html>
