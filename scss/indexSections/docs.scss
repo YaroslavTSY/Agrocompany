@@ -1,107 +1,4 @@
 //* Docs
-// .docs {
-// 	&__container {
-// 	}
-
-// 	&__desc {
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		margin: 3.625rem 0 2.6875rem 0;
-// 		padding: 0 3vw;
-// 		column-gap: 0.625rem;
-// 	}
-// }
-// .section-title__docs {
-// 	@extend .section-title__biz;
-// 	@include adaptiv-value("width", 827, 300, 0);
-// 	@include adaptiv-value("height", 96, 70, 0);
-// 	color: var(--base-color);
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	background: var(--accent-color);
-// 	align-self: flex-start;
-// 	padding: 0 4vw 0 0;
-// 	border-radius: 0px 0px 35px 0px;
-// 	margin: -4.375rem 0 0 0;
-// }
-// .desc {
-// 	&__icon {
-// 	}
-
-// 	&__text {
-// 		@include adaptiv-value("font-size", 25, 15, 1);
-// 	}
-// }
-// .swiper-container {
-// }
-// .docs-slider {
-// 	z-index: 2;
-// 	&__wrapper {
-// 		.swiper-slide-active {
-// 			.certificate {
-// 				display: flex;
-// 				justify-content: start;
-// 			}
-// 		}
-// 	}
-// }
-// .swiper-wrapper {
-// }
-// .swiper-slide {
-// }
-// .docs-item {
-// }
-// .document {
-// 	position: relative;
-// 	picture img,
-// 	img, picture {
-// 		@include adaptiv-value("width", 400, 258, 0);
-// 		@include adaptiv-value("height", 580, 356, 0);
-// 		object-fit: cover;
-// 		object-position: center;
-// 	}
-// }
-// .document-image {
-// }
-// .img-fluid {
-// }
-// .certificate {
-// 	display: none;
-// 	position: absolute;
-// 	left: 0;
-// 	bottom: 0;
-// 	width: 100%;
-// 	padding: 0.7vw 0 0.7vw 3vw;
-// 	background: #85bf2d;
-// 	border-radius: 0px 35px 0px 0px;
-// 	font-size: 1.125rem;
-// 	line-height: 2.22em;
-// 	color: #fff;
-// }
-// .documnet-image {
-// }
-// .swiper-button-next {
-// }
-// .docs-button-next {
-// }
-// .swiper-button-prev {
-// }
-// .docs-button-prev {
-// }
-// .swiper-pagination {
-// }
-// .docs-pagination {
-// }
-// .swiper-srollbar {
-// }
-// .docs-srollbar {
-// }
-// .kliptarz {
-// 	&__docs {
-// 	}
-// }
 // Docs
 .docs {
 	position: relative;
@@ -152,7 +49,6 @@
 	}
 }
 .docs-slider {
-	@include adaptiv-value("padding-bottom", 110, 55, 0);
 	&__wrapper {
 	}
 
@@ -165,8 +61,6 @@
 	}
 
 	&__pagination {
-		@include adaptiv-value("bottom", 60, 20, 0);
-		z-index: 2;
 	}
 
 	&__srollbar {
@@ -174,100 +68,35 @@
 
 	&__button-next,
 	&__button-prev {
-		transform: translateY(-50%);
-		@include adaptiv-value("width", 62, 40, 0);
-		@include adaptiv-value("height", 62, 40, 0);
-		background-color: var(--accent-color);
-		border-radius: 50%;
-		color: var(--base-color);
-		transition: all 0.3s ease 0s;
-		&:hover {
-			transform: translateY(-50%) scale(1.1);
-			background-color: var(--accent-color-dark);
-		}
-		&:active {
-			transform: translateY(-50%) scale(0.9);
-		}
-		&::after {
-			@include adaptiv-value("font-size", 16, 14, 0);
-		}
 	}
 	&__button-next {
-		&::after {
-			transform: rotate(-90deg) translateY(25%);
-		}
 	}
 
 	&__button-prev {
-		&::after {
-			transform: rotate(90deg) translateY(25%);
-		}
 	}
+
 	&__shadow {
-		display: none;
 	}
 }
 .docs-slider__scrollbar {
-	display: flex;
-	align-items: center;
-	position: relative;
-	height: 0.25rem;
-	background: rgba(133, 191, 45, 0.3); // ($accent opacity 0.3)
-	margin: 0 auto;
-	@include adaptiv-value("max-width", 320, 200, 0);
-
 	.swiper-scrollbar-drag {
-		border: 0.1875rem solid var(--accent-color);
-		top: 0;
 	}
 
 	.swiper-pagination-total,
 	.swiper-pagination-current {
-		position: absolute;
-		font-weight: 700;
-		font-size: 1.125rem;
-		line-height: 1.39; /* identical to box height, or 139% */
-		letter-spacing: 0.027em; /* 0.5px/18 */
 	}
 	.swiper-pagination-current {
-		left: -1.5625rem;
 	}
 	.swiper-pagination-total {
-		right: -1.5625rem;
 	}
 }
 .docs-slider-item {
-	position: relative;
-	width: 100%;
-	height: 100%;
 	&__image {
-		width: inherit;
-		height: inherit;
 		img,
 		picture {
-			width: inherit;
-			height: inherit;
-			object-fit: cover;
 		}
 	}
 
 	&__desc {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 2;
-		@include adaptiv-value("height", 60, 45, 0);
-		color: var(--base-color);
-		background-color: var(--accent-color);
-		@include adaptiv-value("padding-left", 45, 20, 0);
-		@include adaptiv-value("padding-right", 45, 20, 0);
-		display: flex;
-		align-items: center;
-		font-weight: 700;
-		font-size: 1.125rem;
-		line-height: 1;
-		letter-spacing: 0.055em; /* 0.1px/18 */
-		border-radius: 0px 35px 0px 0px;
 	}
 }

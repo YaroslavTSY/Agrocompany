@@ -1,21 +1,20 @@
-@import "functionalFiles/loader";
-
 html {
 	scroll-behavior: smooth;
 }
-
+.lock {
+	body {
+		overflow: hidden;
+	}
+}
 body {
 	font-family: "Mulish", sans-serif;
 	height: 100%;
 	background-color: var(--base-color);
 	color: var(--main-color);
 	position: relative;
-	&._lock {
-		overflow: hidden;
-	}
 	svg,
 	svg path {
-		transition: all 0.4s ease 0.1s;
+		transition: all 0.3s ease 0s;
 	}
 }
 
@@ -35,8 +34,6 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--accent-color-dark);
-}
-.section-title__biz {
 }
 h1,
 h2,
@@ -58,7 +55,7 @@ span {
 
 a,
 i {
-	cursor: var(--hovercursor), pointer;
+	cursor: var(--hovercursor) 17 12, pointer;
 }
 
 [class*="__container"],
@@ -90,6 +87,7 @@ p {
 	color: var(--gray-opacity-color);
 	@include adaptiv-value("font-size", $rootfz, 12, 2);
 	line-height: 1.5em;
+	letter-spacing: 0.005em;
 }
 
 .page {
@@ -130,6 +128,7 @@ section {
 }
 
 .btn {
+	display: inline-block;
 	min-width: max-content;
 	text-align: center;
 	@include adaptiv-value("font-size", 18, 16, 0);
@@ -142,7 +141,7 @@ section {
 	@include adaptiv-value("padding-bottom", 18, 15, 2);
 	@include adaptiv-value("padding-left", 38, 25, 2);
 	@include adaptiv-value("padding-right", 38, 25, 2);
-	transition: all 0.4s ease 0.1s;
+	transition: all 0.3s ease 0s;
 	&:hover {
 		background: rgb(70, 104, 19);
 	}
@@ -183,7 +182,7 @@ section {
 		@include adaptiv-value("width", 70, 90, 4);
 		height: $titleHeight;
 		top: 0;
-		box-shadow: 0px -20px 35px var(--base-color-shadow);
+		box-shadow: 0px 0px 35px var(--base-color-shadow);
 	}
 }
 .title-absolute {

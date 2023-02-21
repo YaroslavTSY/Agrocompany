@@ -9,13 +9,13 @@ mediaQuery768.addEventListener("change", () => {
 })
 
 export function moveUnderline() {
-	const menuBody = document.querySelector('.menu__body');
+	const menuList = document.querySelector('.menu__list');
 	const navUnderline = document.querySelector('.menu__underline');
 	let navTabActive = document.querySelector('.menu__list li._active');
 
 	if (navTabActive) {
-		let linkOffsetLeft = (100 / menuBody.offsetWidth * navTabActive.offsetLeft);
-		let linkOffsetWidth = (100 / menuBody.offsetWidth * navTabActive.offsetWidth);
+		let linkOffsetLeft = (100 / menuList.offsetWidth * navTabActive.offsetLeft);
+		let linkOffsetWidth = (100 / menuList.offsetWidth * navTabActive.offsetWidth);
 		let mediaQuery768 = window.matchMedia("(min-width: 48em)");
 		// navUnderline.style.cssText = 'display: none';
 		if (mediaQuery768.matches) {

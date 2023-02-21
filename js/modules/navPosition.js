@@ -1,4 +1,4 @@
-import { moveUnderline, navUnderline } from "./navTabs.js";
+import { navUnderline } from "./navTabs.js";
 
 const mainHeader = document.querySelector('.header');
 const menuBody = document.querySelector('.menu__body');

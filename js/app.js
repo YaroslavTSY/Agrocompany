@@ -11,6 +11,7 @@ import * as productsTabs from "./modules/tabsProducts.js";
 import * as sliders from "./modules/sliders.js";
 
 functions.isWebp();
+functions.addLoadedClass();
 
 //! Checking Mobile or PC device
 if (definition.isMobile.any()) {
@@ -24,6 +25,19 @@ let oldIE = false;
 if (oldIE) {
 	functions.ie7();
 }
+let mediaQuery576 = window.matchMedia("(min-width: 36em)");
+mediaQuery576.addEventListener("change", setClassTitleAbsolute);
+
+function setClassTitleAbsolute() {
+	const controlSection = document.querySelector('.control');
+	if (!mediaQuery576.matches) {
+		controlSection.classList.add('title-absolute')
+	} else {
+		controlSection.classList.remove('title-absolute')
+	}
+}
+
+setClassTitleAbsolute();
 
 // Navigation //
 navTabs
@@ -47,9 +61,8 @@ productsTabs
 
 
 window.onload = function () {
-	document.getElementById('hideAll').classList.add('__active');
-	let mediaQuery576 = window.matchMedia("(min-width: 36em)");
-	if (mediaQuery576.matches) {
+	// document.getElementById('hideAll').classList.add('__active');
+	if (window.scrollY < 1 && mediaQuery576.matches) {
 		navPosition.headerContacts.classList.add('__active');
 	}
 	// Change class "_active" for Nav on Scroll to Section

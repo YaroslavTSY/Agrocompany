@@ -2,7 +2,7 @@ $baseFontSize: 16px;
 
 //Adaptiv value
 $maxWidth: 1440;
-$maxWidthContainer: 1344;
+$maxWidthContainer: 1296;
 
 // Colors
 @import "varsColors";
@@ -21,6 +21,6 @@ $aboutMoreMarginBottom: 3rem;
 $servicesIconsFz: 3.75rem;
 // Real vars:
 html {
-	--hovercursor: url(../img/cursor/hover.png);
+	--hovercursor: url(../img/cursor/hover.svg);
 	--defautBorderRadius: 6px;
 }

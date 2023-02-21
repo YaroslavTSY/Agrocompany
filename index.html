@@ -3,7 +3,7 @@
 @@include('html/head.html',{ "title":"TBB TRADING DMCC" })
 
 <body>
-	<div id="hideAll">
+	<!-- <div id="hideAll">
 		<div>
 			<div>
 				<div class="lds-ellipsis">
@@ -14,12 +14,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="wrapper">
 		@@include('html/header.html',{})
 		<main class="main">
-			<section class="main__container-xl main__nav">
-				<nav class="menu__body">
+			<div class="menu__nav">
+				<nav class="menu__container menu__body">
 					<ul id="menuList" class="menu__list">
 						<li>
 							<a data-goto=".about" href="#" class="menu__link">
@@ -68,11 +68,11 @@
 								</a>
 							</div>
 						</li>
+						<div class="menu__underline">
+						</div>
 					</ul>
-					<div class="menu__underline">
-					</div>
 				</nav>
-			</section>
+			</div>
 			<section class="first" id="firstScreen">
 				<div class="first__container">
 					<div class="first__wrapper">
@@ -108,7 +108,7 @@
 						</div>
 						<div class="about__info" id="aboutInfo">
 							<h2 class="about__title section-title section-title-media-absolute">
-								ABOUT US
+								<span>ABOUT US</span>
 							</h2>
 							<div class="about__text _not-active">
 								<p><span>TBB Trading</span> company was established in Dubai city, UAE as <span>agricultural and
@@ -342,106 +342,104 @@
 					<div class="docs__wrapper">
 						<h3 class="docs__desc i-document">Each dispatch of the goods is accompanied by the following
 							documents mentioned in our contract:</h3>
-						<div class="swiper-container docs__slider docs-slider">
-							<div class="swiper-wrapper docs-slider__wrapper">
-								<div class="swiper-slide docs-slider__item-wrapper">
-									<div class="docs-slider__item docs-slider-item">
-										<div class="docs-slider-item__image">
+						<div class="swiper-container docs__slider docs-slider slider-typical">
+							<div class="swiper-wrapper docs-slider__wrapper slider-typical__wrapper">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
 											<img class="img-fluid" src="@img/phyto-1.jpg" alt="Doc">
 										</div>
-										<div class="docs-slider-item__desc">
+										<div class="docs-slider-item__desc slider-typical-item__desc">
 											<span>Phyto certificate</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="swiper-slide docs-slider__item-wrapper">
-									<div class="docs-slider__item docs-slider-item">
-										<div class="docs-slider-item__image">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
 											<img class="img-fluid" src="@img/phyto-2.jpg" alt="Doc">
 										</div>
-										<div class="docs-slider-item__desc">
+										<div class="docs-slider-item__desc slider-typical-item__desc">
 											<span>Phyto certificate</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="swiper-slide docs-slider__item-wrapper">
-									<div class="docs-slider__item docs-slider-item">
-										<div class="docs-slider-item__image">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
 											<img class="img-fluid" src="@img/phyto-3.jpg" alt="Doc">
 										</div>
-										<div class="docs-slider-item__desc">
+										<div class="docs-slider-item__desc slider-typical-item__desc">
 											<span>Phyto certificate</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="swiper-slide docs-slider__item-wrapper">
-									<div class="docs-slider__item docs-slider-item">
-										<div class="docs-slider-item__image">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
 											<img class="img-fluid" src="@img/phyto-4.jpg" alt="Doc">
 										</div>
-										<div class="docs-slider-item__desc">
+										<div class="docs-slider-item__desc slider-typical-item__desc">
 											<span>Phyto certificate</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="swiper-slide docs-slider__item-wrapper">
-									<div class="docs-slider__item docs-slider-item">
-										<div class="docs-slider-item__image">
+								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+									<div class="docs-slider__item docs-slider-item slider-typical-item">
+										<div class="docs-slider-item__image slider-typical-item__image">
 											<img class="img-fluid" src="@img/phyto-5.jpg" alt="Doc">
 										</div>
-										<div class="docs-slider-item__desc">
+										<div class="docs-slider-item__desc slider-typical-item__desc">
 											<span>Phyto certificate</span>
 										</div>
 									</div>
 								</div>
+
 							</div>
-							<div class="swiper-pagination docs-slider__pagination">
-								<div class="swiper-srollbar docs-slider__srollbar"></div>
+							<div class="swiper-pagination docs-slider__pagination slider-typical__pagination">
+								<div class="swiper-srollbar docs-slider__srollbar slider-typical__scrollbar"></div>
 							</div>
-							<div class="swiper-button-next docs-slider__button-next i-arrow-more">
+							<div class="swiper-button-next docs-slider__button-next i-arrow-more slider-typical__button-next">
 							</div>
-							<div class="swiper-button-prev docs-slider__button-prev i-arrow-more">
+							<div class="swiper-button-prev docs-slider__button-prev i-arrow-more slider-typical__button-prev">
 							</div>
-							<div class="docs-slider__shadow"></div>
+							<div class="docs-slider__shadow slider-typical__shadow"></div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- <section class="control to-scrolling" id="control">
-			<h2 class="section-title__control">
-				SURVEY CONTROL
-			</h2>
-			<div class="control__container">
-				<div class="control__content">
-					<div class="control__offer">
-						<p class="control__text">
-							The main responsibility for our company company is quality of our products, so we pays much
-							attention to quality control of the goods when it is taken to the warehouse and during
-							loading to the final buyer. During the purchase and acceptance of goods, our specialists
-							carry out a thorough check and selection of cargo samples, due to this we can obtain
-							exhaustive information on the quality of the cargo even before it reaches our customers.
-						</p>
-						<a href="##" class="control_btn btn">
-							Request a call
-						</a>
+			<section class="control to-scrolling" id="control">
+				<h2 class="control__title control-title section-title section-title-absolute">
+					<div class="control-title__container">
+						<span>SURVEY CONTROL</span>
 					</div>
-					<div class="control__icon">
-						<img class="img-fluid" src="img/Control-icons.png" alt="">
+				</h2>
+				<div class="control__container">
+					<div class="control__wrapper">
+						<div class="control__content control-content">
+							<p class="control-content__text">
+								The main responsibility for our company company is quality of our products, so we pays much
+								attention to quality control of the goods when it is taken to the warehouse and during
+								loading to the final buyer. During the purchase and acceptance of goods, our specialists
+								carry out a thorough check and selection of cargo samples, due to this we can obtain
+								exhaustive information on the quality of the cargo even before it reaches our customers.
+							</p>
+							<a href="##" class="control-content__btn btn">
+								Request a call
+							</a>
+						</div>
+						<div class="control__images control-images">
+							<div class="control-images__img control-images__img-1"><img src="@img/survey-1.png" alt=""></div>
+							<div class="control-images__img"><img src="@img/survey-2.png" alt=""></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="kliptarz__control__1">
-				<img src="img/klipartz-11.png" alt="">
-			</div>
-			<div class="kliptarz__control__2">
-				<img src="img/klipartz-11.png" alt="">
-			</div>
-		</section>
-		<section class="products to-scrolling">
+			</section>
+			<!-- <section class="products to-scrolling">
 			<div class="products__container">
 				<h2 class="section-title__products">
 					Our Products
@@ -702,10 +700,10 @@
 		</main>
 		@@include('html/footer.html',{})
 	</div>
+	@@include('html/_preloader.htm',{})
 	<!--[if lt IE 8]>
 		<script type="text/javascript">oldIE = true;</script>
 	<![endif]-->
-	<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 

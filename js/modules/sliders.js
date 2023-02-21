@@ -1,14 +1,16 @@
+import Swiper from "swiper/swiper-bundle.js";
 // import Swiper JS
+
 export const docsSlider = new Swiper('.docs-slider', {
 	navigation: {
-		nextEl: '.docs-slider__button-next',
-		prevEl: '.docs-slider__button-prev',
+		nextEl: '.docs-slider__button-next.slider-typical__button-next',
+		prevEl: '.docs-slider__button-prev.slider-typical__button-prev',
 	},
 	pagination: {
-		el: '.docs-slider__pagination',
+		el: '.docs-slider__pagination.slider-typical__pagination',
 		type: 'fraction',
 		renderFraction: function (currentClass, totalClass) {
-			return '<div class="docs-slider__scrollbar">' +
+			return '<div class="docs-slider__scrollbar slider-typical__scrollbar">' +
 				'<span class="' + currentClass + '"></span>' +
 				' ' +
 				'<span class="' + totalClass + '"></span>' +
@@ -16,7 +18,7 @@ export const docsSlider = new Swiper('.docs-slider', {
 		}
 	},
 	scrollbar: {
-		el: '.docs-slider__scrollbar',
+		el: '.docs-slider__scrollbar.slider-typical__scrollbar',
 		draggable: true,
 		snapOnRelease: true,
 		dragSize: 46,

@@ -88,7 +88,6 @@
 		font-weight: 800;
 		font-size: 1.75rem;
 		line-height: 1.07; /* or 107% */
-		letter-spacing: 0.06em; /* 1px/28 */
 		margin-bottom: 3rem;
 		&-orange {
 			&::before {
@@ -111,7 +110,7 @@
 		li {
 			font-size: 1.125rem;
 			line-height: 1.67; /* or 167% */
-			letter-spacing: 0.0063em;
+			letter-spacing: em(0.1, "em", 18px);
 			counter-increment: biz-counter;
 			&:not(:last-child) {
 				margin-bottom: 2.0625rem;

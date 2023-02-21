@@ -52,6 +52,7 @@
 				top: 0;
 				left: 0;
 				width: 100%;
+				max-width: none;
 			}
 		}
 		&__list {
@@ -160,6 +161,21 @@
 	}
 	.services__wrapper {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.control {
+		&__wrapper {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-areas:
+				"."
+				".";
+			justify-items: center;
+			align-items: center;
+			> :not(:last-child) {
+				margin-right: 0;
+				@include adaptiv-value("margin-bottom", 120, 20, 0);
+			}
+		}
 	}
 	.tab-cta {
 		&__title {
@@ -273,7 +289,7 @@
 				bottom: 0;
 			}
 			& span {
-				transition: all 0.4s ease 0.1s;
+				transition: all 0.3s ease 0s;
 				top: 50%;
 				transform: scale(1) translate(0px, -50%);
 			}
@@ -301,19 +317,13 @@
 			@include adaptiv-value("font-size", 45, 42, 0);
 		}
 		&__btn {
-			transition: all 0.4s ease 0.1s;
+			transition: all 0.3s ease 0s;
 			opacity: 0;
 			pointer-events: none;
 			&.__active {
 				opacity: 1;
 				pointer-events: all;
 			}
-		}
-	}
-	.section-title {
-		&__control {
-			width: 95%;
-			padding: 5% 1.4vw 5% 4vw;
 		}
 	}
 	.about__wrapper {
@@ -366,17 +376,6 @@
 		&__wrapper {
 			grid-template-columns: minmax(0, 1fr);
 		}
-	}
-	.control__content {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		gap: 5rem;
-		> * {
-			justify-self: center;
-		}
-		grid-template-areas:
-			"."
-			"control__icon";
 	}
 	.products {
 		&__tabs {
@@ -473,6 +472,16 @@
 	.about {
 		&__text {
 			margin-top: 6.5rem;
+		}
+	}
+	.control-images {
+		display: grid;
+		width: 100%;
+		&__img {
+			justify-self: flex-end;
+			&-1 {
+				justify-self: flex-start;
+			}
 		}
 	}
 	.products__tab-items {
