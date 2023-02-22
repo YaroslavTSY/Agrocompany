@@ -30,13 +30,13 @@
 	&::before {
 		top: 0;
 		right: 0;
-		transform: translateY(-40%);
+		transform: translateY(calc($sectionMarginTopBottom / (-2)));
 		background-image: url(../img/about-image-1.png);
 	}
 	&::after {
 		bottom: 0;
 		right: 0;
-		transform: translateY(40%);
+		transform: translateY($sectionMarginTopBottom);
 		background-image: url(../img/about-image-2.png);
 	}
 	&__container {
@@ -156,3 +156,4 @@
 	&__image {
 	}
 }
+// About

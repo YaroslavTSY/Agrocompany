@@ -1,3 +1,5 @@
+//* Index styles
+
 .page__index {
 }
 [class*="kliptarz"] {
@@ -46,8 +48,10 @@
 @import "indexSections/services.scss";
 @import "indexSections/docs.scss";
 @import "indexSections/control.scss";
-// @import "indexSections/products.scss";
+@import "indexSections/products.scss";
 // @import "indexSections/gallery.scss";
 // @import "indexSections/bizActivity.scss";
 // @import "indexSections/contact.scss";
 // @import "indexSections/feedback.scss";
+
+// Index styles

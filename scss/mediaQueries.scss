@@ -1,3 +1,5 @@
+//* Media queries
+
 //* Mobile-first
 @media (min-width: em($maxWidth + 1)) {
 }
@@ -112,12 +114,6 @@
 }
 //* Desktop-first
 @media (max-width: em(1399px)) {
-}
-@media (max-width: em($maxWidthContainer)) {
-	logo .products__tab-item.__stock-image .products__tab-img div .img-fluid {
-		width: auto;
-		height: auto;
-	}
 }
 @media (max-width: em(1199px)) {
 	[class*="__container"],
@@ -377,31 +373,6 @@
 			grid-template-columns: minmax(0, 1fr);
 		}
 	}
-	.products {
-		&__tabs {
-			// grid-auto-columns: auto;
-			// grid-template-columns: auto;
-			grid-template-rows: repeat(3, auto);
-			grid-template-areas:
-				"."
-				"."
-				".";
-		}
-		&__tab-items {
-			// grid-auto-columns: 1fr;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 0.4375rem 0.5rem;
-			grid-template-areas:
-				". ."
-				". ."
-				". ."
-				". ."
-				". ."
-				". ."
-				". ."
-				"tbb tbb";
-		}
-	}
 	.activity-cards {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
@@ -446,6 +417,44 @@
 		filter: blur(1.5px);
 		transform: translateY(50%) translateX(10%) scale(0.9);
 	}
+	.products {
+		&__typical-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+
+			> :last-child {
+				margin-top: var(--productsMargin);
+				margin-right: 0;
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+		}
+	}
+	.products-tabs__tab {
+		&:not(:last-child) {
+			margin-right: 0;
+		}
+		&:first-child {
+			margin-right: var(--productsMargin);
+		}
+	}
+	.products-content {
+		&__item-wrapper {
+			&:not(:nth-child(3n)) {
+				margin-right: 0;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&:not(:nth-child(2n), :last-child) {
+				margin-right: var(--productsMargin);
+			}
+			&-green {
+				&::before {
+					right: 10%;
+				}
+			}
+		}
+	}
 }
 @media (max-width: em(575px)) and (max-height: em(400px)) {
 	.contacts {
@@ -484,29 +493,20 @@
 			}
 		}
 	}
-	.products__tab-items {
-		// grid-auto-columns: 1fr;
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"."
-			"tbb";
-	}
-	.tab-cta {
-		&__cta {
-			padding: 1rem 2rem;
+	.products {
+		&__typical-grid {
+			grid-template-columns: minmax(0, 1fr);
+			> * {
+				margin-right: 0 !important;
+				margin-bottom: var(--productsMargin) !important;
+			}
+			> :last-child {
+				margin-top: 0;
+				grid-column-end: 1;
+			}
+		}
+		&__content-wrapper {
+			margin-top: 0;
 		}
 	}
 	.activity-cards {
@@ -539,3 +539,5 @@
 		display: block;
 	}
 }
+
+// Media queries

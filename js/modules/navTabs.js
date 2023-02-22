@@ -1,14 +1,21 @@
 // Tabs/active/on click
-export const menuList = document.querySelector('.menu__list');
-export const navTabs = document.querySelectorAll('.menu__list li');
-export const navUnderline = document.querySelector('.menu__underline');
-let mediaQuery768 = window.matchMedia("(min-width: 48em)");
+const mediaQuery768 = window.matchMedia("(min-width: 48em)");
 
-mediaQuery768.addEventListener("change", () => {
-	moveUnderline();
-})
+function setupListenersTabs() {
+	mediaQuery768.addEventListener("change", () => {
+		moveUnderlineTabs();
+	});
 
-export function moveUnderline() {
+	const navTabs = document.querySelectorAll('.menu__list li');
+	navTabs.forEach(el => {
+		el.addEventListener('click', () => {
+			selectPanelTabs();
+			moveUnderlineTabs();
+		});
+	});
+}
+
+export function moveUnderlineTabs() {
 	const menuList = document.querySelector('.menu__list');
 	const navUnderline = document.querySelector('.menu__underline');
 	let navTabActive = document.querySelector('.menu__list li._active');
@@ -16,8 +23,7 @@ export function moveUnderline() {
 	if (navTabActive) {
 		let linkOffsetLeft = (100 / menuList.offsetWidth * navTabActive.offsetLeft);
 		let linkOffsetWidth = (100 / menuList.offsetWidth * navTabActive.offsetWidth);
-		let mediaQuery768 = window.matchMedia("(min-width: 48em)");
-		// navUnderline.style.cssText = 'display: none';
+
 		if (mediaQuery768.matches) {
 			navUnderline.style.cssText = `
 				left: ${linkOffsetLeft}%;
@@ -26,16 +32,14 @@ export function moveUnderline() {
 		}
 	}
 }
-export function selectPanel() {
+export function selectPanelTabs() {
 	const navTabs = document.querySelectorAll('.menu__list li');
 	navTabs.forEach(el => {
 		el.classList.remove('_active');
-		el.addEventListener('click', () => el.classList.add('_active'));
 	});
+	console.log(event, event.target);
+	event.target.classList.add('_active');
 }
-navTabs.forEach(el => {
-	el.addEventListener('click', () => {
-		selectPanel;
-		moveUnderline;
-	});
-})
+export function initTabs() {
+	setupListenersTabs();
+}

@@ -96,13 +96,13 @@
 						<div class="about__images about-images">
 							<div class="about-images__wrapper">
 								<div class="about-images__image">
-									<img src="img/photo-1.jpg" alt="product#1">
+									<img src="@img/about-gallery-1.jpg" alt="product#1">
 								</div>
 								<div class="about-images__image">
-									<img src="img/photo-2.png" alt="product#2">
+									<img src="@img/about-gallery-2.jpg" alt="product#2">
 								</div>
 								<div class="about-images__image">
-									<img src="img/photo-3.png" alt="product#3">
+									<img src="@img/about-gallery-3.jpg" alt="product#3">
 								</div>
 							</div>
 						</div>
@@ -439,17 +439,601 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="products to-scrolling">
-			<div class="products__container">
-				<h2 class="section-title__products">
-					Our Products
-				</h2>
-				<div class="products__content">
-					@@include('html/tabs.html')
+			<section class="products to-scrolling" id="products">
+				<div class="products__container">
+					<div class="products__wrapper">
+						<h2 class="products__title section-title">
+							<span>Our Products</span>
+						</h2>
+						<div class="products__body">
+							<div class="products__tabs products-tabs products__typical-grid">
+								<div class="products-tabs__tab i-flour _active">
+									<h3 class="products-tabs__title">
+										FOOD COMMODITIES
+									</h3>
+								</div>
+								<div class="products-tabs__tab i-corn">
+									<h3 class="products-tabs__title">
+										CATTLE FEED COMMODITIES
+									</h3>
+								</div>
+								<div class="products-tabs__tab i-wood">
+									<h3 class="products-tabs__title">
+										WOOD TIMBER COMMODITIES
+									</h3>
+								</div>
+							</div>
+							<div class="products__content-wrapper">
+								<div class="products__content products-content products__typical-grid _active">
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-1.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-2.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Barley
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-3.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												OATS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-4.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												FABA BEANS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-5.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												RED SORGHUM
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-6.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												WHITE SORGHUM
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-7.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												YELLOW PEAS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-8.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												YELLOW MILLET
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-9.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												YELLOW CORN
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-10.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												CHICKPEAS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-11.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												RAPESEEDS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-12.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												FLAX SEEDS
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-13.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												CORIANDER
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/first/products-1-14.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												SOYBEAN
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper products-content__item-wrapper-green i-flour">
+										<div class="products-content__item products-content-item">
+											<h3 class="products-content-item__title">
+												TBB Trading company
+											</h3>
+											<div class="products-content-item__text">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+												</p>
+											</div>
+											<a href="##" class="products-content-item__btn btn btn-small">
+												Request a call
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="products__content products-content products__typical-grid">
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-1.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-2.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-3.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-4.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-5.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/second/products-2-6.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="products__content products-content products__typical-grid">
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-1.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-2.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-3.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-4.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-5.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-6.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-7.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-8.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-9.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-10.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-11.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+									<div class="products-content__item-wrapper">
+										<div class="products-content__item products-content-item">
+											<div class="products-content-item__img">
+												<img src="@img/products/third/products-3-12.jpg" alt="">
+											</div>
+											<h3 class="products-content-item__title">
+												Milling Wheat
+											</h3>
+											<div class="products-content-item__text">
+												<p>Moisture: max. 14.00 %</p>
+												<p>Foreign matter: 2.00 %</p>
+												<p>Protein: min. 11.50 %</p>
+												<p>Test weight: min 740 kg/hl</p>
+												<p>Wet gluten: min 24.00</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="gallery to-scrolling" id="gallery">
+			</section>
+			<!-- <section class="gallery to-scrolling" id="gallery">
 			<div class="gallery__content">
 				<h2 class="section-title__gallery">
 					Photo Gallery

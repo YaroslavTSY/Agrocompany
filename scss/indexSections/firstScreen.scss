@@ -1,10 +1,9 @@
 //* Fisrt screen
-
 .first {
 	position: relative;
 	margin-top: 0;
 	background: linear-gradient(65deg, rgba(23, 27, 0, 0.6) 10%, rgba(196, 196, 196, 0) 80%),
-		url(../img/combainu.jpg) center 50% / cover no-repeat;
+		url(../img/first-screen-bg.jpg) center 50% / cover no-repeat;
 	color: var(--base-color);
 	&__wrapper {
 		height: calc(
@@ -48,5 +47,4 @@
 		letter-spacing: 0.0313em;
 	}
 }
-
 // First screen
