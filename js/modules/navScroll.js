@@ -3,6 +3,13 @@ import { moveUnderlineTabs } from "./navTabs.js";
 
 // function callback
 const links = document.querySelectorAll('.menu__link');
+
+links.forEach(link => {
+	link.addEventListener('click', () => {
+		document.documentElement.classList.remove('lock');
+	})
+})
+
 const callback = (entries) => {
 	links.forEach((link) => link.parentElement.classList.remove('_active'));
 	const elem = entries.find((entry) => entry.isIntersecting);

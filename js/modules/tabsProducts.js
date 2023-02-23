@@ -17,9 +17,26 @@ const checkoutTabs = (item, index) => {
 			clearActiveClass(contentItems)
 			setActiveClass(tabItems, index)
 			setActiveClass(contentItems, index)
+			localStorage.setItem('selectedTabIndex', index);
+			localStorage.setItem('selectedContentIndex', index);
 		}
 
 	})
 }
 
-tabItems.forEach(checkoutTabs)
+tabItems.forEach(checkoutTabs);
+
+
+const selectedTabIndex = localStorage.getItem('selectedTabIndex');
+const activeTab = document.querySelector('.products-tabs__tab._active');
+const selectedContentIndex = localStorage.getItem('selectedContentIndex');
+const activeContent = document.querySelector('.products-content._active');
+
+if (!activeTab && selectedTabIndex !== null) {
+	// Installation of active taboo
+	tabItems[selectedTabIndex].classList.add('_active');
+}
+if (!activeContent && selectedContentIndex !== null) {
+	// Display the appropriate content set
+	contentItems[selectedContentIndex].classList.add('_active');
+}

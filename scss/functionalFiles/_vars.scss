@@ -21,7 +21,7 @@ $aboutMoreMarginBottom: 3rem;
 $servicesIconsFz: 3.75rem;
 // Real vars:
 html {
-	--hovercursor: url(../img/cursor/hover.svg);
+	--hover-cursor: url(../img/cursor/hover.svg) 17 12, pointer;
 	--defautBorderRadius: 6px;
 	--productsMargin: 0.4375rem;
 }

@@ -1,8 +1,8 @@
-// Tabs/active/on click
-const mediaQuery768 = window.matchMedia("(min-width: 48em)");
+import { minWidth768 } from "./definition.js";
 
+// Tabs/active/on click
 function setupListenersTabs() {
-	mediaQuery768.addEventListener("change", () => {
+	minWidth768.addEventListener("change", () => {
 		moveUnderlineTabs();
 	});
 
@@ -24,7 +24,7 @@ export function moveUnderlineTabs() {
 		let linkOffsetLeft = (100 / menuList.offsetWidth * navTabActive.offsetLeft);
 		let linkOffsetWidth = (100 / menuList.offsetWidth * navTabActive.offsetWidth);
 
-		if (mediaQuery768.matches) {
+		if (minWidth768.matches) {
 			navUnderline.style.cssText = `
 				left: ${linkOffsetLeft}%;
 				width: ${linkOffsetWidth}%;
@@ -37,8 +37,7 @@ export function selectPanelTabs() {
 	navTabs.forEach(el => {
 		el.classList.remove('_active');
 	});
-	console.log(event, event.target);
-	event.target.classList.add('_active');
+	e.target.classList.add('_active');
 }
 export function initTabs() {
 	setupListenersTabs();

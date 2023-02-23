@@ -24,3 +24,5 @@ export const isMobile = {
 		);
 	}
 };
+export const minWidth768 = window.matchMedia("(min-width: 48em)");
+export const minWidth576 = window.matchMedia("(min-width: 36em)");

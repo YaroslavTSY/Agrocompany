@@ -1,13 +1,14 @@
 import * as functions from "./modules/functions.js";
 import * as definition from "./modules/definition.js";
 
+import * as popup from "./modules/popup.js";
 import * as navTabs from "./modules/navTabs.js";
 import * as navPosition from "./modules/navPosition.js";
 import * as navScroll from "./modules/navScroll.js";
 import * as burger from "./modules/burger.js";
 import * as tabToSection from "./modules/tabToSection.js";
 import * as showAboutText from "./modules/showAboutText.js";
-import * as productsTabs from "./modules/tabsProducts.js";
+import * as tabsProducts from "./modules/tabsProducts.js";
 import * as sliders from "./modules/sliders.js";
 
 functions.isWebp();
@@ -39,13 +40,16 @@ function setClassTitleAbsolute() {
 
 setClassTitleAbsolute();
 
+// Popups //
+popup
+
 // Navigation //
 navTabs
 
-// Change positon Nav Menu on Scroll
+// Change positon Nav Menu on Scroll //
 navPosition
 
-//
+// Burget Menu //
 
 burger
 
@@ -53,11 +57,11 @@ burger
 tabToSection
 
 
-// Show/Hide more text in section About, imported from showAboutText.js
+// Show/Hide more text in section About, imported from showAboutText.js //
 showAboutText
 
-// ! Products Tab's imported from tabsProducts.js//
-productsTabs
+// Products Tab's imported from tabsProducts.js //
+tabsProducts
 
 
 window.onload = function () {

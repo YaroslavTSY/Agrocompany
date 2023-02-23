@@ -1,0 +1,68 @@
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+	z-index: 4;
+	&._open {
+		opacity: 1;
+		visibility: visible;
+		.popup__content {
+			transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+			opacity: 1;
+		}
+	}
+	&__area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1.875rem 0.625rem;
+		transition: all 0.8s ease 0s;
+	}
+	&__content {
+		background-color: #fff;
+		color: #000;
+		max-width: $maxWidthContainer;
+		padding: 1.875rem;
+		position: relative;
+		transition: all 0.8s ease 0s;
+		opacity: 0;
+		transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+		&_image {
+			padding: 0;
+		}
+	}
+	&__image img {
+		max-width: 100%;
+		vertical-align: top;
+	}
+	&__close {
+		position: absolute;
+		right: 0.625rem;
+		top: 0.625rem;
+		font-size: 1.25rem;
+		color: #000;
+		text-decoration: none;
+	}
+	&__title {
+		font-size: 2.5rem;
+		margin: 0px 0px 1em 0px;
+	}
+	&__text {
+	}
+}

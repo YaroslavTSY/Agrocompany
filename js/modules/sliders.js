@@ -1,7 +1,36 @@
 import Swiper from "swiper/swiper-bundle.js";
 // import Swiper JS
 
+const defaultSettings = {
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	effect: "coverflow",
+	centeredSlides: true,
+	observer: true,
+	autoHeight: true,
+	coverflowEffect: {
+		depth: 200,
+		modifier: 1,
+		rotate: 0,
+		stretch: 90,
+		slideShadows: false,
+	},
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true
+	},
+	autoplay: {
+		delay: 100000,
+		stopOnLastSlide: false,
+		disableOnInteraction: false
+	},
+	speed: 450,
+}
+
 export const docsSlider = new Swiper('.docs-slider', {
+	...defaultSettings,
+	initialSlide: 2,
 	navigation: {
 		nextEl: '.docs-slider__button-next.slider-typical__button-next',
 		prevEl: '.docs-slider__button-prev.slider-typical__button-prev',
@@ -21,34 +50,32 @@ export const docsSlider = new Swiper('.docs-slider', {
 		el: '.docs-slider__scrollbar.slider-typical__scrollbar',
 		draggable: true,
 		snapOnRelease: true,
-		dragSize: 46,
 	},
-	slidesPerView: 'auto',
-	spaceBetween: 20,
-	// loop: true,
-	effect: "coverflow",
-	centeredSlides: true,
-	observer: true,
-	autoHeight: true,
-	initialSlide: 2,
-	coverflowEffect: {
-		depth: 150,
-		modifier: 1,
-		rotate: 0,
-		stretch: 80,
-		slideShadows: false,
+});
+
+export const gallerySlider = new Swiper('.gallery-slider', {
+	...defaultSettings,
+	initialSlide: 1,
+	navigation: {
+		nextEl: '.gallery-slider__button-next.slider-typical__button-next',
+		prevEl: '.gallery-slider__button-prev.slider-typical__button-prev',
 	},
-	// keyboard: {
-	// 	enabled: true,
-	// 	onlyInViewport: true,
-	// 	pageUpDown: true
-	// },
-	// // autoplay: {
-	// // 	delay: 8000,
-	// // 	stopOnLastSlide: false,
-	// // 	disableOnInteraction: false
-	// // },
-	// // speed: 450,
+	pagination: {
+		el: '.gallery-slider__pagination.slider-typical__pagination',
+		type: 'fraction',
+		renderFraction: function (currentClass, totalClass) {
+			return '<div class="gallery-slider__scrollbar slider-typical__scrollbar">' +
+				'<span class="' + currentClass + '"></span>' +
+				' ' +
+				'<span class="' + totalClass + '"></span>' +
+				'</div>'
+		}
+	},
+	scrollbar: {
+		el: '.gallery-slider__scrollbar.slider-typical__scrollbar',
+		draggable: true,
+		snapOnRelease: true,
+	}
 });
 
 export const partnersSlider = new Swiper('.partners-slider', {
@@ -74,55 +101,6 @@ export const partnersSlider = new Swiper('.partners-slider', {
 		},
 		320: {
 			slidesPerView: 2
-		}
-	}
-});
-
-export const gallerySlider = new Swiper('.gallery-slider', {
-	navigation: {
-		nextEl: '.gallery-button-next',
-		prevEl: '.gallery-button-prev',
-	},
-	pagination: {
-		el: '.gallery-pagination',
-		type: 'fraction',
-		renderFraction: function (currentClass, totalClass) {
-			return '<div class="gallery-scrollbar">' +
-				'<div class="swiper-scrollbar-drag"></div>' +
-				' ' +
-				'<span class="' + currentClass + '"></span>' +
-				' ' +
-				'<span class="' + totalClass + '"></span>' +
-				'</div>'
-		}
-	},
-	scrollbar: {
-		el: '.gallery-scrollbar',
-		draggable: true,
-		snapOnRelease: true,
-	},
-	keyboard: {
-		enabled: true,
-		onlyInViewport: true,
-		pageUpDown: true
-	},
-	autoHeight: true,
-	slidesPerView: 1,
-	centeredSlides: true,
-	initialSlide: 0,
-	speed: 450,
-	observer: true,
-	observerParents: true,
-	observerSlideChildren: true,
-	breakpoints: {
-		576: {
-			slidesPerView: 3,
-			loop: true,
-			autoplay: {
-				delay: 8000,
-				stopOnLastSlide: false,
-				disableOnInteraction: false
-			},
 		}
 	}
 });
