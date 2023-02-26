@@ -9,13 +9,13 @@
 	visibility: hidden;
 	overflow-y: auto;
 	overflow-x: hidden;
-	transition: all 0.8s ease 0s;
+	transition: all 0.5s ease 0s;
 	z-index: 4;
 	&._open {
 		opacity: 1;
 		visibility: visible;
 		.popup__content {
-			transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+			transform: perspective(490px) translate3d(0px, 0px, 0vw) rotateX(0deg);
 			opacity: 1;
 		}
 	}
@@ -32,17 +32,17 @@
 		align-items: center;
 		justify-content: center;
 		padding: 1.875rem 0.625rem;
-		transition: all 0.8s ease 0s;
+		transition: all 0.5s ease 0s;
 	}
 	&__content {
 		background-color: #fff;
 		color: #000;
-		max-width: $maxWidthContainer;
+		max-width: rem($maxWidthContainer);
 		padding: 1.875rem;
 		position: relative;
-		transition: all 0.8s ease 0s;
+		transition: all 0.5s ease 0s;
 		opacity: 0;
-		transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+		transform: perspective(490px) translate3d(0px, 0px, -15vw) rotateX(0deg);
 		&_image {
 			padding: 0;
 		}

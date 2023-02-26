@@ -1,9 +1,8 @@
 .gallery {
 	&__title {
-		color: var(--base-color);
 		&::before {
 			left: 0;
-			background-color: var(--accent-color);
+			background-color: var(--base-color);
 			border-radius: 0 0 2.1875rem 0;
 		}
 	}
@@ -12,7 +11,7 @@
 	}
 
 	&__wrapper {
-		margin-top: 7.1875rem;
+		@include adaptiv-value("margin-top", 115, 50, 0);
 	}
 
 	&__slider {

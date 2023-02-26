@@ -12,7 +12,7 @@
 		//* REM
 		//If bigger then Screen
 		#{$property}: rem($startSize);
-		@media (min-width: em($maxWidth)) {
+		@media (min-width: em($maxWidth + 1)) {
 			#{$property}: calc(#{rem($minSize)} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 		}
 	} @else if $type == 3 {
@@ -30,7 +30,7 @@
 		//? Percent
 		//If bigger then Container
 		#{$property}: $startSize * 1%;
-		@media (min-width: em($maxWidth)) {
+		@media (min-width: em($maxWidth + 1)) {
 			#{$property}: calc(#{$minSize * 1%} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 		}
 	} @else if $type == 6 {
@@ -48,7 +48,7 @@
 		//! PX
 		//If bigger then Screen
 		#{$property}: #{$startSize + px};
-		@media (min-width: em($maxWidth)) {
+		@media (min-width: em($maxWidth + 1)) {
 			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 		}
 	} @else {

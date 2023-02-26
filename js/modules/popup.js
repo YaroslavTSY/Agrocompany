@@ -5,7 +5,7 @@ const lockPadding = document.querySelectorAll("._lock-padding");
 
 let unlock = true;
 
-const timeout = 800;
+const timeout = 500;
 
 if (popupLinks.length > 0) {
 	for (let index = 0; index < popupLinks.length; index++) {

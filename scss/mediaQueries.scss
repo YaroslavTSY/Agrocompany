@@ -9,22 +9,8 @@
 }
 @media (min-width: em(992px)) {
 	.first-screen {
-		background: linear-gradient(65deg, rgba(23, 27, 0, 0.6) 10%, rgba(196, 196, 196, 0) 60%),
+		background: linear-gradient(65deg, rgba(26, 26, 26, 0.6) 10%, rgba(216, 216, 216, 0) 60%),
 			url(../img/combainu.jpg) center 50% / cover no-repeat;
-	}
-	.activity-card__title {
-		line-height: 156%;
-	}
-	.contact-card {
-		&__ukraine {
-			margin-right: auto;
-		}
-		&__uae {
-			margin: 0 auto;
-		}
-		&__warehouse {
-			margin-left: auto;
-		}
 	}
 }
 @media (min-width: em(768px)) {
@@ -78,20 +64,6 @@
 	}
 	.gallery-slider {
 		@include adaptiv-value("padding-bottom", 6, 10, 3);
-	}
-	.activity-card {
-		&.__wood {
-			justify-self: start;
-		}
-		&.__buyers {
-			justify-self: end;
-		}
-		&.__export {
-			justify-self: start;
-		}
-		&.__countries {
-			justify-self: end;
-		}
 	}
 	.reg {
 		&__submit {
@@ -165,13 +137,6 @@
 			line-height: 1.5em;
 			margin-bottom: 0.625rem;
 		}
-	}
-	.contact-info {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		grid-template-areas:
-			"uae ukraine"
-			"warehouse ukraine";
 	}
 }
 @media (max-width: em(767px)) {
@@ -309,11 +274,41 @@
 			}
 		}
 	}
-	.about__wrapper {
-		flex-direction: column;
-		> :not(:last-child) {
-			margin-right: 0;
-			@include adaptiv-value("margin-bottom", 40, 20, 0);
+	@keyframes aboutText {
+		0% {
+			max-height: calc(
+				90vh -
+					calc(
+						#{rem($smallHeightHeader)} + #{$startHeightHeader - $smallHeightHeader} *
+							((100vw - 320px) / #{$maxWidth - 320})
+					)
+			);
+			color: rgb(89, 89, 89);
+			background: linear-gradient(180deg, rgba(89, 89, 89, 1) 85%, rgba(255, 255, 255, 1) 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		100% {
+			max-height: none;
+			color: auto;
+			background: none;
+			-webkit-background-clip: content-box;
+			-webkit-text-fill-color: currentColor;
+		}
+	}
+	.about {
+		&__title {
+			max-width: none;
+			display: flex;
+			justify-content: center;
+			border-radius: 0;
+		}
+		&__wrapper {
+			flex-direction: column;
+			> :not(:last-child) {
+				margin-right: 0;
+				@include adaptiv-value("margin-bottom", 40, 20, 0);
+			}
 		}
 	}
 	.about-images {
@@ -327,6 +322,7 @@
 		}
 	}
 	.biz {
+		margin-top: calc($sectionMarginTopBottom + $titleHeight);
 		&::before {
 			width: 100%;
 			height: 0.125rem;
@@ -358,37 +354,6 @@
 		}
 		&__wrapper {
 			grid-template-columns: minmax(0, 1fr);
-		}
-	}
-	.activity-cards {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		gap: 1.875rem 0.9375rem;
-		grid-template-areas:
-			"__wood __turnover"
-			"__buyers __export"
-			"__countries __countries";
-	}
-	.activity-card.__countries {
-		width: 100%;
-	}
-	.contact-info {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, 1fr);
-		grid-template-areas:
-			"uae"
-			"ukraine"
-			"warehouse";
-	}
-	.contact-card {
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		&__tbb-content {
-			display: flex;
-			text-align: center;
-			flex-direction: column;
-			align-items: center;
 		}
 	}
 	.feedback {
@@ -442,6 +407,41 @@
 			}
 		}
 	}
+	.activity-card {
+		&:nth-child(n) {
+			justify-content: center;
+			grid-column: 1 / 7;
+			margin: 0;
+			@include adaptiv-value("margin-top", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
+		&:nth-child(1) {
+			grid-column: 1 / 4;
+			margin: 0;
+			@include adaptiv-value("margin-right", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+			@include adaptiv-value("margin-bottom", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
+
+		&:nth-child(2) {
+			grid-column: 4 / 7;
+			margin: 0;
+			@include adaptiv-value("margin-left", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+			@include adaptiv-value("margin-bottom", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
+
+		&:nth-child(3) {
+			grid-column: 1 / 4;
+			margin: 0;
+			@include adaptiv-value("margin-right", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+			@include adaptiv-value("margin-bottom", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
+
+		&:nth-child(4) {
+			grid-column: 4 / 7;
+			margin: 0;
+			@include adaptiv-value("margin-left", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+			@include adaptiv-value("margin-bottom", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
+	}
 }
 @media (max-width: em(575px)) and (max-height: em(400px)) {
 	.contacts {
@@ -468,6 +468,7 @@
 	.about {
 		&__text {
 			margin-top: 6.5rem;
+			@include adaptiv-value("margin-top", 104, 40, 0);
 		}
 	}
 	.control-images {
@@ -484,36 +485,40 @@
 		&__grid_typical {
 			grid-template-columns: minmax(0, 1fr);
 			> * {
-				margin-right: 0 !important;
-				margin-bottom: var(--productsMargin) !important;
+				margin: calc(var(--productsMargin) / 2) 0 calc(var(--productsMargin) / 2) 0 !important;
+				grid-column-start: 1;
 			}
 			> :last-child {
-				margin-top: 0;
-				grid-column-end: 1;
+				margin-bottom: 0 !important;
+				grid-column-end: 1 !important;
 			}
 		}
 		&__content-wrapper {
-			margin-top: 0;
 		}
 	}
-	.activity-cards {
-		// grid-auto-columns: 1fr;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(5, 1fr);
-		gap: 1.875rem 0;
-		grid-template-areas:
-			"__wood"
-			"__buyers"
-			"__turnover"
-			"__export"
-			"__countries";
-	}
 	.slider-typical__item-wrapper {
-		height: 100% !important;
+		height: 31.25rem !important;
 		width: 100% !important;
+		// min-width: 284px !important;
+		// min-height: 360px !important;
+	}
+	.slider-typical-item {
+		height: 31.25rem !important;
+		width: 100% !important;
+		&__image {
+			height: 31.25rem;
+		}
 	}
 	.docs::after {
 		z-index: 0;
+	}
+	.activity-card {
+		&:nth-child(n) {
+			justify-content: center;
+			grid-column: 1 / 7 !important;
+			margin: 0;
+			@include adaptiv-value("margin-bottom", $activityCardsMarginUnit, $activityCardsMarginUnitSmall, 0);
+		}
 	}
 }
 @media (max-width: em(375px)) {

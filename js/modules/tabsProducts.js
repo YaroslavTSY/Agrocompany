@@ -9,7 +9,8 @@ const clearActiveClass = (element, className = '_active') => {
 const setActiveClass = (element, index, className = '_active') => {
 	element[index].classList.add(`${className}`)
 }
-
+localStorage.setItem('selectedTabIndex', 0);
+localStorage.setItem('selectedContentIndex', 0);
 const checkoutTabs = (item, index) => {
 	item.addEventListener('click', () => {
 		if (!item.classList.contains('_active')) {

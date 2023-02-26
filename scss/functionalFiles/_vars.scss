@@ -14,11 +14,17 @@ $startHeightHeader: 105;
 $smallHeightHeader: 70;
 
 $sectionMarginTopBottom: 5.3125rem;
+$sectionMarginTopBottomHalf: 2rem;
+$sectionMarginTopBottomUnit: 85;
+$sectionMarginTopBottomUnitHalf: 32;
 $sectionMarginLeftRight: 0;
 $menuListLiPadding: 0.625rem;
 $titleHeight: 6rem;
+$titleHeightUnit: 96;
 $aboutMoreMarginBottom: 3rem;
 $servicesIconsFz: 3.75rem;
+$activityCardsMarginUnit: 45;
+$activityCardsMarginUnitSmall: 15;
 // Real vars:
 html {
 	--hover-cursor: url(../img/cursor/hover.svg) 17 12, pointer;

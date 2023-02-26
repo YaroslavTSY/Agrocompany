@@ -24,7 +24,7 @@
 	}
 
 	&__wrapper {
-		margin-top: 3.5rem;
+		@include adaptiv-value("margin-top", 56, 35, 0);
 		> :not(:last-child) {
 			@include adaptiv-value("margin-bottom", 45, 30, 0);
 		}

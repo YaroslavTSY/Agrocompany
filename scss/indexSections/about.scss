@@ -23,6 +23,7 @@
 }
 
 .about {
+	margin-bottom: 0;
 	&::before,
 	&::after {
 		content: "";
@@ -57,26 +58,34 @@
 
 	&__title {
 		position: relative;
-		padding: 1.625rem 4.8125rem;
+		padding: 0;
+		@include adaptiv-value("padding-top", 26, 16, 0);
+		@include adaptiv-value("padding-bottom", 26, 16, 0);
+		@include adaptiv-value("padding-left", 77, 16, 0);
+		@include adaptiv-value("padding-right", 77, 16, 0);
 		background: var(--base-color);
 		box-shadow: 25px 0px 35px var(--base-color-shadow);
 		border-radius: 0px 0px 35px 0px;
 		max-width: fit-content;
-		margin: auto auto 3.4375rem 0;
+		@include adaptiv-value("margin-bottom", 55, 30, 0);
 	}
 
 	&__text {
 		flex: 1;
 		position: relative;
+		transition: all 1s ease 0s;
 		&._not-active {
 			animation: aboutText 1s linear 0s 1 alternate-reverse both;
 			.show {
 				margin-top: -18%;
 				opacity: 0;
 				height: 9vh;
+				pointer-events: none;
+				visibility: hidden;
+				user-select: none;
 			}
 			.about__more {
-				@include adaptiv-value("bottom", 0, 17, 4);
+				@include adaptiv-value("bottom", 1, -15, 4);
 				svg {
 					transform: rotate(0);
 				}
@@ -118,11 +127,12 @@
 			margin-left: 0.625rem;
 			fill: var(--accent-color);
 			transform: rotate(180deg);
+			transition: all 1s ease 0.1s;
 		}
 		&:hover {
 			svg {
 				fill: #689b1b;
-				transform: translateY(10%);
+				transform: translateY(10%) rotate(180deg);
 			}
 			background-color: #689b1b;
 			transform: scale(0.95);
@@ -130,9 +140,6 @@
 	}
 }
 .about-images {
-	flex: 1 1 46.58%;
-	overflow: hidden;
-	border-radius: 35px 0 35px 0;
 	max-height: calc(
 		100vh -
 			calc(
@@ -140,9 +147,13 @@
 					((100vw - 320px) / #{$maxWidth - 320})
 			)
 	);
+	flex: 1 1 46.58%;
+	overflow: hidden;
+	border-radius: 35px 0 35px 0;
 	&__wrapper {
 		border-radius: inherit;
 		max-width: 100%;
+		height: 100%;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
@@ -154,6 +165,13 @@
 	}
 
 	&__image {
+		height: 100%;
+		width: 100%;
+		img {
+			height: inherit;
+			width: inherit;
+			object-fit: cover;
+		}
 	}
 }
 // About

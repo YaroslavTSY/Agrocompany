@@ -113,13 +113,15 @@ main {
 
 section {
 	position: relative;
-	margin: $sectionMarginTopBottom $sectionMarginLeftRight;
+	margin: 0;
+	@include adaptiv-value("margin-top", $sectionMarginTopBottomUnit, $sectionMarginTopBottomUnitHalf, 0);
+	@include adaptiv-value("margin-bottom", $sectionMarginTopBottomUnit, $sectionMarginTopBottomUnitHalf, 0);
 	&::before,
 	&::after {
 		z-index: -1;
 		position: absolute;
-		height: 300px;
-		width: 300px;
+		height: 18.75rem;
+		width: 18.75rem;
 		display: block;
 		background-size: contain;
 		background-position: center center;
@@ -179,14 +181,16 @@ section {
 		content: " ";
 		display: block;
 		position: absolute;
+		background-color: var(--base-color);
 		@include adaptiv-value("width", 70, 90, 4);
 		height: $titleHeight;
 		top: 0;
+		z-index: -1;
 		box-shadow: 0px 0px 35px var(--base-color-shadow);
 	}
 }
 .title-absolute {
-	margin-top: calc($sectionMarginTopBottom + $titleHeight);
+	@include adaptiv-value("margin-top", 181, 100, 0);
 	padding-top: calc($titleHeight / 2);
 }
 

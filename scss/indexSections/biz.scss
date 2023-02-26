@@ -1,5 +1,6 @@
 //* Biz
 .biz {
+	margin-top: calc(($sectionMarginTopBottom / 2) + $titleHeight);
 	padding-top: 0;
 	&::before {
 		content: "";

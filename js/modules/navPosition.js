@@ -15,6 +15,9 @@ window.addEventListener('scroll', function () {
 	}
 	else {
 		menuBody.classList.remove('scroll');
+		if (!document.querySelector('.menu__list li._active')) {
+			document.querySelector('.menu__underline').style.width = '0';
+		}
 	};
 	if (scrollpos >= 1) {
 		headerContacts.classList.remove('__active');
@@ -22,9 +25,6 @@ window.addEventListener('scroll', function () {
 	} else if (minWidth576.matches) {
 		headerContacts.classList.add('__active');
 		offerBtn.classList.remove('__active');
-	}
-	if (!document.querySelector('.menu__list li._active')) {
-		document.querySelector('.menu__underline').style.width = '0';
 	}
 })
 
