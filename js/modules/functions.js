@@ -65,3 +65,26 @@ export function addLoadedClass() {
 		});
 	}
 }
+export function scrollTop() {
+	const scrollBtn = document.createElement("button");
+	scrollBtn.appendChild(document.createElement('span'));
+	scrollBtn.setAttribute("id", "scrollBtn");
+	scrollBtn.querySelector('span').setAttribute("class", "i-arrow-more");
+	document.body.appendChild(scrollBtn);
+	const scrollBtnDisplay = function () {
+		window.scrollY + 500 > window.innerHeight
+			? scrollBtn.classList.add("show")
+			: scrollBtn.classList.remove("show");
+	};
+	window.addEventListener("scroll", scrollBtnDisplay);
+	const footerScrollBtn = document.querySelector('#scrollBtn');
+	const scrollWindow = function () {
+		if (window.scrollY != 0) {
+			setTimeout(function () {
+				window.scrollTo(0, window.scrollY - window.scrollY);
+			}, 10);
+		}
+	};
+	scrollBtn.addEventListener("click", scrollWindow);
+	footerScrollBtn.addEventListener("click", scrollWindow);
+};

@@ -15,8 +15,8 @@ const callback = (entries) => {
 	const elem = entries.find((entry) => entry.isIntersecting);
 	if (elem) {
 		const index = sections.findIndex((section) => section === elem.target);
-		let linkSelected = links[index].parentElement;
-		linkSelected.classList.add('_active');
+		let linkSelected = links[index]?.parentElement;
+		linkSelected?.classList.add('_active');
 		moveUnderlineTabs();
 	}
 }

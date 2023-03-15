@@ -1,0 +1,30 @@
+#scrollBtn {
+	opacity: 0;
+	pointer-events: none;
+	@include adaptiv-value("width", 53, 10, 2);
+	@include adaptiv-value("height", 53, 10, 2);
+	background-color: var(--base-color);
+	box-shadow: 0px 4px 20px #ececec;
+	position: fixed;
+	z-index: 99;
+	bottom: 7.5%;
+	right: 7.5%;
+	border-radius: 50%;
+	transition: all 0.5s;
+	span {
+		display: inline-block;
+		transform: translateY(-0.15rem) rotate(180deg);
+		color: var(--accent-color);
+	}
+	&.show {
+		opacity: 0.99;
+		pointer-events: all;
+		transition: all 1s;
+		&:hover {
+			background-color: var(--accent-color);
+			span {
+				color: var(--base-color);
+			}
+		}
+	}
+}

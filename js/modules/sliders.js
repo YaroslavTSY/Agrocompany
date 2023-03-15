@@ -20,12 +20,12 @@ const defaultSettings = {
 		onlyInViewport: true,
 		pageUpDown: true
 	},
-	autoplay: {
-		delay: 100000,
-		stopOnLastSlide: false,
-		disableOnInteraction: false
-	},
-	speed: 450,
+	// autoplay: {
+	// 	delay: 100000,
+	// 	stopOnLastSlide: false,
+	// 	disableOnInteraction: false
+	// },
+	// speed: 450,
 }
 
 export const docsSlider = new Swiper('.docs-slider', {
@@ -78,17 +78,19 @@ export const gallerySlider = new Swiper('.gallery-slider', {
 	}
 });
 
-export const partnersSlider = new Swiper('.partners-slider', {
-	slidesPerView: 7,
+export const partnersSlider = new Swiper('.partners-slider.swiper-container.slider-typical', {
+	slidesPerView: 1,
 	watchOverFlow: true,
+	observer: true,
+	spaceBetween: 40,
 	scrollbar: {
-		el: '.partners-scrollbar',
+		el: '.partners__scrollbar.slider-typical__scrollbar',
 		draggable: true,
 		snapOnRelease: true,
 	},
 	breakpoints: {
 		1200: {
-			slidesPerView: 7
+			slidesPerView: 7,
 		},
 		992: {
 			slidesPerView: 5
@@ -100,7 +102,7 @@ export const partnersSlider = new Swiper('.partners-slider', {
 			slidesPerView: 3
 		},
 		320: {
-			slidesPerView: 2
+			slidesPerView: 2,
 		}
 	}
 });

@@ -13,6 +13,7 @@ import * as sliders from "./modules/sliders.js";
 
 functions.isWebp();
 functions.addLoadedClass();
+functions.scrollTop();
 
 //! Checking Mobile or PC device
 if (definition.isMobile.any()) {
@@ -75,7 +76,7 @@ window.onload = function () {
 	// Swiper-sliders imported from sliders.js
 	sliders.docsSlider;
 	sliders.gallerySlider;
-	sliders.partnersSlider;
+	// sliders.partnersSlider;
 }
 
 
