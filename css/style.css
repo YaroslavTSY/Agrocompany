@@ -758,6 +758,7 @@ section::after {
   padding: 0;
 }
 
+.popup__image picture,
 .popup__image img {
   max-width: 100%;
   vertical-align: top;
@@ -1609,6 +1610,7 @@ body._pc .menu__list li:hover::after {
   width: 100%;
 }
 
+.about-images__image picture,
 .about-images__image img {
   height: inherit;
   width: inherit;
@@ -2263,6 +2265,7 @@ body._pc .menu__list li:hover::after {
   z-index: -1;
 }
 
+.products-content-item__img picture,
 .products-content-item__img img {
   width: inherit;
   height: inherit;
@@ -2622,6 +2625,7 @@ body._pc .menu__list li:hover::after {
   max-width: fit-content;
 }
 
+.partners-slider__image picture,
 .partners-slider__image img {
   max-width: 100%;
 }
