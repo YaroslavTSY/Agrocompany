@@ -47,9 +47,12 @@
 			padding: 0;
 		}
 	}
-	&__image img {
-		max-width: 100%;
-		vertical-align: top;
+	&__image {
+		picture,
+		img {
+			max-width: 100%;
+			vertical-align: top;
+		}
 	}
 	&__close {
 		position: absolute;

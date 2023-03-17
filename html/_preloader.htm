@@ -32,7 +32,6 @@
 			box-sizing: border-box;
 		}
 
-		/* Головний блок */
 		.preloader {
 			pointer-events: none;
 			z-index: -1;
@@ -46,7 +45,6 @@
 			align-items: center;
 		}
 
-		/* Блок з елементами */
 		.preloader__body {
 			padding: 0.93rem;
 			max-width: 31.25rem;
@@ -54,9 +52,9 @@
 			flex-direction: column;
 		}
 
-		/* Блок з лічильником */
 		.preloader__counter {
-			font-size: 10rem;
+			font-size: calc(7rem + 3 * ((100vw - 320px) / calc(1440 - 320)));
+			font-family: sans-serif;
 		}
 
 		/* Прогресбар */

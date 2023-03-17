@@ -90,7 +90,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about to-scrolling">
+			<section class="about to-scrolling" id="about">
 				<div class="about__container">
 					<div class="about__wrapper _not-active">
 						<div class="about__images about-images">
@@ -165,7 +165,7 @@
 				</div>
 
 			</section>
-			<section class="biz title-absolute to-scrolling">
+			<section class="biz title-absolute to-scrolling" id="biz">
 				<h2 class="biz__title section-title section-title-absolute">
 					<span>OUR BUSINESS STRUCTURE</span>
 				</h2>
@@ -767,7 +767,7 @@
 				<div class="feedback__container">
 					<div class="feedback__wrapper">
 						<div class="feedback__reg">
-							<form action="#" class="feedback__form feedback-form">
+							<form action="#" id="form" class="feedback__form feedback-form">
 								<h4 class="feedback-form__title">
 									TBB Trading company
 								</h4>
@@ -775,34 +775,33 @@
 									<div class="feedback-form__item">
 										<div class="feedback-form__input-wrapper">
 											<div class="feedback-form__input-item">
-												<input class="feedback-form__input form-control" type="text" name="Name"
-													id="InputName" placeholder="First name" required>
+												<input class="feedback-form__input form-control _req" type="text" name="name"
+													id="formName" placeholder="First name">
 											</div>
 											<div class="feedback-form__input-item">
-												<input type="tel" name="Phone" placeholder="Phone number"
-													class="feedback-form__input form-control" maxlength="14" required>
+												<input type="tel" name="phone" placeholder="Phone number" id="formPhone"
+													class="feedback-form__input form-control _req" maxlength="14">
 											</div>
 										</div>
 									</div>
 									<div class="feedback-form__item">
 										<div class="feedback-form__input-item">
-											<input class="feedback-form__input form-control" name="Email" placeholder="E-mail"
-												type="email" required>
+											<input id="formEmail" type="text" name="email" placeholder="E-mail"
+												class="feedback-form__input form-control _req _email">
 										</div>
 									</div>
 									<div class="feedback-form__item">
 										<div class="feedback-form__submit">
-											<input type="submit" value="Send">
+											<button type="submit" class="feedback-form__submit-btn">Send</button>
 										</div>
 									</div>
 								</div>
 								<div class="feedback-form__agree">
 									<div class="feedback-form__checkbox">
-										<input type="checkbox" required="" checked="">
-									</div>
-									<div class="feedback-form__agree-text">
-										<p>I have read and agree to the</p>
-										<a href="##"><span>Terms of Service</span></a>
+										<input id="formAgreement" checked type="checkbox" name="agreement"
+											class="feedback-form__checkbox-input _req">
+										<label for="formAgreement" class="feedback-form__checkbox-label"><span>I have read and
+												agree to the <a href="##">Terms of Service</a>*</span></label>
 									</div>
 								</div>
 							</form>

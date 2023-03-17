@@ -5,7 +5,6 @@ function setupListenersTabs() {
 	minWidth768.addEventListener("change", () => {
 		moveUnderlineTabs();
 	});
-
 	const navTabs = document.querySelectorAll('.menu__list li');
 	navTabs.forEach(el => {
 		el.addEventListener('click', () => {

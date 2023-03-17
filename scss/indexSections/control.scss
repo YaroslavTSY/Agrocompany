@@ -24,7 +24,9 @@
 		grid-template-rows: 1fr;
 		gap: 0 0;
 		grid-template-areas: ". .";
-		justify-items: flex-end;
+		> * {
+			justify-self: flex-end;
+		}
 		> :not(:last-child) {
 			@include adaptiv-value("margin-right", 120, 0, 0);
 		}

@@ -27,12 +27,11 @@ let oldIE = false;
 if (oldIE) {
 	functions.ie7();
 }
-let mediaQuery576 = window.matchMedia("(min-width: 36em)");
-mediaQuery576.addEventListener("change", setClassTitleAbsolute);
+definition.minWidth576.addEventListener("change", setClassTitleAbsolute);
 
 function setClassTitleAbsolute() {
 	const controlSection = document.querySelector('.control');
-	if (!mediaQuery576.matches) {
+	if (!definition.minWidth576.matches) {
 		controlSection.classList.add('title-absolute')
 	} else {
 		controlSection.classList.remove('title-absolute')
@@ -64,12 +63,20 @@ showAboutText
 // Products Tab's imported from tabsProducts.js //
 tabsProducts
 
-
+document.addEventListener('DOMContentLoaded', functions.formHandler)
 window.onload = function () {
 	// document.getElementById('hideAll').classList.add('__active');
-	if (window.scrollY < 1 && mediaQuery576.matches) {
+	if (window.scrollY < 1 && definition.minWidth576.matches) {
 		navPosition.headerContacts.classList.add('__active');
 	}
+	definition.minWidth768.addEventListener('change', () => {
+		if (!definition.minWidth768.matches) {
+			document.querySelector('.menu__underline').style.cssText = `
+			left: 0%;
+			width: 0%;
+			`;
+		}
+	})
 	// Change class "_active" for Nav on Scroll to Section
 	navScroll
 

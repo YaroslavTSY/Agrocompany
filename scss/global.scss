@@ -5,6 +5,11 @@ html {
 	body {
 		overflow: hidden;
 	}
+	#scrollBtn {
+		right: 15%;
+		top: 15%;
+		transform: translateX(50%);
+	}
 }
 body {
 	font-family: "Mulish", sans-serif;

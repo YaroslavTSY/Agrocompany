@@ -1,4 +1,5 @@
 // Change class "_active" for Nav on Scroll to Section //
+import { minWidth768 } from "./definition.js";
 import { moveUnderlineTabs } from "./navTabs.js";
 
 // function callback
