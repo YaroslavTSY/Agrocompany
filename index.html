@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap&_v=20230222192508" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css?_v=20230222192508" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230222192508">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap&_v=20230317160742" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css?_v=20230317160742" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230317160742">
 </head>
 
 <body>
@@ -73,45 +73,45 @@
 </header>
 		<main class="main">
 			<div class="menu__nav">
-				<nav class="menu__container menu__body">
+				<nav class="menu__container menu__body _lock-padding">
 					<ul id="menuList" class="menu__list">
 						<li>
-							<a data-goto=".about" href="#" class="menu__link">
+							<a data-goto="#about" href="#" class="menu__link">
 								About us
 							</a>
 						</li>
 						<li>
-							<a data-goto=".biz" href="#" class="menu__link">
+							<a data-goto="#biz" href="#" class="menu__link">
 								Our bussiness structure
 							</a>
 						</li>
 						<li class="_active">
-							<a data-goto=".services" href="#" class="menu__link">
+							<a data-goto="#services" href="#" class="menu__link">
 								What we do
 							</a>
 						</li>
 						<li>
-							<a data-goto=".docs" href="#" class="menu__link">
+							<a data-goto="#docs" href="#" class="menu__link">
 								Documentation
 							</a>
 						</li>
 						<li>
-							<a data-goto=".control" href="#" class="menu__link">
+							<a data-goto="#control" href="#" class="menu__link">
 								Survey control
 							</a>
 						</li>
 						<li>
-							<a data-goto=".products" href="#" class="menu__link">
+							<a data-goto="#products" href="#" class="menu__link">
 								Our products
 							</a>
 						</li>
 						<li>
-							<a data-goto=".business-activity" href="#" class="menu__link">
+							<a data-goto="#activity" href="#" class="menu__link">
 								Bussiness activity
 							</a>
 						</li>
 						<li>
-							<a data-goto=".contact" href="#" class="menu__link">
+							<a data-goto="#contact" href="#" class="menu__link">
 								Contact Us
 							</a>
 						</li>
@@ -144,7 +144,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about to-scrolling">
+			<section class="about to-scrolling" id="about">
 				<div class="about__container">
 					<div class="about__wrapper _not-active">
 						<div class="about__images about-images">
@@ -176,18 +176,17 @@
 									square meters with 5 hectares of the adjacent territory located in Odessa at a distance of
 									up to 3 km. to the largest seaport in Ukraine and 8 highly equipped sawmills.</p>
 
-								<p>Besides our own production, our company purchase different agricultural products directly
+								<p>Besides our own production, our company purchase different agricultural products
+									directly
 									from Ukrainian farmers all year round, which allows us to fully control the quality and
 									ensure uninterrupted supply of goods in large volumes for our customers.</pc>
 
-								<p>Today the activities of our company has spread to more than 40 countries and 80 companies
+								<p>Today the activities of our company has spread to more than 40 countries and 80
+									companies
 									around the world with a monthly turnover more than 700 containers of timber and agricultural
 									products, and we are increasing this figure from year to year.</p>
 
-								<p class="show">Today our company owns more than 8000 hectares of land
-									and
-									own
-									storage
+								<p class="show">Today our company owns more than 8000 hectares of land and own storage
 									facilities over 10,000 square meters with 5 hectares of the adjacent territory located in
 									Odessa at a distance of up to 3 km. to the largest seaport in Ukraine and 8 highly equipped
 									sawmills.</p>
@@ -220,7 +219,7 @@
 				</div>
 
 			</section>
-			<section class="biz title-absolute to-scrolling">
+			<section class="biz title-absolute to-scrolling" id="biz">
 				<h2 class="biz__title section-title section-title-absolute">
 					<span>OUR BUSINESS STRUCTURE</span>
 				</h2>
@@ -398,7 +397,8 @@
 							documents mentioned in our contract:</h3>
 						<div class="swiper-container docs__slider docs-slider slider-typical">
 							<div class="swiper-wrapper docs-slider__wrapper slider-typical__wrapper">
-								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+								<a href="#docsImage1"
+									class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper popup-link">
 									<div class="docs-slider__item docs-slider-item slider-typical-item">
 										<div class="docs-slider-item__image slider-typical-item__image">
 											<picture><source srcset="img/phyto-1.webp" type="image/webp"><img class="img-fluid" src="img/phyto-1.jpg" alt="Doc"></picture>
@@ -407,9 +407,10 @@
 											<span>Phyto certificate</span>
 										</div>
 									</div>
-								</div>
+								</a>
 
-								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+								<a href="#docsImage2"
+									class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper popup-link">
 									<div class="docs-slider__item docs-slider-item slider-typical-item">
 										<div class="docs-slider-item__image slider-typical-item__image">
 											<picture><source srcset="img/phyto-2.webp" type="image/webp"><img class="img-fluid" src="img/phyto-2.jpg" alt="Doc"></picture>
@@ -418,9 +419,10 @@
 											<span>Phyto certificate</span>
 										</div>
 									</div>
-								</div>
+								</a>
 
-								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+								<a href="#docsImage3"
+									class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper popup-link">
 									<div class="docs-slider__item docs-slider-item slider-typical-item">
 										<div class="docs-slider-item__image slider-typical-item__image">
 											<picture><source srcset="img/phyto-3.webp" type="image/webp"><img class="img-fluid" src="img/phyto-3.jpg" alt="Doc"></picture>
@@ -429,9 +431,10 @@
 											<span>Phyto certificate</span>
 										</div>
 									</div>
-								</div>
+								</a>
 
-								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+								<a href="#docsImage4"
+									class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper popup-link">
 									<div class="docs-slider__item docs-slider-item slider-typical-item">
 										<div class="docs-slider-item__image slider-typical-item__image">
 											<picture><source srcset="img/phyto-4.webp" type="image/webp"><img class="img-fluid" src="img/phyto-4.jpg" alt="Doc"></picture>
@@ -440,9 +443,10 @@
 											<span>Phyto certificate</span>
 										</div>
 									</div>
-								</div>
+								</a>
 
-								<div class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper">
+								<a href="#docsImage5"
+									class="swiper-slide docs-slider__item-wrapper slider-typical__item-wrapper popup-link">
 									<div class="docs-slider__item docs-slider-item slider-typical-item">
 										<div class="docs-slider-item__image slider-typical-item__image">
 											<picture><source srcset="img/phyto-5.webp" type="image/webp"><img class="img-fluid" src="img/phyto-5.jpg" alt="Doc"></picture>
@@ -451,7 +455,7 @@
 											<span>Phyto certificate</span>
 										</div>
 									</div>
-								</div>
+								</a>
 
 							</div>
 							<div class="swiper-pagination docs-slider__pagination slider-typical__pagination">
@@ -461,7 +465,6 @@
 							</div>
 							<div class="swiper-button-prev docs-slider__button-prev i-arrow-more slider-typical__button-prev">
 							</div>
-							<div class="docs-slider__shadow slider-typical__shadow"></div>
 						</div>
 					</div>
 				</div>
@@ -500,8 +503,8 @@
 							<span>Our Products</span>
 						</h2>
 						<div class="products__body">
-							<div class="products__tabs products-tabs products__typical-grid">
-								<div class="products-tabs__tab i-flour _active">
+							<div class="products__tabs products-tabs products__grid_typical">
+								<div class="products-tabs__tab i-flour">
 									<h3 class="products-tabs__title">
 										FOOD COMMODITIES
 									</h3>
@@ -518,246 +521,246 @@
 								</div>
 							</div>
 							<div class="products__content-wrapper">
-								<div class="products__content products-content products__typical-grid _active">
+								<div class="products__content products-content products__grid_typical">
 									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-1.webp" type="image/webp"><img src="img/products/first/products-1-1.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-2.webp" type="image/webp"><img src="img/products/first/products-1-2.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Barley
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-3.webp" type="image/webp"><img src="img/products/first/products-1-3.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												OATS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-4.webp" type="image/webp"><img src="img/products/first/products-1-4.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												FABA BEANS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-5.webp" type="image/webp"><img src="img/products/first/products-1-5.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												RED SORGHUM
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-6.webp" type="image/webp"><img src="img/products/first/products-1-6.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												WHITE SORGHUM
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-7.webp" type="image/webp"><img src="img/products/first/products-1-7.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												YELLOW PEAS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-8.webp" type="image/webp"><img src="img/products/first/products-1-8.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												YELLOW MILLET
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-9.webp" type="image/webp"><img src="img/products/first/products-1-9.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												YELLOW CORN
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-10.webp" type="image/webp"><img src="img/products/first/products-1-10.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												CHICKPEAS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-11.webp" type="image/webp"><img src="img/products/first/products-1-11.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												RAPESEEDS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-12.webp" type="image/webp"><img src="img/products/first/products-1-12.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												FLAX SEEDS
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-13.webp" type="image/webp"><img src="img/products/first/products-1-13.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												CORIANDER
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/first/products-1-14.webp" type="image/webp"><img src="img/products/first/products-1-14.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												SOYBEAN
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper products-content__item-wrapper-green i-flour">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-1.webp" type="image/webp"><img src="img/products/first/products-1-1.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Milling Wheat
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-2.webp" type="image/webp"><img src="img/products/first/products-1-2.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Barley
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-3.webp" type="image/webp"><img src="img/products/first/products-1-3.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Oats
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-4.webp" type="image/webp"><img src="img/products/first/products-1-4.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Faba Beans
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-5.webp" type="image/webp"><img src="img/products/first/products-1-5.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Red Sorghum
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-6.webp" type="image/webp"><img src="img/products/first/products-1-6.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			White Sorghum
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-7.webp" type="image/webp"><img src="img/products/first/products-1-7.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Yellow Peas
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-8.webp" type="image/webp"><img src="img/products/first/products-1-8.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Yellow Millet
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-9.webp" type="image/webp"><img src="img/products/first/products-1-9.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Yellow Corn
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-10.webp" type="image/webp"><img src="img/products/first/products-1-10.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Chickpeas
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-11.webp" type="image/webp"><img src="img/products/first/products-1-11.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Rapeseeds
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-12.webp" type="image/webp"><img src="img/products/first/products-1-12.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Flax Seeds
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-13.webp" type="image/webp"><img src="img/products/first/products-1-13.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Coriander
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/first/products-1-14.webp" type="image/webp"><img src="img/products/first/products-1-14.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			Soybean
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture: max. 14.00 %</p>
+			<p>Foreign matter: 2.00 %</p>
+			<p>Protein: min. 11.50 %</p>
+			<p>Test weight: min 740 kg/hl</p>
+			<p>Wet gluten: min 24.00</p>
+		</div>
+	</div>
+</div>
+									<div class="products-content__item-wrapper products-content__item-wrapper_green i-flour">
 										<div class="products-content__item products-content-item">
 											<h3 class="products-content-item__title">
 												TBB Trading company
@@ -772,579 +775,635 @@
 										</div>
 									</div>
 								</div>
-								<div class="products__content products-content products__typical-grid">
+								<div class="products__content products-content products__grid_typical">
 									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-1.webp" type="image/webp"><img src="img/products/second/products-2-1.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-2.webp" type="image/webp"><img src="img/products/second/products-2-2.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-3.webp" type="image/webp"><img src="img/products/second/products-2-3.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-4.webp" type="image/webp"><img src="img/products/second/products-2-4.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-5.webp" type="image/webp"><img src="img/products/second/products-2-5.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/second/products-2-6.webp" type="image/webp"><img src="img/products/second/products-2-6.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-1.webp" type="image/webp"><img src="img/products/second/products-2-1.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			SUNFLOWER MEAL
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-2.webp" type="image/webp"><img src="img/products/second/products-2-2.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			SUNFLOWER MEAL PELLETS
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-3.webp" type="image/webp"><img src="img/products/second/products-2-3.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			SUNFLOWER SEEDS CAKE
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-4.webp" type="image/webp"><img src="img/products/second/products-2-4.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			FEED WHEAT
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-5.webp" type="image/webp"><img src="img/products/second/products-2-5.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			WHEAT BRAN PELLETS
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/second/products-2-6.webp" type="image/webp"><img src="img/products/second/products-2-6.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			SOYBEAN MEAL
+		</h3>
+		<div class="products-content-item__text">
+			<p>Protein content: min. 35.00 %</p>
+			<p>Fiber: max. 20.00 %</p>
+			<p>Moisture: max. 12.00 %</p>
+			<p>Fat content: max. 2.00 %</p>
+			<p></p>
+		</div>
+	</div>
+</div>
 								</div>
-								<div class="products__content products-content products__typical-grid">
+								<div class="products__content products-content products__grid_typical">
 									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-1.webp" type="image/webp"><img src="img/products/third/products-3-1.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-2.webp" type="image/webp"><img src="img/products/third/products-3-2.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-3.webp" type="image/webp"><img src="img/products/third/products-3-3.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-4.webp" type="image/webp"><img src="img/products/third/products-3-4.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-5.webp" type="image/webp"><img src="img/products/third/products-3-5.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-6.webp" type="image/webp"><img src="img/products/third/products-3-6.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-7.webp" type="image/webp"><img src="img/products/third/products-3-7.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-8.webp" type="image/webp"><img src="img/products/third/products-3-8.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-9.webp" type="image/webp"><img src="img/products/third/products-3-9.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-10.webp" type="image/webp"><img src="img/products/third/products-3-10.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-11.webp" type="image/webp"><img src="img/products/third/products-3-11.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
-									<div class="products-content__item-wrapper">
-										<div class="products-content__item products-content-item">
-											<div class="products-content-item__img">
-												<picture><source srcset="img/products/third/products-3-12.webp" type="image/webp"><img src="img/products/third/products-3-12.jpg" alt=""></picture>
-											</div>
-											<h3 class="products-content-item__title">
-												Milling Wheat
-											</h3>
-											<div class="products-content-item__text">
-												<p>Moisture: max. 14.00 %</p>
-												<p>Foreign matter: 2.00 %</p>
-												<p>Protein: min. 11.50 %</p>
-												<p>Test weight: min 740 kg/hl</p>
-												<p>Wet gluten: min 24.00</p>
-											</div>
-										</div>
-									</div>
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-1.webp" type="image/webp"><img src="img/products/third/products-3-1.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			FRESH CUT PINE TIMBER AIR DRY
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture up to 18 %</p>
+			<p>Size: length up to 6000 mm.</p>
+			<p> -width up to 150 mm.</p>
+			<p> -thickness up to 150 mm.</p>
+			<p>Grade: mix grade AB/ABC/BC</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-2.webp" type="image/webp"><img src="img/products/third/products-3-2.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			FRESH CUT PINE TIMBER KLIN DRY
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture up to 18 %</p>
+			<p>Size: length up to 6000 mm.</p>
+			<p> -width up to 150 mm.</p>
+			<p> -thickness up to 150 mm.</p>
+			<p>Grade: mix grade AB/ABC/BC</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-3.webp" type="image/webp"><img src="img/products/third/products-3-3.jpg" alt=""></picture>
+		</div>
+		<h3 class="products-content-item__title">
+			DEAD WOOD
+		</h3>
+		<div class="products-content-item__text">
+			<p>Moisture up to 18 %</p>
+			<p>Size: length up to 6000 mm.</p>
+			<p> -width up to 150 mm.</p>
+			<p> -thickness up to 150 mm.</p>
+			<p>Grade: mix grade AB/ABC/BC</p>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-4.webp" type="image/webp"><img src="img/products/third/products-3-4.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-5.webp" type="image/webp"><img src="img/products/third/products-3-5.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-6.webp" type="image/webp"><img src="img/products/third/products-3-6.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-7.webp" type="image/webp"><img src="img/products/third/products-3-7.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-8.webp" type="image/webp"><img src="img/products/third/products-3-8.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-9.webp" type="image/webp"><img src="img/products/third/products-3-9.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-10.webp" type="image/webp"><img src="img/products/third/products-3-10.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-11.webp" type="image/webp"><img src="img/products/third/products-3-11.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
+<div class="products-content__item-wrapper">
+	<div class="products-content__item products-content-item products-content-item products-content-item_empty">
+		<div class="products-content-item__img">
+			<picture><source srcset="img/products/third/products-3-12.webp" type="image/webp"><img src="img/products/third/products-3-12.jpg" alt=""></picture>
+		</div>
+	</div>
+</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- <section class="gallery to-scrolling" id="gallery">
-			<div class="gallery__content">
-				<h2 class="section-title__gallery">
-					Photo Gallery
+			<section class="gallery title-absolute" id="gallery">
+				<h2 class="gallery__title section-title section-title-absolute">
+					<span>Photo Gallery</span>
 				</h2>
-				<div class="gallery-slider swiper-container">
-					<div class="gallery-slider__wrapper swiper-wrapper">
-						<div class="gallery-item swiper-slide">
-							<div class="gallery-item__content">
-								<div class="gallery-item__image">
-									<picture><source srcset="img/chickpeas-2-2.webp" type="image/webp"><img class="img-fluid" src="img/chickpeas-2-2.jpg" alt="photo-1"></picture>
-								</div>
-								<div class="gallery-item__desc">
-									<p>
-										Chickpeas
-									</p>
-								</div>
+				<div class="gallery__container">
+					<div class="gallery__wrapper">
+						<div class="swiper-container gallery__slider gallery-slider slider-typical">
+							<div class="swiper-wrapper gallery-slider__wrapper slider-typical__wrapper">
+								<a href="#galleryImage1"
+									class="swiper-slide gallery-slider__item-wrapper slider-typical__item-wrapper popup-link">
+									<div class="gallery-slider__item gallery-slider-item slider-typical-item">
+										<div class="gallery-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/gallery/gallery-photo-1.webp" type="image/webp"><img class="img-fluid" src="img/gallery/gallery-photo-1.jpg" alt="Doc"></picture>
+										</div>
+										<div class="gallery-slider-item__desc slider-typical-item__desc">
+											<span>Pine timber loading 4</span>
+										</div>
+									</div>
+								</a>
+
+								<a href="#galleryImage2"
+									class="swiper-slide gallery-slider__item-wrapper slider-typical__item-wrapper popup-link">
+									<div class="gallery-slider__item gallery-slider-item slider-typical-item">
+										<div class="gallery-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/gallery/gallery-photo-2.webp" type="image/webp"><img class="img-fluid" src="img/gallery/gallery-photo-2.jpg" alt="Doc"></picture>
+										</div>
+										<div class="gallery-slider-item__desc slider-typical-item__desc">
+											<span>Chickpeas</span>
+										</div>
+									</div>
+								</a>
+
+								<a href="#galleryImage3"
+									class="swiper-slide gallery-slider__item-wrapper slider-typical__item-wrapper popup-link">
+									<div class="gallery-slider__item gallery-slider-item slider-typical-item">
+										<div class="gallery-slider-item__image slider-typical-item__image">
+											<picture><source srcset="img/gallery/gallery-photo-3.webp" type="image/webp"><img class="img-fluid" src="img/gallery/gallery-photo-3.jpg" alt="Doc"></picture>
+										</div>
+										<div class="gallery-slider-item__desc slider-typical-item__desc">
+											<span>Split yellow peas</span>
+										</div>
+									</div>
+								</a>
+
 							</div>
-						</div>
-						<div class="gallery-item swiper-slide">
-							<div class="gallery-item__content">
-								<div class="gallery-item__image">
-									<picture><source srcset="img/SPLIT-YELLOW-PEAS-2.webp" type="image/webp"><img class="img-fluid" src="img/SPLIT-YELLOW-PEAS-2.jpg" alt="photo-2"></picture>
-								</div>
-								<div class="gallery-item__desc">
-									<p>
-										Split Yellow Peas
-									</p>
-								</div>
+							<div class="swiper-pagination gallery-slider__pagination slider-typical__pagination">
+								<div class="swiper-srollbar gallery-slider__srollbar slider-typical__scrollbar"></div>
 							</div>
-						</div>
-						<div class="gallery-item swiper-slide">
-							<div class="gallery-item__content">
-								<div class="gallery-item__image">
-									<picture><source srcset="img/pine-timber-loading-4-2.webp" type="image/webp"><img class="img-fluid" src="img/pine-timber-loading-4-2.jpg" alt="photo-3"></picture>
-								</div>
-								<div class="gallery-item__desc">
-									<p>
-										Pine timber loading 4
-									</p>
-								</div>
+							<div
+								class="swiper-button-next gallery-slider__button-next i-arrow-more slider-typical__button-next">
+							</div>
+							<div
+								class="swiper-button-prev gallery-slider__button-prev i-arrow-more slider-typical__button-prev">
 							</div>
 						</div>
 					</div>
-					<div class="gallery-button-prev swiper-button-prev"></div>
-					<div class="gallery-button-next swiper-button-next"></div>
-					<div class="gallery-pagination swiper-pagination">
-						<div class="gallery-scrollbar swiper-scrollbar"></div>
-					</div>
 				</div>
-				<div class="kliptarz__gallery">
-					<picture><source srcset="img/klipartz-14.webp" type="image/webp"><img src="img/klipartz-14.jpg" alt=""></picture>
-				</div>
-		</section>
-		<section class="business-activity to-scrolling" id="business-activity">
-			<h2 class="section-title__activity">
-				BUSINESS ACTIVITY
-			</h2>
-			<div class="activity__content">
+			</section>
+			<section class="activity title-absolute to-scrolling" id="activity">
+				<h2 class="activity__title section-title section-title-absolute">
+					BUSINESS ACTIVITY
+				</h2>
 				<div class="activity__container">
-					<div class="activity-cards">
-						<div class="activity-card __wood">
-							<div class="activity-card__icon">
-								<picture><source srcset="img/wood-1.webp" type="image/webp"><img class="img-fluid" src="img/wood-1.png" alt=""></picture>
+					<div class="activity__wrapper">
+						<div class="activity__cards">
+							<div class="activity__card activity-card activity-card_wood">
+								<div class="activity-card__body">
+									<i class="activity-card__icon i-wood-2">
+									</i>
+									<h3 class="activity-card__title">
+										<span>up to</span> <span class="activity-card__number">10000</span> cbm
+									</h3>
+									<h4 class="activity-card__subtitle">
+										Monthly wood export
+									</h4>
+								</div>
 							</div>
-							<h3 class="activity-card__title">
-								up to <span>10000</span> cbm
-							</h3>
-							<h4 class="activity-card__subtitle">
-								Monthly wood export
-							</h4>
-						</div>
-						<div class="activity-card __turnover">
-							<div class="activity-card__icon">
-								<picture><source srcset="img/boxes-1.webp" type="image/webp"><img class="img-fluid" src="img/boxes-1.png" alt=""></picture>
+							<div class="activity__card activity-card activity-card_turnover">
+								<div class="activity-card__body">
+									<i class="activity-card__icon i-boxes">
+									</i>
+									<h3 class="activity-card__title">
+										<span>up to</span> <span class="activity-card__number">700</span>
+										<span>fcl +</span>
+									</h3>
+									<h4 class="activity-card__subtitle">
+										Monthly containers turnover
+									</h4>
+								</div>
 							</div>
-							<h3 class="activity-card__title">
-								up to <span>700</span> fcl +
-							</h3>
-							<h4 class="activity-card__subtitle">
-								Monthly containers turnover
-							</h4>
-						</div>
-						<div class="activity-card __buyers">
-							<div class="activity-card__icon">
-								<picture><source srcset="img/participant-1.webp" type="image/webp"><img class="img-fluid" src="img/participant-1.png" alt=""></picture>
+							<div class="activity__card activity-card activity-card_buyers">
+								<div class="activity-card__body">
+									<i class="activity-card__icon i-companies">
+									</i>
+									<h3 class="activity-card__title">
+										<span class="activity-card__number">80</span> compamies
+									</h3>
+									<h4 class="activity-card__subtitle">
+										Regular buyers
+									</h4>
+								</div>
 							</div>
-							<h3 class="activity-card__title">
-								<span>80</span> compamies
-							</h3>
-							<h4 class="activity-card__subtitle">
-								Regular buyers
-							</h4>
-						</div>
-						<div class="activity-card __export">
-							<div class="activity-card__icon">
-								<picture><source srcset="img/agriculture-1.webp" type="image/webp"><img class="img-fluid" src="img/agriculture-1.png" alt=""></picture>
+							<div class="activity__card activity-card activity-card_export">
+								<div class="activity-card__body">
+									<i class="activity-card__icon i-plant">
+									</i>
+									<h3 class="activity-card__title">
+										<span>up to</span> <span class="activity-card__number">9000</span> metric tones
+									</h3>
+									<h4 class="activity-card__subtitle">
+										Monthly agricultural export
+									</h4>
+								</div>
 							</div>
-							<h3 class="activity-card__title">
-								up to <span>9000</span> metric tones
-							</h3>
-							<h4 class="activity-card__subtitle">
-								Monthly agricultural export
-							</h4>
-						</div>
-						<div class="activity-card __countries">
-							<div class="activity-card__icon">
-								<img class="img-fluid" src="img/countries.svg" alt="">
+							<div class="activity__card activity-card activity-card_countries">
+								<div class="activity-card__body">
+									<i class="activity-card__icon i-countries">
+									</i>
+									<h3 class="activity-card__title">
+										<span class="activity-card__number">40</span> countries
+									</h3>
+									<h4 class="activity-card__subtitle">
+										Covered countries
+									</h4>
+								</div>
 							</div>
-							<h3 class="activity-card__title">
-								<span>40</span> countries
-							</h3>
-							<h4 class="activity-card__subtitle">
-								Covered countries
-							</h4>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="contact to-scrolling" id="contact">
-			<h2 class="section-title__contact">
-				CONTACT US
-			</h2>
-			<div class="contact__container">
-				<div class="contact-info">
-					<div class="contact-card contact-card__uae">
-						<h3 class="contact-title">
-							Office in UAE
-						</h3>
-						<div class="contact-card__tbb-content">
-							<h4 class="contact-tbb">
-								TBB TRADING DMCC
-							</h4>
-							<p class="contact-addres">
-								Unit 1909 Jumeirah Bay 2 Plot JLT-PH2-X2A Jumeirah Lakes Towers Dubai
-							</p>
-							<p class="contact-phone">
-								<span>Cell phone:</span> +971 50 601 8233
-							</p>
-							<p class="contact-email">
-								<span>E:mail –</span> tbb.dmcc.execution@gmail.com
-								<br>
-								tbb.dmcc@gmail.com
-							</p>
+			</section>
+			<section class="contact title-absolute to-scrolling" id="contact">
+				<h2 class="contact__title section-title section-title-absolute">
+					CONTACT US
+				</h2>
+				<div class="contact__container">
+					<div class="contact__wrapper">
+						<div class="contact__info">
+							<div class="contact__card contact-card contact-card_uae">
+								<h3 class="contact-card__title contact-item__title">
+									Office in UAE
+								</h3>
+								<div class="contact-card__body contact-card-body">
+									<h4 class="contact-card-body__title">
+										<span>TBB TRADING DMCC</span>
+									</h4>
+									<p class="contact-card-body__addres">
+										<span>Unit 9999</span> <span>Bay 99</span> <span>Plot XXX-999-X9X</span> <span>Lake Tower
+											Dubai</span>
+									</p>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title"><span>Cell phone:</span></p>
+										<div class="contact-card-body-line__content">
+											<p><span>+975 31 357 9753</span></p>
+										</div>
+									</div>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title"><span>E:mail –</span></p>
+										<div class="contact-card-body-line__content">
+											<p><span>dmcc.execution@gmailon.com</span></p>
+											<p><span>tbb@gmailon.com</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contact__card contact-card contact-card_ukraine">
+								<h3 class="contact-card__title contact-item__title">
+									Office in Ukraine
+								</h3>
+								<div class="contact-card__body contact-card-body">
+									<p class="contact-card-body__addres">
+										Phontan str. 23, Odessa, Ukraine
+									</p>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title">Trading department:</p>
+										<div class="contact-card-body-line__content">
+											<p><span>+38 543 211 23 45</span> <span>– Mr. Michael</span></p>
+										</div>
+									</div>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title">WhatsApp:</p>
+										<div class="contact-card-body-line__content">
+											<p><span>+38 753 124 68 10</span> <span>– Mr. Michael</span></p>
+										</div>
+									</div>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title">Execution:</p>
+										<div class="contact-card-body-line__content">
+											<p><span>+38 432 101 23 45</span> <span>– Ms. Victoria</span></p>
+										</div>
+									</div>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title">Documentation:</p>
+										<div class="contact-card-body-line__content">
+											<p><span>+38 765 432 12 34</span> <span>– Ms. Larisa</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contact__card contact-card contact-card_warehouse">
+								<h3 class="contact-card__title contact-item__title">
+									WAREHOUSE
+								</h3>
+								<div class="contact-card__body contact-card-body">
+									<p class="contact-card-body__addres">
+										<span>Khimicheskaya str.,</span> <span>9/99,</span> <span>Odessa,</span>
+										<span>Ukraine</span>
+									</p>
+									<div class="contact-card-body__line contact-card-body-line">
+										<p class="contact-card-body-line__title"><span>Cell phone:</span></p>
+										<div class="contact-card-body-line__content">
+											<p><span>+38 01 234 56 78</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="contact-card contact-card__ukraine">
-
-						<h3 class="contact-title">
-							Office in Ukraine
-						</h3>
-						<p class="contact-addres">
-							Phontanskaya str. 6, Odessa, Ukraine
-						</p>
-						<p class="contact-dep">
-							<span>Trading department:</span> +38 093 549 99 49 – Mr. Michael
-						</p>
-						<p class="contact-ws">
-							<span>WhatsApp:</span> +38 093 549 99 49 – Mr. Michael
-						</p>
-						<p class="contact-execution">
-							<span>Execution:</span> +38 063 839 40 41 – Ms. Victoria
-						</p>
-						<p class="contact-doc">
-							<span>Documentation:</span> +38 094 932 14 48 - Ms. Larisa
-						</p>
-
-					</div>
-					<div class="contact-card contact-card__warehouse">
-						<h3 class="contact-title">
-							WAREHOUSE
-						</h3>
-						<p class="contact-addres">
-							Khimicheskaya str., 1/23, Odessa, Ukraine
-						</p>
-						<p class="contact-phone">
-							<span>Cell phone:</span> +38 094 932 14 48
-						</p>
+						<div class="contanct__partners partners">
+							<h3 class="contact-item__title partners__title">
+								OUR BUSINESS PARTNERS
+							</h3>
+							<div class="partners-slider swiper-container slider-typical">
+								<div class="partners-slider__wrapper swiper-wrapper">
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-1.webp" type="image/webp"><img src="img/contacts/partners/partners-1.png" alt=""></picture>
+										</div>
+									</div>
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-2.webp" type="image/webp"><img src="img/contacts/partners/partners-2.png" alt=""></picture>
+										</div>
+									</div>
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-3.webp" type="image/webp"><img src="img/contacts/partners/partners-3.png" alt=""></picture>
+										</div>
+									</div>
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-4.webp" type="image/webp"><img src="img/contacts/partners/partners-4.png" alt=""></picture>
+										</div>
+									</div>
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-5.webp" type="image/webp"><img src="img/contacts/partners/partners-5.png" alt=""></picture>
+										</div>
+									</div>
+									<div class="partners-slider__slide swiper-slide">
+										<div class="partners-slider__image">
+											<picture><source srcset="img/contacts/partners/partners-6.webp" type="image/webp"><img src="img/contacts/partners/partners-6.png" alt=""></picture>
+										</div>
+									</div>
+								</div>
+								<div class="partners__scrollbar slider-typical__scrollbar"></div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<h3 class="contact-title contact-title__partners">
-					OUR BUSINESS PARTNERS
-				</h3>
-				<div class="partners-slider swiper-container">
-					<div class="partners-slider__wrapper swiper-wrapper">
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS-1.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-1.png" alt=""></picture>
-							</div>
-						</div>
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS.png" alt=""></picture>
-							</div>
-						</div>
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS-3.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-3.png" alt=""></picture>
-							</div>
-						</div>
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS-4.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-4.png" alt=""></picture>
-							</div>
-						</div>
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS-5.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-5.png" alt=""></picture>
-							</div>
-						</div>
-						<div class="partners-slider__slide swiper-slide">
-							<div class="partners-slider__image">
-								<picture><source srcset="img/OUR-BUSINESS-PARTNERS-2.webp" type="image/webp"><img src="img/OUR-BUSINESS-PARTNERS-2.png" alt=""></picture>
-							</div>
-						</div>
-					</div>
-					<div class="partners-scrollbar swiper-scrollbar"></div>
-				</div>
-			</div>
-		</section>
-		<section class="feedback to-scrolling" id="feedback">
-			<div class="feedback__content">
+			</section>
+			<section class="feedback to-scrolling" id="feedback">
 				<div class="feedback__map">
 					<div id="map" class="map">
-
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d788.0281974336168!2d-122.26256071417923!3d37.81082702735794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1678367984989!5m2!1suk!2sua"
+							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
 					</div>
 				</div>
-				<div class="feedback__reg">
-					<form action="#" class="feedback__form">
-						<h4 class="reg__title">
-							TBB Trading company
-						</h4>
-						<div class="reg__group">
-							<input type="text" name="first-name" placeholder="First name">
-							<input type="number" name="number" placeholder="Phone number">
+				<div class="feedback__container">
+					<div class="feedback__wrapper">
+						<div class="feedback__reg">
+							<form action="#" id="form" class="feedback__form feedback-form">
+								<h4 class="feedback-form__title">
+									TBB Trading company
+								</h4>
+								<div class="feedback-form__content">
+									<div class="feedback-form__item">
+										<div class="feedback-form__input-wrapper">
+											<div class="feedback-form__input-item">
+												<input class="feedback-form__input form-control _req" type="text" name="name"
+													id="formName" placeholder="First name">
+											</div>
+											<div class="feedback-form__input-item">
+												<input type="tel" name="phone" placeholder="Phone number" id="formPhone"
+													class="feedback-form__input form-control _req" maxlength="14">
+											</div>
+										</div>
+									</div>
+									<div class="feedback-form__item">
+										<div class="feedback-form__input-item">
+											<input id="formEmail" type="text" name="email" placeholder="E-mail"
+												class="feedback-form__input form-control _req _email">
+										</div>
+									</div>
+									<div class="feedback-form__item">
+										<div class="feedback-form__submit">
+											<button type="submit" class="feedback-form__submit-btn">Send</button>
+										</div>
+									</div>
+								</div>
+								<div class="feedback-form__agree">
+									<div class="feedback-form__checkbox">
+										<input id="formAgreement" checked type="checkbox" name="agreement"
+											class="feedback-form__checkbox-input _req">
+										<label for="formAgreement" class="feedback-form__checkbox-label"><span>I have read and
+												agree to the <a href="##">Terms of Service</a>*</span></label>
+									</div>
+								</div>
+							</form>
 						</div>
-						<input type="email" name="email" placeholder="E-mail">
-						<input class="reg__submit" type="submit" value="Send">
-						<div class="agree">
-							<input type="checkbox" class="agree__checkbox" name="agree" id="agree">
-							<p class="agree__text">I have read and agree to the <span><a href="##">Terms of
-										Service</a></span></p>
-						</div>
-					</form>
+					</div>
 				</div>
-			</div>
-		</section> -->
+			</section>
 		</main>
 		<footer class="footer">
-    <div class="footer__container">
-        <div class="footer__content">
-            <p class="copyright">
-                Copyright © 2022
-            </p>
-        </div>
-    </div>
+	<div class="footer__container">
+		<div class="footer__content">
+			<p class="copyright">
+				Copyright © 2023
+			</p>
+		</div>
+	</div>
 </footer>
+	</div>
+	<div id="docsImage1" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/phyto-1.webp" type="image/webp"><img src="img/phyto-1.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="docsImage2" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/phyto-2.webp" type="image/webp"><img src="img/phyto-2.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="docsImage3" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/phyto-3.webp" type="image/webp"><img src="img/phyto-3.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="docsImage4" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/phyto-4.webp" type="image/webp"><img src="img/phyto-4.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="docsImage5" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/phyto-5.webp" type="image/webp"><img src="img/phyto-5.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="galleryImage1" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/gallery/gallery-photo-1.webp" type="image/webp"><img src="img/gallery/gallery-photo-1.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="galleryImage2" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/gallery/gallery-photo-2.webp" type="image/webp"><img src="img/gallery/gallery-photo-2.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="galleryImage3" class="popup">
+		<div class="popup__body">
+			<div class="popup__content popup__content_image">
+				<a href="#menuList" class="popup__close close-popup">X</a>
+				<div class="popup__image">
+					<picture><source srcset="img/gallery/gallery-photo-3.webp" type="image/webp"><img src="img/gallery/gallery-photo-3.jpg" alt=""></picture>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- Стилі для body -->
 <style>
@@ -1380,7 +1439,6 @@
 			box-sizing: border-box;
 		}
 
-		/* Головний блок */
 		.preloader {
 			pointer-events: none;
 			z-index: -1;
@@ -1394,7 +1452,6 @@
 			align-items: center;
 		}
 
-		/* Блок з елементами */
 		.preloader__body {
 			padding: 0.93rem;
 			max-width: 31.25rem;
@@ -1402,9 +1459,9 @@
 			flex-direction: column;
 		}
 
-		/* Блок з лічильником */
 		.preloader__counter {
-			font-size: 10rem;
+			font-size: calc(7rem + 3 * ((100vw - 320px) / calc(1440 - 320)));
+			font-family: sans-serif;
 		}
 
 		/* Прогресбар */
@@ -1485,7 +1542,7 @@
 	<!--[if lt IE 8]>
 		<script type="text/javascript">oldIE = true;</script>
 	<![endif]-->
-	<script src="js/app.min.js?_v=20230222192508"></script>
+	<script src="js/app.min.js?_v=20230317160742"></script>
 </body>
 
 </html>
